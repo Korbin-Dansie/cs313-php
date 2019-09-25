@@ -2,5 +2,12 @@
 * Display you clicked me
 ********************************/
 function clickedMe(){
-  alert("You Clicked me.");
+  alert("Clicked!");
+}
+
+/********************************
+* Change backgroundColor of a element
+********************************/
+function changeColor(color, location){
+  location.style.backgroundColor = color;
 }
