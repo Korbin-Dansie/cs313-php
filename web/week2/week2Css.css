@@ -1,15 +1,26 @@
 div{
-  length: 150px;
+  height: 100px;
 }
 
-.div1{
+div[id^="div"]:hover{
+  font-weight: bold;
+}
+
+#div1{
   background-color: #00c8f8;
+  font-size: 12px;
 }
 
-.div2{
-background-color: #eeeeee;
+#div2{
+  background-color: #eeeeee;
+  font-size: 16px;
 }
 
-.div3{
+#div3{
   background-color: #00b2dd;
+  font-size: 20px;
+}
+
+form{
+  padding: 15px 0 15px 0;
 }
