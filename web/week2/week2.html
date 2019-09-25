@@ -2,25 +2,38 @@
 <html>
 <head>
   <title>Week 2 Assignment</title>
-  <link rel="stylesheet" href="week2.css">
+  <link rel="stylesheet" href="week2Css.css">
   <script src="week2Java.js"></script>
+  <link rel="icon" href="../img/KtechIcon.png">
 </head>
 <body>
 
-<div class="div1">
-  <h1>Hello World</h1>
-  <p>By: Korbin Dansie week2 2 test</p>
-</div>
+  <div id="div1">
+    <h1>Hello World</h1>
+    <p>By: Korbin Dansie week2 2 test</p>
+  </div>
 
-<div class="div2">
-<p>div 2</p>
-</div>
+  <div id="div2">
+    <p>Div 2</p>
+  </div>
 
-<div class="div3">
-<p>div 3</p>
-</div>
+  <div id="div3">
+    <p>Div 3</p>
+  </div>
 
-<button type="button" name="Click Me" onclick="clickedMe()">Click Me</button>
 
+  <form >
+    First Color: <input type="text" name="newColor" value="">
+    <input type="button" name="changeColor" value="Change color">
+  </form>
+  <button type="button" name="Click Me" onclick="clickedMe()">Click Me</button>
+
+
+  <script type="text/javascript">
+  document.getElementsByName("changeColor")[0].addEventListener("click" , function() {
+    //Change Color of First Div
+    changeColor(document.getElementsByName("newColor")[0].value, document.getElementById("div1"));
+  });
+</script>
 </body>
 </html>
