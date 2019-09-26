@@ -1,0 +1,21 @@
+header{
+  text-align: left;
+  padding: 8px;
+}
+header>h1{
+  text-align: left;
+  border: none;
+  border:none;
+}
+a#homeButton{
+  color: black;
+  text-decoration: none;
+  font-variant: small-caps;
+  border-style: solid;
+  padding: 5px;
+  text-align: left;
+}
+
+a#homeButton:hover{
+  background-color: lightgray;
+}
