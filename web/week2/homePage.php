@@ -20,6 +20,9 @@
 
   <h1 style="text-align:center;">Welcome to Korbin Dansie's Home Page</h1>
 
+<?php
+echo date("l jS h:i:s A") . "<br>";;
+ ?>
   <p style="font-family:"Times New Roman""><strong>About Me:</strong></p>
   <ul>
     <li>Name: Korbin Marshal Dansie</li>
