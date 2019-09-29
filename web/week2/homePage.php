@@ -9,7 +9,7 @@
 
 <body>
 
-  <h1><a href="index.html" id="homeButton">CS 313 Assignments</a></h1>
+  <h1><a href="../index.html" id="homeButton">CS 313 Assignments</a></h1>
 
   <h2>By: Korbin Dansie</h2>
   <p style="font-family:"Georgia"">Assignment 02</p>
