@@ -1,0 +1,52 @@
+CREATE EXTENSION pgcrypto;
+
+CREATE TABLE Customers
+(
+	CustomerID serial Primary Key,
+	UserName varchar(255) NOT NULL UNIQUE,
+	UserPassword varchar(256) NOT NULL,
+	FirstName varchar(255),
+	LastName varchar(255)
+);
+
+/*
+--How to add a customer
+INSERT INTO Customers (UserName, UserPassword) VALUES 
+	('TestName', crypt('passwordHere', gen_salt('bf')));
+	
+DELETE FROM Customers WHERE UserName='TestName';
+SELECT * FROM Customers;
+*/
+
+Create Table Orders
+(
+	OrdersID serial Primary Key,
+	CustomerID INTEGER REFERENCES Customers(CustomerID)
+);
+
+Create Table Categories
+(
+	CategoryID serial Primary Key,
+	Categoryname text
+);
+
+Create Table Products
+(
+	ProductID serial Primary Key,
+	ProductName text,
+	CategoryID INTEGER,
+	Price double precision,
+	Quantity INTEGER
+);
+
+Create Table Order_Items
+(
+	OrderID INTEGER REFERENCES Orders(OrdersID)
+	    ON DELETE CASCADE ON UPDATE CASCADE,
+	ItemID INTEGER, 
+	ProductID INTEGER NOT NULL REFERENCES Products(ProductID)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+	Quantity INTEGER,
+	Price double precision,
+	PRIMARY KEY (OrderID, ItemID)
+);
