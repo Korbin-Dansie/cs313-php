@@ -30,6 +30,12 @@ try
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Got Here.";
+  foreach ($db->query("Select * From test.userinfo") as $row) {
+    // code...
+    echo "<br />";
+    echo $row[id]."-".$row['name'];
+  }
 }
 catch (PDOException $ex)
 {
