@@ -30,14 +30,18 @@
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Got Here.";
-    $stmt = $db->query("select * from customers");
-    while ($row = $stmt->fetch()) {
-      // code...
-      echo "<br />";
-      echo $row['name']."<br />\n";
-    }
+    $stmt = "select * from customers";
+    echo "Got Here.\n";
+
+    foreach ($db->query($stmt) as $row) {
+      print $row['customerid'] . "\t";
+      print $row['username'] . "\t";
+      print $row['userpassword'] . "\n";
   }
+
+
+
+  }//End of Try
 
   catch (PDOException $ex)
   {
