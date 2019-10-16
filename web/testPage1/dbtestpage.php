@@ -31,7 +31,7 @@
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Got Here.";
-    $stmt = $db->query("select * from public.customers");
+    $stmt = $db->query("select * from customers");
     while ($row = $stmt->fetch()) {
       // code...
       echo "<br />";
