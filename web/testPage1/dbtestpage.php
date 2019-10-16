@@ -31,11 +31,11 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Got Here.";
-
-  foreach ($db->query("select * from public.customers") as $row) {
+  $stmt = $db->query("select * from public.customers");
+  foreach ($stmt->fetch() as $row) {
     // code...
     echo "<br />";
-    print $row['userid']."-".$row['username']."<br/>";
+    print $row['userid']."-".$row['name']."<br/>";
   }
 }
 catch (PDOException $ex)
