@@ -21,7 +21,6 @@
 
 
     $dbOpts = parse_url($dbUrl);
-    echo "$dbOpts";
 
     $dbHost = $dbOpts["host"];
     $dbPort = $dbOpts["port"];
@@ -32,14 +31,11 @@
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = "select * from customers";
-    echo "Got Here.\n";
-
-    foreach ($db->query($stmt) as $row) {
-      print $row['customerid'] . "\t";
-      print $row['username'] . "\t";
-      print $row['userpassword'] . "\n";
-  }
+    $stmt = $db->query('SELECT * FROM customers');
+    while ($row = $stmt->fetch())
+    {
+        echo $row['username'] . "\n";
+    }
 
 
 
