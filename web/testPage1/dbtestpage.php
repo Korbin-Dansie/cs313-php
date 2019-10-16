@@ -31,11 +31,11 @@
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $db->query('SELECT * FROM customers');
-    while ($row = $stmt->fetch())
+    foreach ($db->query('SELECT now()') as $row)
     {
-        echo $row['username'] . "\n";
+      print "<p>$row[0]</p>\n\n";
     }
+
 
 
 
