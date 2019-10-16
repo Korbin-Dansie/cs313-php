@@ -32,7 +32,7 @@ try
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Got Here.";
 
-  foreach ($db->query("select * from customers;;") as $row) {
+  foreach ($db->query("select * from customers") as $row) {
     // code...
     echo "<br />";
     print $row['userid']."-".$row['username']."<br/>";
