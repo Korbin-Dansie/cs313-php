@@ -18,10 +18,6 @@
   try
   {
     $dbUrl = getenv('DATABASE_URL');
-    print_r($dbUrl);
-    echo "<br/>";
-
-
     $dbOpts = parse_url($dbUrl);
 
     $dbHost = $dbOpts["host"];
@@ -34,14 +30,9 @@
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-    $statement = $db->query('SELECT * FROM users');
+    $statement = $db->query('SELECT * FROM products');
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     print_r($results);
-
-
-
-
 
   }//End of Try
 
