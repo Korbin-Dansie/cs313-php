@@ -34,10 +34,8 @@
 
 
     $statement = $db->query('SELECT username, userpassword FROM customers');
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-    {
-      echo 'user: ' . $row['username'] . ' password: ' . $row['userpassword'] . '<br/>';
-    }
+    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    echo "$results";
 
 
 
