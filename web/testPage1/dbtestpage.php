@@ -35,7 +35,7 @@
 
     $statement = $db->query('SELECT * FROM users');
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo "$results";
+    print_r($results);
 
 
 
