@@ -33,7 +33,7 @@
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $statement = $db->query('SELECT * FROM customers');
+    $statement = $db->query('SELECT * FROM users');
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     echo "$results";
 
