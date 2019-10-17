@@ -18,6 +18,8 @@
   try
   {
     $dbUrl = getenv('DATABASE_URL');
+    print_r($dbUrl);
+    echo "<br/>";
 
 
     $dbOpts = parse_url($dbUrl);
