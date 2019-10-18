@@ -30,7 +30,8 @@
 
     //Get String is prepared
     //Pass in the current GET Paramaters
-    xhr.open("GET", "displayProducts.php" + location.search);
+    alert(location.search);
+    xhr.open("GET", "displayProducts.php");
     xhr.send(null);
   }
   </script>
