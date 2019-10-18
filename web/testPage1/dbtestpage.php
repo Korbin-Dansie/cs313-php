@@ -35,7 +35,7 @@
       }
     };
     xhr.open("GET", "displayProducts.php");
-    xhr.send(document.getElementById("SearchForm"));
+    xhr.send(null);
   }
 
   </script>
