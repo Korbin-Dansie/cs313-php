@@ -1,5 +1,6 @@
 <?php
 //Print the table in HTML
+//Need to call the function in the other php file
 function writeProductsTable($WHEREClause = '')
 {
   try
@@ -19,7 +20,7 @@ function writeProductsTable($WHEREClause = '')
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $statement = $db->query('SELECT * FROM products ');
+    $statement = $db->query('SELECT * FROM products ' . $WHEREClause);
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     print_r($results);
 
