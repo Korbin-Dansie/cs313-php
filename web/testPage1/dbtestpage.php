@@ -29,6 +29,7 @@
     getString = getString.substring(0, getString.length - 1);
 
     //Get String is prepared
+    alert(getString);
     xhr.open("GET", "displayProducts.php" + getString);
     xhr.send();
   }
