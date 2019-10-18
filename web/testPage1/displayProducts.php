@@ -24,6 +24,13 @@ function writeProductsTable($WHEREClause = '')
 
     //Create the tableRows
     echo "<table>";
+    //Create table headers
+    echo "<tr>";
+      echo "<th>ID</th>";
+      echo "<th>Name</th>";
+      echo "<th>Quantity</th>";
+      echo "<th>Price</th>";
+    echo "</tr>";
     for ($i=0; $i < count($results); $i++) {
       echo "<tr>";
       foreach ($results[$i] as $key => $value) {
