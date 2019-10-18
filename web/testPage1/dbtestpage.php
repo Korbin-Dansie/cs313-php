@@ -25,7 +25,7 @@
         getString += element.getAttribute("name") + "=" + element.value;
       }
       else{
-        alert()
+        alert();
       }
       alert(element.getAttribute("name") + "=" + element.value);
     }
