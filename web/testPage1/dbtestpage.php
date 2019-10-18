@@ -18,7 +18,7 @@
     //Prepare the Get String
     var getString = "?";
     var formLocation = document.getElementById("SearchForm");
-    alert('formLocation');
+    alert(formLocation);
     var formElements = formLocation.elements;
 
     for (var i = 0, element; element = elements[i++];) {
