@@ -23,7 +23,7 @@ function writeProductsTable($WHEREClause = '')
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     //Create the tableRows
-    for ($i=0; $i < $results.length(); $i++) {
+    for ($i=0; $i < count($results); $i++) {
       echo "<tr>";
       foreach ($results as $key => $value) {
         // code...
