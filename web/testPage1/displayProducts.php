@@ -1,6 +1,17 @@
 <?php
 //Print the table in HTML
-//Need to call the function in the other php file
+
+//Check if there are sorting variables
+$WHEREclause = '';
+if(isset($_GET)){
+  echo "True";
+}
+else {
+  echo "False";
+}
+
+return;
+
 $returnString = '';
 try
 {
@@ -18,7 +29,7 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $statement = $db->query('SELECT * FROM products ' . $WHEREClause);
+  $statement = $db->query('SELECT * FROM products ' . $WHEREclause);
   $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   //Create the tableRows

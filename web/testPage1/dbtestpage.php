@@ -17,15 +17,13 @@
       Name: <input type="text" name="ProductName">
       <input type="Button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
-
-
-
-
   </div>
+
   <?php
   include("displayProducts.php");
   ?>
 
+  
   <script type="text/javascript">
   function updateProducts(){
     var xhr = new XMLHttpRequest();
