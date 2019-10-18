@@ -15,6 +15,6 @@
 
   <?php
   include("displayProducts.php");
-  writeProductsTable();
+  writeProductsTable('WHERE productid=1');
   ?>
 </body>
