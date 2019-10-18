@@ -5,16 +5,19 @@
 $WHEREclause = '';
 
 $WHEREclause .= 'WHERE '
-if(isset($_GET['ProductName']) && $_GET['ProductName'] != '') {
+if(isset($_GET['ProductName'])) {
   $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
 }
 //if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
 //  $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
 //  }
 
-if($WHEREclause == 'WHERE '){
+if($WHEREclause == 'WHERE ') {
   $WHEREclause = '';
 }
+
+echo $WHEREclause;
+return;
 
 $returnString = '';
 try
