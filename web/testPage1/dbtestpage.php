@@ -29,7 +29,6 @@
     getString = getString.substring(0, getString.length - 1);
 
     //Get String is prepared
-    alert(getString);
     xhr.open("GET", "displayProducts.php" + getString);
     xhr.send();
   }
@@ -44,6 +43,7 @@
   <div>
     <form action="" id="SearchForm">
       Name: <input type="text" name="ProductName">
+      <br/>
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
       <input type="Button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>

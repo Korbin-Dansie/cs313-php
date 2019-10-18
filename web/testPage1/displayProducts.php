@@ -3,12 +3,24 @@
 
 //Check if there are sorting variables
 $WHEREclause = 'WHERE ';
-if(isset($_GET['ProductName'])) {
-  $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
+if(isset($_GET))
+{
+  $searchValues = array();
+  if(isset($_GET['ProductName'])) {
+    array_push($searchValues,"ProductName LIKE ' %".$_GET['ProductName'].'\'%');
+  }
+  if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
+    $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
+  }
+
+  //Add 'and' between search values
+  foreach ($searchValues as $key) {
+    $WHEREclause .= $key;
+    if(end($searchValues) != $key){
+      $WHEREclause .= " and ";
+    }
+  }
 }
-//if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
-//  $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
-//  }
 
 if($WHEREclause == 'WHERE ') {
   $WHEREclause = 'Blank';
