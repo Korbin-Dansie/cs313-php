@@ -21,13 +21,12 @@
     var formElements = formLocation.getElementsByTagName("INPUT");
     for (var i = 0, element; element = formElements[i++];) {
       if (element.value !== ""){
-        getString += element.getAttribute("name") + "=" + element.value;
+        getString += element.getAttribute("name") + "=" + element.value + "&";
       }
     }
 
-    if(getString.length == 1){
-      getString = "";
-    }
+    //Trim last charactar of the string to prevent errors
+    getString = str.substring(0, getString.length - 1);
 
     //Get String is prepared
     xhr.open("GET", "displayProducts.php" + getString);
