@@ -16,11 +16,19 @@
     }
 
     //Prepare the Get String
-    var getString = "";
+    var getString = "?";
     var formLocation = document.getElementById("SearchForm");
-    alert(formLocation);
+    var formElements = formLocation.elements;
+    for (var i = 0, element; element = elements[i++];) {
+      if (element.type === "input" && element.value != "")
+      getString += element.getAttribute("name") + "=" + element.value;
+    }
+    if(getString.length == 1){
+      getString = "";
+    }
+
     //Get String is prepared
-    xhr.open("GET", "displayProducts.php");
+    xhr.open("GET", "displayProducts.php" + getString);
     xhr.send();
   }
   </script>
@@ -42,7 +50,7 @@
 
   </div>
 
-<script type="text/javascript">
+  <script type="text/javascript">
   updateProducts();
 </script>
 
