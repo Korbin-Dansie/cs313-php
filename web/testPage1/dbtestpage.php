@@ -21,10 +21,10 @@
     var formElements = formLocation.elements;
     for (var i = 0, element; element = formElements[i++];) {
       if (element.type === "INPUT" && element.value !== ""){
-        getString += element.getAttribute("name") + "=" + element.value;
+        getString += element.getAttribute("name") + "=" + element.getAttribute("value");
       }
       else{
-        alert(element.getAttribute("name") + "= Blank");
+        alert(element.getAttribute("name") + "=\'" + element.value + "\'");
       }
     }
 
