@@ -4,7 +4,7 @@
 //Check if there are sorting variables
 $WHEREclause = '';
 
-$WHEREclause .= 'WHERE '
+$WHEREclause .= 'WHERE ';
 if(isset($_GET['ProductName'])) {
   $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
 }
@@ -13,7 +13,7 @@ if(isset($_GET['ProductName'])) {
 //  }
 
 if($WHEREclause == 'WHERE ') {
-  $WHEREclause = '';
+  $WHEREclause = 'Blank';
 }
 
 echo $WHEREclause;
