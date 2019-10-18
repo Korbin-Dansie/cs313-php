@@ -13,12 +13,12 @@
         var divDom = document.getElementById("productTable");
         divDom.innerHTML = xhr.responseText;
       }
-    };
+    }
 
     //Prepare the Get String
     var getString = "";
     var formLocation = document.getElementById("SearchForm");
-    getString += "ProductName=" + formLocation.getElementsByName("ProductName").value;
+    getString += "ProductName=" + formLocation.getElementsByName("ProductName");
     xhr.open("GET", "displayProducts.php?" + getString);
     xhr.send(null);
   }
