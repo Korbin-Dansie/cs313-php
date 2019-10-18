@@ -11,6 +11,10 @@ if(isset($_GET)){
   if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
     $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
   }
+
+  if($WHEREclause == 'WHERE '){
+    $WHEREclause = '';
+  }
 }
 
 
