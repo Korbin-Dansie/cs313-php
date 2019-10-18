@@ -20,7 +20,7 @@
     var formLocation = document.getElementById("SearchForm");
     var formElements = formLocation.elements;
     alert(formElements);
-    for (var i = 0, element; element = elements[i++];) {
+    for (var i = 0,var element; element = formElements[i++];) {
       if (element.type === "INPUT" && element.value != ""){
         getString += element.getAttribute("name") + "=" + element.value;
       }
