@@ -19,9 +19,19 @@ function writeProductsTable($WHEREClause = '')
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
     $statement = $db->query('SELECT * FROM products ' . $WHEREClause);
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    //Create the tableRows
+    for ($i=0; $i < $results.length(); $i++) {
+      echo "<tr>";
+      foreach ($results as $key => $value) {
+        // code...
+        echo "<td>$value</td>";
+      }
+      echo "</tr>";
+    }
+    echo "<br/>";
     print_r($results);
 
   }//End of Try
