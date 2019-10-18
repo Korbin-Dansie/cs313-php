@@ -41,11 +41,11 @@
   <br />
 
   <div>
-    <form action="" id="SearchForm">
+    <form method="get" action="" id="SearchForm">
       Name: <input type="text" name="ProductName">
       <br/>
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
-      <input type="Button" name="Submit" value="Submit" onclick="updateProducts()">
+      <input type="Submit" name="Submit" value="Submit">
     </form>
   </div>
 
