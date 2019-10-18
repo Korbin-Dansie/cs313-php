@@ -43,7 +43,7 @@
 
   <div>
     <form action="" id="SearchForm">
-      Name: <input type="text" name="Name">
+      Name: <input type="text" name="ProductName">
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
       <input type="Button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>

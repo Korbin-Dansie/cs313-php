@@ -2,9 +2,7 @@
 //Print the table in HTML
 
 //Check if there are sorting variables
-$WHEREclause = '';
-
-$WHEREclause .= 'WHERE ';
+$WHEREclause = 'WHERE ';
 if(isset($_GET['ProductName'])) {
   $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
 }
