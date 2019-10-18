@@ -5,7 +5,7 @@
 $WHEREclause = '';
 
 $WHEREclause .= 'WHERE '
-if(isset($_GET['ProductName']){
+if(isset($_GET['ProductName'] && $_GET['ProductName'] != '')) {
   $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
 }
 //if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
