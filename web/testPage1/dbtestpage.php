@@ -15,8 +15,6 @@
 
   <?php
   include("displayProducts.php");
-  echo "<table>";
   writeProductsTable('');
-  echo "</table>";
   ?>
 </body>
