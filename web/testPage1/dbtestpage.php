@@ -14,8 +14,13 @@
         divDom.innerHTML = xhr.responseText;
       }
     };
-    xhr.open("POST", "displayProducts.php");
-    xhr.send(document.getElementById('SearchForm'));
+
+    //Prepare the Get String
+    var getString = '';
+    var formLocation = document.getElementById("SearchForm");
+    getString += "ProductName=" formLocation.getElementsByName("ProductName").value;
+    xhr.open("GET", "displayProducts.php?" + getString);
+    xhr.send(null);
   }
   </script>
 </head>
