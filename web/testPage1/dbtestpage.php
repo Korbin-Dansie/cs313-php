@@ -18,9 +18,9 @@
     //Prepare the Get String
     var getString = "?";
     var formLocation = document.getElementById("SearchForm");
-    var formElements = formLocation.elements;
+    var formElements = formLocation.getElementsByTagName("INPUT");
     for (var i = 0, element; element = formElements[i++];) {
-      if (element.type === "INPUT" && element.value !== ""){
+      if (element.value !== ""){
         getString += element.getAttribute("name") + "=" + element.getAttribute("value");
       }
       else{
