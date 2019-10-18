@@ -26,7 +26,7 @@ function writeProductsTable($WHEREClause = '')
     echo "<table>";
     for ($i=0; $i < count($results); $i++) {
       echo "<tr>";
-      foreach ($results as $key => $value) {
+      foreach ($results[$i] as $key => $value) {
         // code...
         echo "<td>$value</td>";
       }
