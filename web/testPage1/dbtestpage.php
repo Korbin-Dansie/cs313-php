@@ -24,7 +24,7 @@
   </div>
   <?php
   include("displayProducts.php");
-  echo writeProductsTable('');
+  writeProductsTable('');
   ?>
 
   <script type="text/javascript">
