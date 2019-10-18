@@ -41,14 +41,12 @@ function writeProductsTable($WHEREClause = '')
       $returnString .= "</tr>";
     }
     $returnString .= "</table>";
-
-    header("Content-Type: text/plain");
-    echo "$returnString";
+    return "$returnString";
   }//End of Try
 
   catch (PDOException $ex)
   {
-    echo 'Error!: ' . $ex->getMessage();
+    return 'Error!: ' . $ex->getMessage();
     die();
   }
 }
