@@ -33,7 +33,7 @@
     var paramaters = "";
     if(location.search != null)
     {
-      paramaters = location.search;
+      paramaters = location.search.toString();
     }
     xhr.open("GET", "displayProducts.php" + paramaters);
     xhr.send(null);
