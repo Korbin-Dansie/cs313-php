@@ -5,6 +5,20 @@
   <link rel="stylesheet" type="text/css" href="../css/HomeButton.css" />
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
+  <script type="text/javascript">
+  function updateProducts(){
+    var xhr = new XMLHttpRequest();
+    xhr.onreadyState = function (){
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        alert("xhr.responseText");
+        var divDom = document.getElementById("producTable");
+        divDom.innerHTML = xhr.responseText;
+      }
+    };
+    xhr.open("GET", "displayProducts.php");
+    xhr.send(null);
+  }
+  </script>
 </head>
 
 <body>
@@ -19,24 +33,9 @@
     </form>
   </div>
 
-  <?php
-  include("displayProducts.php");
-  ?>
+<script type="text/javascript">
+  updateProducts();
+</script>
 
 
-  <script type="text/javascript">
-  function updateProducts(){
-    var xhr = new XMLHttpRequest();
-    xhr.onreadyState = function (){
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        alert("xhr.responseText");
-        var divDom = document.getElementById("producTable");
-        divDom.innerHTML = xhr.responseText;
-      }
-    };
-    xhr.open("GET", "displayProducts.php");
-    xhr.send(null);
-  }
-
-  </script>
 </body>
