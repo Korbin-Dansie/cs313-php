@@ -24,7 +24,7 @@
   </div>
   <?php
   include("displayProducts.php");
-  writeProductsTable('');
+  echo writeProductsTable('');
   ?>
 
   <script type="text/javascript">
@@ -33,8 +33,10 @@
     xhr.onreadyState = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
         //Do Stuff
-        var result = xhr.responseText;
-
+        <?php
+        var divDom = document.getElementById("producTable");
+        divDom.innerHTML = xhr.writeProductsTable();
+        ?>
       }
     }
     xhr.open("GET", "displayProducts.php");

@@ -1,6 +1,7 @@
 <?php
 //Print the table in HTML
 //Need to call the function in the other php file
+$returnString = '';
 function writeProductsTable($WHEREClause = '')
 {
   try
@@ -23,27 +24,26 @@ function writeProductsTable($WHEREClause = '')
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     //Create the tableRows
-    echo "<table>";
+    $returnString .= "<table id='producTable'>";
     //Create table headers
-    echo "<tr>";
-      echo "<th>ID</th>";
-      echo "<th>Name</th>";
-      echo "<th>Quantity</th>";
-      echo "<th>Price</th>";
-    echo "</tr>";
+    $returnString .= "<tr>";
+      $returnString .= "<th>ID</th>";
+      $returnString .= "<th>Name</th>";
+      $returnString .= "<th>Quantity</th>";
+      $returnString .= "<th>Price</th>";
+    $returnString .= "</tr>";
     for ($i=0; $i < count($results); $i++) {
-      echo "<tr>";
+      $returnString .= "<tr>";
       foreach ($results[$i] as $key => $value) {
         // code...
-        echo "<td>$value</td>";
+        $returnString .= "<td>$value</td>";
       }
-      echo "</tr>";
+      $returnString .= "</tr>";
     }
-    echo "</table>";
+    $returnString .= "</table>";
 
-    echo "<br/>";
-    print_r($results);
-
+    header("Content-Type: text/plain");
+    echo "$returnString";
   }//End of Try
 
   catch (PDOException $ex)
