@@ -24,7 +24,6 @@
   </div>
   <?php
   include("displayProducts.php");
-  echo $returnString;
   ?>
 
   <script type="text/javascript">
