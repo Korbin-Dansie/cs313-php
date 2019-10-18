@@ -16,11 +16,10 @@
     }
 
     //Prepare the Get String
-    var getString = "";
-    var formLocation = document.getElementById("SearchForm");
-    getString += "ProductName=" + formLocation.getElementsByName("ProductName");
-    xhr.open("GET", "displayProducts.php?" + getString);
-    xhr.send(null);
+    //var getString = "";
+    //var formLocation = document.getElementById("SearchForm");
+    xhr.open("GET", "displayProducts.php" + getString);
+    xhr.send(document.getElementById("SearchForm"));
   }
   </script>
 </head>
