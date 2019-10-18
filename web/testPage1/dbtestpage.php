@@ -30,8 +30,8 @@
   <h2>By: Korbin Dansie</h2>
   <br />
 
-  <div id="SearchForm">
-    <form action="">
+  <div>
+    <form action="" id="SearchForm">
       Name: <input type="text" name="ProductName">
       <input type="Button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
