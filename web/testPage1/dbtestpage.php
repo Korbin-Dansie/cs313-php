@@ -1,7 +1,3 @@
-<?php
-start_sesstion();
-?>
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -33,7 +29,8 @@ start_sesstion();
     getString = getString.substring(0, getString.length - 1);
 
     //Get String is prepared
-    xhr.open("GET", "displayProducts.php");
+    //Pass in the current GET Paramaters
+    xhr.open("GET", "displayProducts.php" + location.search);
     xhr.send(null);
   }
   </script>
