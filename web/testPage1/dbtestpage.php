@@ -10,13 +10,12 @@
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
-        alert("xhr.responseText");
         var divDom = document.getElementById("productTable");
         divDom.innerHTML = xhr.responseText;
       }
     };
     xhr.open("GET", "displayProducts.php");
-    xhr.send(null);
+    xhr.send(document.getElementById('SearchForm'));
   }
   </script>
 </head>
