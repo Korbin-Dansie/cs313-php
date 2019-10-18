@@ -24,6 +24,7 @@
   </div>
   <?php
   include("displayProducts.php");
+  echo $returnString;
   ?>
 
   <script type="text/javascript">
@@ -34,7 +35,7 @@
         //Do Stuff
 
         var divDom = document.getElementById("producTable");
-        divDom.innerHTML = xhr.writeProductsTable();
+        divDom.innerHTML = xhr.responseText;
 
       }
     }
