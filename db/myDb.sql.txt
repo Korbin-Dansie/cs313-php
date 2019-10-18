@@ -34,7 +34,6 @@ Create Table Products
 (
 	ProductID serial Primary Key,
 	ProductName text,
-	CategoryID INTEGER,
 	Price double precision,
 	Quantity INTEGER
 );
@@ -49,4 +48,10 @@ Create Table Order_Items
 	Quantity INTEGER,
 	Price double precision,
 	PRIMARY KEY (OrderID, ItemID)
+);
+
+Create Table Products_Categories
+(
+	ProductID INTEGER NOT NULL REFERENCES Products(ProductID),
+	CatogoryID INTEGER NOT NULL REFERENCES Categories(CategorieID)
 );

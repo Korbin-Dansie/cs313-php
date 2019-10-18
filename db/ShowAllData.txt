@@ -1,0 +1,12 @@
+--SELECT * FROM Categories;
+
+--SELECT * FROM Customers;
+
+--SELECT * FROM Orders;
+
+--SELECT * FROM Order_items;
+
+--SELECT * FROM Products_Categories;
+
+--SELECT * FROM Products;
+
