@@ -23,7 +23,7 @@
   include("displayProducts.php");
   ?>
 
-  
+
   <script type="text/javascript">
   function updateProducts(){
     var xhr = new XMLHttpRequest();
@@ -31,6 +31,7 @@
       if (xhr.readyState == 4 && xhr.status == 200) {
         var divDom = document.getElementById("producTable");
         divDom.innerHTML = xhr.responseText;
+        alert("xhr.responseText");
       }
     }
     xhr.open("GET", "displayProducts.php");

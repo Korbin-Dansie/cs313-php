@@ -4,7 +4,7 @@
 //Check if there are sorting variables
 $WHEREclause = '';
 if(isset($_GET)){
-  echo "True";
+  echo "True<br/>";
   print_r($_GET);
 }
 else {
