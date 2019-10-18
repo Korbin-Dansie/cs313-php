@@ -4,13 +4,21 @@
 //Check if there are sorting variables
 $WHEREclause = '';
 if(isset($_GET)){
-  echo "True<br/>";
+  echo "Get<br/>";
   print_r($_GET);
 }
 else {
   echo "False";
 }
 
+
+if(isset($_POST)){
+  echo "Post<br/>";
+  print_r($_POST);
+}
+else {
+  echo "False";
+}
 return;
 
 $returnString = '';
