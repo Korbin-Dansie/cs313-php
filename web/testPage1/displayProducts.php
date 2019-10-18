@@ -25,9 +25,7 @@ if(isset($_GET))
 if($WHEREclause == 'WHERE ') {
   $WHEREclause = 'Blank';
 }
-
-echo $WHEREclause;
-return;
+//End of preparing Whereclause
 
 $returnString = '';
 try
