@@ -5,6 +5,7 @@
 $WHEREclause = '';
 if(isset($_GET)){
   echo "True";
+  print_r($_GET);
 }
 else {
   echo "False";
