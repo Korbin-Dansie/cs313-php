@@ -26,13 +26,12 @@
 
   <script type="text/javascript">
   function updateProducts(){
-    alert("updating...");
     var xhr = new XMLHttpRequest();
     xhr.onreadyState = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
+        alert("xhr.responseText");
         var divDom = document.getElementById("producTable");
         divDom.innerHTML = xhr.responseText;
-        alert("xhr.responseText");
       }
     };
     xhr.open("GET", "displayProducts.php");
