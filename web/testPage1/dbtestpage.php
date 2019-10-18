@@ -1,3 +1,7 @@
+<?php
+start_sesstion();
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -30,7 +34,7 @@
 
     //Get String is prepared
     xhr.open("GET", "displayProducts.php");
-    xhr.send();
+    xhr.send(null);
   }
   </script>
 </head>

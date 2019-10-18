@@ -1,4 +1,7 @@
 <?php
+start_sesstion();
+?>
+<?php
 //Print the table in HTML
 
 //Check if there are sorting variables
