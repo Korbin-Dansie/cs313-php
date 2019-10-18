@@ -11,7 +11,7 @@
     xhr.onreadyState = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
         alert("xhr.responseText");
-        var divDom = document.getElementById("producTable");
+        var divDom = document.getElementById("productTable");
         divDom.innerHTML = xhr.responseText;
       }
     };
@@ -31,6 +31,10 @@
       Name: <input type="text" name="ProductName">
       <input type="Button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
+  </div>
+
+  <div id="productTable">
+
   </div>
 
 <script type="text/javascript">

@@ -34,7 +34,7 @@ try
   $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   //Create the tableRows
-  $returnString .= "<table id='producTable'>";
+  $returnString .= "<table id='productTable'>";
   //Create table headers
   $returnString .= "<tr>";
   $returnString .= "<th>ID</th>";
