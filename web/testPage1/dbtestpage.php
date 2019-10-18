@@ -26,7 +26,7 @@
     }
 
     //Trim last charactar of the string to prevent errors
-    getString = str.substring(0, getString.length - 1);
+    getString = getString.substring(0, getString.length - 1);
 
     //Get String is prepared
     xhr.open("GET", "displayProducts.php" + getString);
