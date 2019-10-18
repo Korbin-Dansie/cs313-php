@@ -16,10 +16,12 @@
     }
 
     //Prepare the Get String
-    //var getString = "";
-    //var formLocation = document.getElementById("SearchForm");
+    var getString = "";
+    var formLocation = document.getElementById("SearchForm");
+    alert(formLocation);
+    //Get String is prepared
     xhr.open("GET", "displayProducts.php");
-    xhr.send(document.getElementById("SearchForm"));
+    xhr.send();
   }
   </script>
 </head>
