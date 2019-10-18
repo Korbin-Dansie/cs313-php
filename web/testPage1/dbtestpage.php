@@ -18,7 +18,7 @@
     //Prepare the Get String
     //var getString = "";
     //var formLocation = document.getElementById("SearchForm");
-    xhr.open("GET", "displayProducts.php" + getString);
+    xhr.open("GET", "displayProducts.php");
     xhr.send(document.getElementById("SearchForm"));
   }
   </script>
