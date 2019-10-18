@@ -21,7 +21,7 @@
     var formElements = formLocation.getElementsByTagName("INPUT");
     for (var i = 0, element; element = formElements[i++];) {
       if (element.value !== ""){
-        getString += element.getAttribute("name") + "=" + element.valu;
+        getString += element.getAttribute("name") + "=" + element.value;
       }
     }
 
