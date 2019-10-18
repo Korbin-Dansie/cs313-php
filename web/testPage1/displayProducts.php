@@ -3,21 +3,18 @@
 
 //Check if there are sorting variables
 $WHEREclause = '';
-if(isset($_GET)){
-  $WHEREclause .= 'WHERE '
-  if(isset($_GET['ProductName']){
-    $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
-  }
-  //if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
-  //  $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
-  //  }
 
-  if($WHEREclause == 'WHERE '){
-    $WHEREclause = '';
-  }
+$WHEREclause .= 'WHERE '
+if(isset($_GET['ProductName']){
+  $WHEREclause .= "ProductName=".'\''.$_GET['ProductName'].'\'';
 }
-echo "$WHEREclause";
-return;
+//if(isset($_GET['PriceLow'] && isset($_GET['PriceHigh']){
+//  $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
+//  }
+
+if($WHEREclause == 'WHERE '){
+  $WHEREclause = '';
+}
 
 $returnString = '';
 try
