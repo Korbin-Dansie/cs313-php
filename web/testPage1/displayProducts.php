@@ -10,7 +10,7 @@ if(isset($_GET))
     array_push($searchValues,"ProductName LIKE ' %".$_GET['ProductName'].'\'%');
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
-    $WHEREclause .= "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh'] ;
+    array_push($searchValues, "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
   }
 
   //Add 'and' between search values
