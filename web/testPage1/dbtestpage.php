@@ -18,11 +18,16 @@
     //Prepare the Get String
     var getString = "?";
     var formLocation = document.getElementById("SearchForm");
+    alert('formLocation');
     var formElements = formLocation.elements;
+
     for (var i = 0, element; element = elements[i++];) {
-      if (element.type === "INPUT" && element.value != "")
-      getString += element.getAttribute("name") + "=" + element.value;
+      if (element.type === "INPUT" && element.value != ""){
+        getString += element.getAttribute("name") + "=" + element.value;
+      }
+      alert(getString);
     }
+
     if(getString.length == 1){
       getString = "";
     }
