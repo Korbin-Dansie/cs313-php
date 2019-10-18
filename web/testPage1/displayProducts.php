@@ -16,8 +16,8 @@ if(isset($_GET)){
     $WHEREclause = '';
   }
 }
-
-
+echo "$WHEREclause";
+return;
 
 $returnString = '';
 try
