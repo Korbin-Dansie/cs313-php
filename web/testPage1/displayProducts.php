@@ -27,10 +27,10 @@ function writeProductsTable($WHEREClause = '')
     $returnString .= "<table id='producTable'>";
     //Create table headers
     $returnString .= "<tr>";
-      $returnString .= "<th>ID</th>";
-      $returnString .= "<th>Name</th>";
-      $returnString .= "<th>Quantity</th>";
-      $returnString .= "<th>Price</th>";
+    $returnString .= "<th>ID</th>";
+    $returnString .= "<th>Name</th>";
+    $returnString .= "<th>Quantity</th>";
+    $returnString .= "<th>Price</th>";
     $returnString .= "</tr>";
     for ($i=0; $i < count($results); $i++) {
       $returnString .= "<tr>";

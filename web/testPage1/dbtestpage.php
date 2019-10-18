@@ -24,7 +24,6 @@
   </div>
   <?php
   include("displayProducts.php");
-  writeProductsTable('');
   ?>
 
   <script type="text/javascript">
@@ -34,8 +33,8 @@
       if (xhr.readyState == 4 && xhr.status == 200) {
         //Do Stuff
         <?php
-        var divDom = document.getElementById("producTable");
-        divDom.innerHTML = xhr.writeProductsTable();
+        //var divDom = document.getElementById("producTable");
+        //divDom.innerHTML = xhr.writeProductsTable();
         ?>
       }
     }
