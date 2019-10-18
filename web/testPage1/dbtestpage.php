@@ -14,7 +14,7 @@
         divDom.innerHTML = xhr.responseText;
       }
     };
-    xhr.open("GET", "displayProducts.php");
+    xhr.open("POST", "displayProducts.php");
     xhr.send(document.getElementById('SearchForm'));
   }
   </script>

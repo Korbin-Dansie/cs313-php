@@ -10,7 +10,7 @@ if(isset($_GET)){
 else {
   echo "False";
 }
-
+echo "<br/>";
 
 if(isset($_POST)){
   echo "Post<br/>";
