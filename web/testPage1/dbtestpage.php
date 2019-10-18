@@ -24,7 +24,7 @@
         getString += element.getAttribute("name") + "=" + element.getAttribute("value");
       }
       else{
-        alert(element.getAttribute("name") + "=\'" + element.value + "\'");
+        alert(element.type + "=\'" + element.value + "\'");
       }
     }
 
