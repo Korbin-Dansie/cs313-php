@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="../css/HomeButton.css" />
+  <link rel="stylesheet" type="text/css" href="../css/productTable.css" />
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
   <script src="displayProductsAjax.js"></script>
@@ -20,7 +21,8 @@
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
       <br/>
       Category <input type="text" name="Category">
-      <input type="reset"  name="Reset" value="Clear">
+      <br/>
+      <input type="reset"  name="Reset" value="Clear" onclick="resetForm()">
       <input type="button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
   </div>

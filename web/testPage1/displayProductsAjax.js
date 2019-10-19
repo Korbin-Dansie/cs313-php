@@ -34,3 +34,7 @@ function updateProducts(){
   xhr.open("GET", "displayProducts.php" + paramaters);
   xhr.send();
 }
+
+function resetForm(){
+  window.history.replaceState(null, null, '');
+}
