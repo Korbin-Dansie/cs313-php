@@ -23,7 +23,7 @@ if(isset($_GET))
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
     if(($_GET['PriceLow'] != "") && ($_GET['PriceHigh'] != "")) {
-      array_push($searchValues, "productsprice BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
+      array_push($searchValues, "ProductsPrice BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
     }
   }
 
@@ -89,6 +89,9 @@ try
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id
   ';
+
+  echo "$statment . ' ' . $WHEREclause";
+  return;
 
   $dbquery = $db->query($statment . ' ' . $WHEREclause);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
