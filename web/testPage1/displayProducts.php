@@ -30,8 +30,6 @@ if($WHEREclause == 'WHERE ') {
   $WHEREclause = 'Blank';
 }
 //End of preparing Whereclause
-echo "$WHEREclause";
-return;
 $returnString = '';
 try
 {
