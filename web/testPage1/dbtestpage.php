@@ -31,9 +31,10 @@
       }
       //Trim last charactar of the string to prevent errors
       getString = getString.substring(0, getString.length - 1);
+      //Add paramaters to url with page refreash
       window.history.replaceState(null, null, getString);
     }
-    if(location.search != null)
+    else if(location.search != null)
     {
       paramaters = location.search.toString();
     }
@@ -53,7 +54,7 @@
       Name: <input type="text" name="ProductName">
       <br/>
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
-      <input type="button" name="Submit" value="Submit" onclick="updateProducts()">
+      <input type="button" name="Submit" value="Submit" onclick="updateProducts">
     </form>
   </div>
 
