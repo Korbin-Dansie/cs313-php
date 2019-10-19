@@ -1,4 +1,15 @@
 <?php
+/***********
+* Possible values that should be returned
+*  ProductName, PriceLow, PriceHigh, Category
+*  Clear, Submit
+*
+* The names of the coloms for sql
+* [productsid] => 1      [categoryname] => Sword       [sub_categoryname] => Short_Sword
+* [rarityname] => Common [productsname] => Steel_Sword [productsquantity] => 100
+* [productsprice] => 12
+***********/
+
 //Print the table in HTML
 //Check if there are sorting variables
 $WHEREclause = 'WHERE ';
@@ -7,14 +18,21 @@ if(isset($_GET))
   $searchValues = array();
   if(isset($_GET['ProductName'])) {
     if($_GET['ProductName'] != ""){
-      array_push($searchValues,"LOWER(name) LIKE LOWER('%".$_GET['ProductName']."%')");
+      array_push($searchValues,"LOWER(productsname) LIKE LOWER('%".$_GET['ProductName']."%')");
     }
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
     if(($_GET['PriceLow'] != "") && ($_GET['PriceHigh'] != "")) {
-      array_push($searchValues, "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
+      array_push($searchValues, "productsprice BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
     }
   }
+
+  if(isset($_GET['Category'])){
+    if($_GET['Category'] != ""){
+      array_push($searchValues, "LOWER(sub_categoryname) LIKE LOWER('%".$_GET['Category']."%'")
+    }
+  }
+
 
   //Add 'and' between search values
   foreach ($searchValues as $key) {

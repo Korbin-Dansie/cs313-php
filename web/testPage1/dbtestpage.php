@@ -18,7 +18,8 @@
       Name: <input type="text" name="ProductName">
       <br/>
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
-      Catagory <input type="text" name="" value="">
+      <br/>
+      Category <input type="text" name="Category">
       <input type="reset"  name="Reset" value="Clear">
       <input type="button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
