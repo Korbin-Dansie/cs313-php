@@ -6,9 +6,9 @@
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
   <script src="displayProductsAjax.js"></script>
-</head onload="updateProducts()">
+</head>
 
-<body>
+<body onload="updateProducts()">
   <h1><a href="../index.html" id="homeButton">CS 313 Assignments</a></h1>
   <h2>By: Korbin Dansie</h2>
   <br />
