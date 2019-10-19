@@ -67,6 +67,7 @@ try
   ';
   $dbquery = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
+  print_r($results);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers
