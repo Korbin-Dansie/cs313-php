@@ -69,6 +69,8 @@ try
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id;
   ';
+
+  echo "$statment<br/>";
   $dbquery = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   print_r($results);
