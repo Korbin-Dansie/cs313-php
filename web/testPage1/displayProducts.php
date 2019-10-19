@@ -1,6 +1,5 @@
 <?php
 //Print the table in HTML
-
 //Check if there are sorting variables
 $WHEREclause = 'WHERE ';
 if(isset($_GET))
@@ -48,22 +47,27 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+  /***********
+  * Returns an array with the following information
+  * [id] => 1         [rarityid] => 1 [name] => Steel_Sword
+  * [quantity] => 100 [price] => 12   [sub_categoryid] => 1
+  ***********/
   $statment =
   'select
-    Products.id,
-    Category.name,
-    Sub_Category.name,
-    Rarity.name,
-    Products.name,
-    Products.quantity,
-    Products.price
+  Products.id,
+  Category.name,
+  Sub_Category.name,
+  Rarity.name,
+  Products.name,
+  Products.quantity,
+  Products.price
   from products
   left OUTER JOIN Rarity
-    ON products.rarityid = Rarity.id
+  ON products.rarityid = Rarity.id
   left OUTER JOIN Category
-    ON products.sub_categoryid = Category.id
+  ON products.sub_categoryid = Category.id
   left OUTER JOIN Sub_Category
-    ON products.sub_categoryid = Sub_Category.id;
+  ON products.sub_categoryid = Sub_Category.id;
   ';
   $dbquery = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
