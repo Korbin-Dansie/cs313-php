@@ -72,7 +72,12 @@ try
 
   $dbquery = $db->query($statment . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
+  print_r($statment);
+  echo "<hr/>";
+  print_r($dbquery);
+  echo "<hr/>";
   print_r($results);
+  echo "<hr/>";
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers
