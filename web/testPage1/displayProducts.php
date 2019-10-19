@@ -54,13 +54,13 @@ try
   ***********/
   $statment =
   'select
-  Products.id,
-  Category.name,
-  Sub_Category.name,
-  Rarity.name,
-  Products.name,
-  Products.quantity,
-  Products.price
+  Products.id AS ProductsID,
+  Category.name AS CategoryName,
+  Sub_Category.name AS Sub_CategoryName,
+  Rarity.name AS RarityName,
+  Products.name AS ProductsName,
+  Products.quantity AS ProductsQuantity,
+  Products.price AS ProductsPrice
   from products
   left OUTER JOIN Rarity
   ON products.rarityid = Rarity.id
@@ -71,7 +71,7 @@ try
   ';
 
   $dbquery = $db->query($statment . ' ' . $WHEREclause);
-  $results = $dbquery->fetchAll(PDO::FETCH_NAMED);
+  $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   echo "'";
   print_r($statment);
   echo "'";
