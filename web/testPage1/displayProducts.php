@@ -30,6 +30,7 @@ if($WHEREclause == 'WHERE ') {
 }
 //End of preparing Whereclause
 
+//The string we will return when we end
 $returnString = '';
 try
 {
@@ -49,8 +50,9 @@ try
 
   /***********
   * Returns an array with the following information
-  * [id] => 1         [rarityid] => 1 [name] => Steel_Sword
-  * [quantity] => 100 [price] => 12   [sub_categoryid] => 1
+  * [productsid] => 1      [categoryname] => Sword       [sub_categoryname] => Short_Sword
+  * [rarityname] => Common [productsname] => Steel_Sword [productsquantity] => 100
+  * [productsprice] => 12
   ***********/
   $statment =
   'select
@@ -72,29 +74,40 @@ try
 
   $dbquery = $db->query($statment . ' ' . $WHEREclause);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-  echo "'";
-  print_r($statment);
-  echo "'";
-  echo "<hr/>";
-  print_r($dbquery);
-  echo "<hr/>";
-  print_r($results);
-  echo "<hr/>";
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers
   $returnString .= "<tr>";
-  $returnString .= "<th>ID</th>";
-  $returnString .= "<th>Name</th>";
-  $returnString .= "<th>Quantity</th>";
-  $returnString .= "<th>Price</th>";
+  $returnString .= "<th>ID</th>";       //Row Number
+  $returnString .= "<th>Category</th>"; //Sub Category
+  $returnString .= "<th>Name</th>";     //name
+  $returnString .= "<th>Quantity</th>"; //Quantity
+  $returnString .= "<th>Price</th>";    //Price
   $returnString .= "</tr>";
+
+  //For per Row
   for ($i=0; $i < count($results); $i++) {
     $returnString .= "<tr>";
+    $productsnameSTR = "";
+    //For per column
     foreach ($results[$i] as $key => $value) {
-      // code...
-      $returnString .= "<td>$value</td>";
+      //Values we dont want
+      if($key == "categoryname"){
+        continue;
+      }
+      //Have rarity info come before product name
+      else if($key == "rarityname"){
+        $productsnameSTR .= "<td class=\"Common\">";
+      }
+      else if($key == "productsname"){
+        $productsnameSTR .= "$value</td>";
+        $returnString .= $productsnameSTR;
+      }
+      else {
+        $returnString .= "<td>$value</td>";
+      }
     }
+
     $returnString .= "</tr>";
   }
   $returnString .= "</table>";
