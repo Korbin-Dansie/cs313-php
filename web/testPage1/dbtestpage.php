@@ -19,7 +19,7 @@
     //Get String is prepared
     //Pass in the current GET Paramaters
     var paramaters = "";
-    if(location.search == null){
+    if(location.search.toString() == ""){
       //Prepare the Get String
       var getString = "?";
       var formLocation = document.getElementById("SearchForm");
