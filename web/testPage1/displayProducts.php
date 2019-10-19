@@ -26,7 +26,7 @@ if(isset($_GET))
 }
 
 if($WHEREclause == 'WHERE ') {
-  $WHEREclause = 'Blank';
+  $WHEREclause = '';
 }
 //End of preparing Whereclause
 
@@ -69,7 +69,7 @@ try
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id
   ';
-  
+
   $dbquery = $db->query($statment . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   print_r($results);
