@@ -68,11 +68,13 @@ try
   ON products.sub_categoryid = Category.id
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id
-  ';
+   ';
 
   $dbquery = $db->query($statment . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
+  echo "'";
   print_r($statment);
+  echo "'";
   echo "<hr/>";
   print_r($dbquery);
   echo "<hr/>";
