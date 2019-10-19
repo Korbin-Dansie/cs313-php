@@ -71,7 +71,7 @@ try
   ';
 
   $dbquery = $db->query($statment . ' ' . $WHEREclause);
-  $results = $dbquery->fetchAll(PDO::FETCH_FUNC|PDO::FETCH_ASSOC);
+  $results = $dbquery->fetchAll(PDO::FETCH_COLUMN);
   echo "'";
   print_r($statment);
   echo "'";
