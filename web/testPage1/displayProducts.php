@@ -29,7 +29,7 @@ if(isset($_GET))
 
   if(isset($_GET['Category'])){
     if($_GET['Category'] != ""){
-      array_push($searchValues, "LOWER(sub_categoryname) LIKE LOWER('%".$_GET['Category']."%'")
+      array_push($searchValues, "LOWER(sub_categoryname) LIKE LOWER('%".$_GET['Category']."%'");
     }
   }
 
@@ -128,6 +128,7 @@ try
 
     $returnString .= "</tr>";
   }
+
   $returnString .= "</table>";
   echo "$returnString";
 }//End of Try
