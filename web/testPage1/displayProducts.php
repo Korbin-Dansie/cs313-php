@@ -8,7 +8,7 @@ if(isset($_GET))
   $searchValues = array();
   if(isset($_GET['ProductName'])) {
     if($_GET['ProductName'] != ""){
-      array_push($searchValues,"LOWER(ProductName) LIKE LOWER('%".$_GET['ProductName']."%')");
+      array_push($searchValues,"LOWER(name) LIKE LOWER('%".$_GET['ProductName']."%')");
     }
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){

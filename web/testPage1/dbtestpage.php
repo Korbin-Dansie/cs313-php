@@ -6,7 +6,7 @@
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
   <script src="displayProductsAjax.js"></script>
-</head>
+</head onload="updateProducts()">
 
 <body>
   <h1><a href="../index.html" id="homeButton">CS 313 Assignments</a></h1>
@@ -26,10 +26,4 @@
 
   <div id="productTable">
   </div>
-
-  <script type="text/javascript">
-  updateProducts();
-  </script>
-
-
 </body>
