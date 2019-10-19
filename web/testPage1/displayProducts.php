@@ -12,7 +12,7 @@ if(isset($_GET))
     }
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
-    if($_GET['PriceLow'] != "" && $_GET['PriceHigh'] != ""){
+    if(($_GET['PriceLow'] != "") && ($_GET['PriceHigh'] != "")) {
       array_push($searchValues, "Price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
     }
   }
@@ -30,7 +30,8 @@ if($WHEREclause == 'WHERE ') {
   $WHEREclause = 'Blank';
 }
 //End of preparing Whereclause
-
+echo "$WHEREclause";
+return;
 $returnString = '';
 try
 {
