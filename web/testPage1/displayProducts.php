@@ -67,11 +67,10 @@ try
   left OUTER JOIN Category
   ON products.sub_categoryid = Category.id
   left OUTER JOIN Sub_Category
-  ON products.sub_categoryid = Sub_Category.id;
+  ON products.sub_categoryid = Sub_Category.id
   ';
-
-  echo "$statment<br/>";
-  $dbquery = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
+  
+  $dbquery = $db->query($statment . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   print_r($results);
   //Create the tableRows
