@@ -99,9 +99,6 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  echo "$statment ". ' ' . "$WHEREclause";
-  return;
-
   $dbquery = $db->query($statment $WHEREclause);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
