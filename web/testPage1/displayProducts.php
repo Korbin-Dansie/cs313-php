@@ -22,8 +22,7 @@
 //Print the table in HTML
 //Check if there are sorting variables
 $WHEREclause = 'WHERE ';
-if(isset($_GET))
-{
+if(isset($_GET)){
   $searchValues = array();
   if(isset($_GET['ProductName'])) {
     if($_GET['ProductName'] != ""){
@@ -99,7 +98,7 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  $dbquery = $db->query($statment $WHEREclause);
+  $dbquery = $db->query($statment . " " . $WHEREclause);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";

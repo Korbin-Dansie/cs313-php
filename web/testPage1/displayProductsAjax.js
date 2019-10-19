@@ -32,5 +32,5 @@ function updateProducts(){
     paramaters = location.search.toString();
   }
   xhr.open("GET", "displayProducts.php" + paramaters);
-  xhr.send(null);
+  xhr.send();
 }
