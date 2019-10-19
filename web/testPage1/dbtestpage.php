@@ -27,14 +27,14 @@
 
     //Trim last charactar of the string to prevent errors
     getString = getString.substring(0, getString.length - 1);
-
+    window.history.replaceState(null, null, getString);
     //Get String is prepared
     //Pass in the current GET Paramaters
     var paramaters = "";
     if(location.search != null)
     {
       paramaters = location.search.toString();
-    }
+      }
     xhr.open("GET", "displayProducts.php" + paramaters);
     xhr.send(null);
   }
@@ -51,7 +51,7 @@
       Name: <input type="text" name="ProductName">
       <br/>
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
-      <input type="Submit" name="Submit" value="Submit">
+      <input type="button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
   </div>
 
