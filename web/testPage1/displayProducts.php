@@ -48,8 +48,10 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $statement = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
-  $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+  $statment =
+  '';
+  $dbquery = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
+  $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
 
   //Create the tableRows
   $returnString .= "<table id='productTable'>";

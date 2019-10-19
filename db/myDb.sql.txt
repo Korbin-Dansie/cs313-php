@@ -2,7 +2,7 @@ CREATE EXTENSION pgcrypto;
 
 CREATE TABLE Customers
 (
-	CustomerID serial Primary Key,
+	id serial Primary Key,
 	UserName varchar(255) NOT NULL UNIQUE,
 	UserPassword varchar(256) NOT NULL,
 	FirstName varchar(255),
@@ -20,22 +20,36 @@ SELECT * FROM Customers;
 
 Create Table Orders
 (
-	OrdersID serial Primary Key,
-	CustomerID INTEGER REFERENCES Customers(CustomerID)
+	id serial Primary Key,
+	CustomerID INTEGER REFERENCES Customers(id)
 );
 
-Create Table Categories
+Create Table Category
 (
-	CategoryID serial Primary Key,
-	Categoryname text 
+	id serial Primary Key,
+	name varchar(255)
+);
+
+Create Table Sub_Category
+(
+	id serial Primary Key,
+	name varchar(255),
+	CategoryID INTEGER REFERENCES Category(id)
+);
+
+Create Table Rarity
+(
+	id serial Primary Key,
+	name varchar(255)
 );
 
 Create Table Products
 (
-	ProductID serial Primary Key,
-	CatagoryID INTEGER REFERENCES Categories(CategoryID)
+	id serial Primary Key,
+	CategoryID INTEGER REFERENCES Category(id)
 	ON DELETE CASCADE ON UPDATE CASCADE,
-	ProductName text,
+	Rarity INTEGER REFERENCES Rarity(id),
+	Name varchar(255),
 	Quantity INTEGER,
 	Price double precision
 	
@@ -43,18 +57,12 @@ Create Table Products
 
 Create Table Order_Items
 (
-	OrderID INTEGER REFERENCES Orders(OrdersID)
+	OrderID INTEGER REFERENCES Orders(id)
 	    ON DELETE CASCADE ON UPDATE CASCADE,
-	ItemID INTEGER, 
-	ProductID INTEGER NOT NULL REFERENCES Products(ProductID)
+	ItemID serial,
+	ProductID INTEGER NOT NULL REFERENCES Products(id)
 		ON DELETE CASCADE ON UPDATE CASCADE,
 	Quantity INTEGER,
 	Price double precision,
 	PRIMARY KEY (OrderID, ItemID)
-);
-
-Create Table Products_Categories
-(
-	ProductID INTEGER NOT NULL REFERENCES Products(ProductID),
-	CatogoryID INTEGER NOT NULL REFERENCES Categories(CategorieID)
 );
