@@ -36,5 +36,6 @@ function updateProducts(){
 }
 
 function resetForm(){
+  alert("Hi");
   window.history.replaceState(null, null, " ");
 }
