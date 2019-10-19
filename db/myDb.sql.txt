@@ -46,9 +46,9 @@ Create Table Rarity
 Create Table Products
 (
 	id serial Primary Key,
-	CategoryID INTEGER REFERENCES Category(id)
+	Sub_CategoryID INTEGER REFERENCES Sub_Category(id)
 	ON DELETE CASCADE ON UPDATE CASCADE,
-	Rarity INTEGER REFERENCES Rarity(id),
+	RarityID INTEGER REFERENCES Rarity(id),
 	Name varchar(255),
 	Quantity INTEGER,
 	Price double precision
