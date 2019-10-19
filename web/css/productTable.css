@@ -5,13 +5,13 @@
   --Legendary-Color: #cc00ff;
 }
 
-.common{
+.common {
   color : var(--Common-Color);
 }
-.Uncommon{
+.Uncommon {
   color : var(--Uncommon-Color);
 }
-.Rare{
+.Rare {
   color : var(--Rare-Color);
 }
 .Legendary{
