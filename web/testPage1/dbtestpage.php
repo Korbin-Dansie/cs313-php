@@ -23,7 +23,8 @@
     var formLocation = document.getElementById("SearchForm");
     var formElements = formLocation.getElementsByTagName("INPUT");
     for (var i = 0, element; element = formElements[i++];) {
-      if (element.value !== "" && (element.getAttribute("name") != "Submit")){
+      if (element.value !== "" &&
+          (element.getAttribute("name") != "Submit" || element.getAttribute("name") != "Reset" )){
         getString += element.getAttribute("name") + "=" + element.value + "&";
       }
     }
@@ -54,6 +55,8 @@
       Name: <input type="text" name="ProductName">
       <br/>
       Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
+      Catagory <input type="text" name="" value="">
+      <input type="reset"  name="Reset" value="Clear">
       <input type="button" name="Submit" value="Submit" onclick="updateProducts()">
     </form>
   </div>

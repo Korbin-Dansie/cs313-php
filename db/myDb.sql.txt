@@ -27,15 +27,18 @@ Create Table Orders
 Create Table Categories
 (
 	CategoryID serial Primary Key,
-	Categoryname text
+	Categoryname text 
 );
 
 Create Table Products
 (
 	ProductID serial Primary Key,
+	CatagoryID INTEGER REFERENCES Categories(CategoryID)
+	ON DELETE CASCADE ON UPDATE CASCADE,
 	ProductName text,
-	Price double precision,
-	Quantity INTEGER
+	Quantity INTEGER,
+	Price double precision
+	
 );
 
 Create Table Order_Items

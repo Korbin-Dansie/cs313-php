@@ -1,0 +1,10 @@
+select
+	products.productname, 
+	products.productid,
+	products_categories.catogoryid,
+	categories.categoryName
+from products
+LEFT OUTER JOIN Products_categories
+ON products.productid = Products_categories.productid
+LEFT OUTER JOIN categories
+on  products_categories.catogoryid = categories.categoryid;

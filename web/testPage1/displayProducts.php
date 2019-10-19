@@ -30,6 +30,7 @@ if($WHEREclause == 'WHERE ') {
   $WHEREclause = 'Blank';
 }
 //End of preparing Whereclause
+
 $returnString = '';
 try
 {
@@ -47,7 +48,7 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $statement = $db->query('SELECT * FROM products ' . $WHEREclause);
+  $statement = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
   $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   //Create the tableRows
