@@ -71,7 +71,7 @@ try
   ';
 
   $dbquery = $db->query($statment . ' ' . $WHEREclause);
-  $results = $dbquery->fetch_assoc();
+  $results = $dbquery->fetch();
   echo "'";
   print_r($statment);
   echo "'";
