@@ -49,10 +49,24 @@ try
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $statment =
-  '';
+  'select
+    Products.id,
+    Category.name,
+    Sub_Category.name,
+    Rarity.name,
+    Products.name,
+    Products.quantity,
+    Products.price
+  from products
+  left OUTER JOIN Rarity
+    ON products.rarityid = Rarity.id
+  left OUTER JOIN Category
+    ON products.sub_categoryid = Category.id
+  left OUTER JOIN Sub_Category
+    ON products.sub_categoryid = Sub_Category.id;
+  ';
   $dbquery = $db->query('SELECT * FROM products ' . $WHEREclause . ';');
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers

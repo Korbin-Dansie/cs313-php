@@ -1,10 +1,15 @@
 select
-	products.productname, 
-	products.productid,
-	products_categories.catogoryid,
-	categories.categoryName
+	Products.id,
+	Category.name,
+	Sub_Category.name,
+	Rarity.name,
+	Products.name,
+	Products.quantity,
+	Products.price
 from products
-LEFT OUTER JOIN Products_categories
-ON products.productid = Products_categories.productid
-LEFT OUTER JOIN categories
-on  products_categories.catogoryid = categories.categoryid;
+left OUTER JOIN Rarity
+ON products.rarityid = Rarity.id
+left OUTER JOIN Category
+ON products.sub_categoryid = Category.id
+left OUTER JOIN Sub_Category
+ON products.sub_categoryid = Sub_Category.id;
