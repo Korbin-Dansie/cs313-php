@@ -54,13 +54,13 @@ try
   ***********/
   $statment =
   'select
-  (Products.id,
+  Products.id,
   Category.name,
   Sub_Category.name,
   Rarity.name,
   Products.name,
   Products.quantity,
-  Products.price)
+  Products.price
   from products
   left OUTER JOIN Rarity
   ON products.rarityid = Rarity.id
@@ -68,9 +68,9 @@ try
   ON products.sub_categoryid = Category.id
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id
-   ';
+  ';
 
-  $dbquery = $db->query($statment . $WHEREclause . ';');
+  $dbquery = $db->query($statment . ' ' . $WHEREclause);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   echo "'";
   print_r($statment);
