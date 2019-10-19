@@ -32,7 +32,8 @@
       //Trim last charactar of the string to prevent errors
       getString = getString.substring(0, getString.length - 1);
       //Add paramaters to url with page refreash
-      window.history.replaceState(null, null, getString);
+      //window.history.replaceState(null, null, getString);
+      paramaters = getString;
     }
     else if(location.search != null)
     {
