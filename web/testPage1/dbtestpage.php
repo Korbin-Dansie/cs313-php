@@ -24,7 +24,7 @@
     var formElements = formLocation.getElementsByTagName("INPUT");
     for (var i = 0, element; element = formElements[i++];) {
       if (element.value !== "" &&
-          (element.getAttribute("name") != "Submit" || element.getAttribute("name") != "Reset" )){
+          !(element.getAttribute("name") != "Submit" || element.getAttribute("name") != "Reset" )){
         getString += element.getAttribute("name") + "=" + element.value + "&";
       }
     }
