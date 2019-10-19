@@ -37,5 +37,5 @@ function updateProducts(){
 
 function resetForm(){
   alert("Hi");
-  window.history.replaceState(null, null, " ");
+  window.history.replaceState(null, null, location.hostname + location.pathname);
 }
