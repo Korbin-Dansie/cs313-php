@@ -123,7 +123,7 @@ try
       }
       //Have rarity info come before product name
       else if($key == "rarityname"){
-        $productsnameSTR .= "<td class=\"Common\">";
+        $productsnameSTR .= "<td class=\"$value\">";
       }
       else if($key == "productsname"){
         $productsnameSTR .= "$value</td>";
