@@ -99,7 +99,7 @@ try
   ';
 
 
-  $dbquery = $db->prepare($statment . " " . $WHEREclause);
+  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
   echo "$dbquery";
   return;
 
