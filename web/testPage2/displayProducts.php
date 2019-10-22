@@ -26,18 +26,18 @@ if(isset($_GET)){
   $searchValues = array();
   if(isset($_GET['ProductName'])) {
     if($_GET['ProductName'] != ""){
-      array_push($searchValues,"LOWER(Products.name) LIKE LOWER('%:Pname%')");
+      array_push($searchValues,"LOWER(Products.name) LIKE LOWER('%".$_GET['ProductName']."%')");
     }
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
     if(($_GET['PriceLow'] != "") && ($_GET['PriceHigh'] != "")) {
-    //  array_push($searchValues, "Products.price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
+      array_push($searchValues, "Products.price BETWEEN " . $_GET['PriceLow'] . ' and ' . $_GET['PriceHigh']);
     }
   }
 
   if(isset($_GET['Category'])){
     if($_GET['Category'] != ""){
-    //  array_push($searchValues, "LOWER(Sub_Category.name) LIKE LOWER('%".$_GET['Category']."%')");
+      array_push($searchValues, "LOWER(Sub_Category.name) LIKE LOWER('%".$_GET['Category']."%')");
     }
   }
 
@@ -98,25 +98,8 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  print ("\"" . $statment . " " . $WHEREclause . "\"");
-  return;
-
-  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
-
-  if(isset($_GET['ProductName'])) {
-    if($_GET['ProductName'] != ""){
-    $dbquery->bind_param(":Pname", $_GET['ProductName']);
-    }
-  }
-
-
-
-  if ($stmt->execute(array($_GET['ProductName']))) {
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo "$results";
-    return;
-  }
-
+  $dbquery = $db->query($statment . " " . $WHEREclause);
+  $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers
