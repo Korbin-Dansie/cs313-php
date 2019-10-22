@@ -98,11 +98,12 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  $results;
 
   $dbquery = $db->prepare($statment . " " . $WHEREclause);
-  if ($stmt->execute($_GET['ProductName'])) {
+  if ($stmt->execute(array($_GET['ProductName']))) {
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo "$results";
+    return;
   }
 
   //Create the tableRows
