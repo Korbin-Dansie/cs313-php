@@ -98,7 +98,7 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  echo ("\"" . $statment . " " . $WHEREclause . "\"");
+  print ("\"" . $statment . " " . $WHEREclause . "\"");
   $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
 
 
