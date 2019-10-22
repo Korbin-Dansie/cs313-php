@@ -99,13 +99,15 @@ try
   ';
 
   $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
+
+  echo "$dbquery";
+  return;
+
   $dbquery->execute(
     [
       ':pass' => "LOWER('%$_GET['ProductName']%')"
     ]);
 
-  echo "$dbquery";
-  return;
 
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
