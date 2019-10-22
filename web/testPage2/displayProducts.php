@@ -98,7 +98,7 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause);
+  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
   $dbquery->execute(
     [
       ':pass' => $_GET['ProductName']
