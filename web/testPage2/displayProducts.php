@@ -101,8 +101,7 @@ try
   $results;
 
   $dbquery = $db->prepare($statment . " " . $WHEREclause);
-  $stmt->bindParam(1, $_GET['productsname']);
-  if ($stmt->execute(array($_GET['ProductName']))) {
+  if ($stmt->execute($_GET['ProductName'])) {
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
