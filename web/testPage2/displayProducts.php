@@ -98,10 +98,10 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-
-  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
   echo "$dbquery";
   return;
+
+  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
 
   if ($stmt->execute(array($_GET['ProductName']))) {
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
