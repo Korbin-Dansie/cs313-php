@@ -32,5 +32,10 @@ function updateProducts(){
     paramaters = location.search.toString();
   }
   xhr.open("GET", "displayProducts.php" + paramaters);
-  xhr.send(null);
+  xhr.send();
+}
+
+function resetForm(){
+  window.history.replaceState(null, null, location.pathname);
+  updateProducts();
 }
