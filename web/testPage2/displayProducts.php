@@ -100,6 +100,9 @@ try
 
 
   $dbquery = $db->prepare($statment . " " . $WHEREclause);
+  echo "$dbquery";
+  return;
+
   if ($stmt->execute(array($_GET['ProductName']))) {
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo "$results";
