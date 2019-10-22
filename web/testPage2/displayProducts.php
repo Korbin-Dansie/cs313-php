@@ -99,8 +99,10 @@ try
   ';
 
   $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause);
-  $dbquery->bindParam(':pass', $_GET['ProductName'], PDO::PARAM_STR);
-  $dbquery->execute(array('name' => $name));
+  $dbquery->execute(
+    [
+      ':pass' => $_GET['ProductName']
+    ]);
 
   echo "$dbquery";
   return;
