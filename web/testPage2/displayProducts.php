@@ -27,7 +27,7 @@ if(isset($_GET)){
   if(isset($_GET['ProductName'])) {
     if($_GET['ProductName'] != ""){
       array_push($searchValues,"LOWER(Products.name) LIKE :pass");
-    } //LOWER('%:pass%')
+    }
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
     if(($_GET['PriceLow'] != "") && ($_GET['PriceHigh'] != "")) {
@@ -104,10 +104,10 @@ try
 
 
 
-  $dbquery->execute(
+  /*$dbquery->execute(
     [
       ':pass' => "LOWER('%$_GET['ProductName']%')"
-    ]);
+    ]);*/
 
 
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
