@@ -99,8 +99,10 @@ try
   ';
 
   $dbquery = $db->prepare($statment . " " . $WHEREclause);
-  $dbquery = execute(array("%$_GET[productsname]%"));
-  $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
+  $stmt->bindParam(1, $_GET['productsname']);
+  $stmt->execute();
+
+  //$results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers
