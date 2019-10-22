@@ -98,6 +98,8 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
+  print ("\"" . $statment . " " . $WHEREclause . "\"");
+  return;
 
   $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
 
@@ -107,8 +109,6 @@ try
     }
   }
 
-  print ("\"" . $statment . " " . $WHEREclause . "\"");
-  return;
 
 
   if ($stmt->execute(array($_GET['ProductName']))) {
