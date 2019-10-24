@@ -14,19 +14,7 @@
   <h2>By: Korbin Dansie</h2>
   <br />
 
-  <div>
-    <form method="get" action="" id="SearchForm" onreset="resetForm()">
-      Name: <input type="text" name="ProductName">
-      <br/>
-      Price <input type="text" name="PriceLow"><input type="text" name="PriceHigh">
-      <br/>
-      Category <input type="text" name="Category">
-      <br/>
-      <input type="reset"  name="Reset" value="Clear">
-      <input type="button" name="Submit" value="Submit" onclick="updateProducts()">
-    </form>
-  </div>
-
+  <?php include("displayProductsUI.php") ?>
   <div id="productTable">
   </div>
 </body>
