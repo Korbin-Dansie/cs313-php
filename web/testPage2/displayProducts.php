@@ -26,7 +26,7 @@ if(isset($_GET)){
   $searchValues = array();
   if(isset($_GET['ProductName'])) {
     if($_GET['ProductName'] != ""){
-      array_push($searchValues,"LOWER(Products.name) LIKE :pass");
+      array_push($searchValues,"LOWER(Products.name) LIKE LOWER('%".$_GET['ProductName']."%')");
     }
   }
   if(isset($_GET['PriceLow']) && isset($_GET['PriceHigh'])){
@@ -98,18 +98,7 @@ try
   ON products.sub_categoryid = Sub_Category.id
   ';
 
-  print("\"" . $statment . " " . $WHEREclause . "\"");
-  return;
-  $dbquery = $db->prepare("\"" . $statment . " " . $WHEREclause . "\"");
-
-
-
-  /*$dbquery->execute(
-    [
-      ':pass' => "LOWER('%$_GET['ProductName']%')"
-    ]);*/
-
-
+  $dbquery = $db->query($statment . " " . $WHEREclause);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
