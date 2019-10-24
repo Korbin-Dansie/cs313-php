@@ -14,7 +14,7 @@
   <h2>By: Korbin Dansie</h2>
   <br />
 
-  <?php include("displayProductsUI.php") ?>
+  <?php include "displayProductsUI.php"; ?>
   <div id="productTable">
   </div>
 </body>
