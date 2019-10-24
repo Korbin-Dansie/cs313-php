@@ -1,0 +1,14 @@
+#SearchForm * {
+  box-sizing: border-box;
+}
+
+#SearchForm input{
+  width: 75%;
+}
+
+#SearchForm input{
+  width: 75%;
+}
+#SearchForm #ResetButton,#SubmitButton{
+  width: 50%;
+}
