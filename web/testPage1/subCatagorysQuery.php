@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/plain");
 
-if(isset($_GET["Catagory"]){
+if(isset($_GET["Catagory"])) {
   echo "True";
 }
 else{
