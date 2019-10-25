@@ -8,7 +8,7 @@ function displaySubProducts(){
         var subCatagorys = document.getElementById("SubCatagoryField");
         subCatagorys.innerHTML = xhr.responseText;
       }
-    }
+    };
     //Get String is prepared
     //Pass in the current GET Paramaters
     var paramaters = "?Catagory=" + input.value;
