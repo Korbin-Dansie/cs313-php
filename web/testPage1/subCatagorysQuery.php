@@ -30,10 +30,9 @@ if(isset($_GET["Catagory"])) {
     category
     left outer Join sub_category on
     sub_category.id = category.id
-    where category.name =
     ';
-
-    $dbquery = $db->query($statment . " '" . $_GET["Catagory"] . "'");
+    //. " '" . $_GET["Catagory"] . "'"
+    $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
     for ($i=0; $i < count($results); $i++) {
       foreach ($results[$i] as $key => $value) {
