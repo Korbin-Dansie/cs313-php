@@ -15,7 +15,6 @@ function displaySubProducts(){
 
     xhr.open("GET", "subCatagorysQuery.php" + paramaters);
     xhr.send();
-
   }
   else {
 

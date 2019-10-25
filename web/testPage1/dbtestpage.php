@@ -17,9 +17,7 @@
   <br />
 
   <div>
-    <?php echo "here" ?>
     <?php include("displayProductsUI.php"); ?>
-    <?php echo "End"; ?>
   </div>
 
   <div id="productTable">
