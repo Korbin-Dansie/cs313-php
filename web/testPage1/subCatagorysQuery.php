@@ -30,8 +30,8 @@ if(isset($_GET["Catagory"])) {
       'Select sub_category.name
       from
       category
-      full outer Join sub_category on
-      sub_category.id = category.id
+      left outer Join sub_category on
+      sub_category.categoryid = category.id
       where category.name =
       ';
       $whereClause = " '" . stripslashes($_GET["Catagory"]) . "'";
