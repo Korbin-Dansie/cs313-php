@@ -34,15 +34,11 @@
      * [rarityname] => Common [productsname] => Steel_Sword [productsquantity] => 100
      * [productsprice] => 12
      ***********/
-     $statment = 'Select name from category';
+     $statment = 'Select category.name from public.category;';
 
      $dbquery = $db->query($statment);
      $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
      echo "$results";
-
-     foreach ($results as $key => $value) {
-      echo "<option value=\"$value\">$value</option>";
-     }
 
    catch (PDOException $ex)
    {
