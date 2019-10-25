@@ -33,7 +33,7 @@
 
         $dbquery = $db->query($statment);
         $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($results[0] as $key => $value) {
+        foreach ($results as $key => $value) {
           echo "<option value="$value">$value</option>";
           // code...
         }
