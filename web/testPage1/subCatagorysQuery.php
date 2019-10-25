@@ -30,7 +30,7 @@ if(isset($_GET["Catagory"])) {
       'Select sub_category.name
       from
       category
-      left outer Join sub_category on
+      full outer Join sub_category on
       sub_category.id = category.id
       where category.name =
       ';
