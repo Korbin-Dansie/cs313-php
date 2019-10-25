@@ -33,7 +33,7 @@ if(isset($_GET["Catagory"])) {
     where category.name =
     ';
 
-    $dbquery = $db->query($statment . " " . $_GET["Catagory"]);
+    $dbquery = $db->query($statment . " '" . $_GET["Catagory"] . "'");
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
     for ($i=0; $i < count($results); $i++) {
       foreach ($results[$i] as $key => $value) {
