@@ -6,8 +6,8 @@
   <link rel="stylesheet" type="text/css" href="../css/productTable.css" />
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
-  <script src="displayProductsAjax.js"></script>
   <script src="displayProductsUIAjax.js"></script>
+  <script src="displayProductsAjax.js"></script>
 
 </head>
 
