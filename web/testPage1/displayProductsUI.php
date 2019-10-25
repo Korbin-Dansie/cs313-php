@@ -48,9 +48,11 @@
       ?>
     </select>
 
-    <div id="SubCatagoryField" name="SubCategory">
-      
-    </div>
+    <select id="SubCatagoryField" name="SubCategory">
+      <option value="None">None</option>
+      <span id="OtherSubCatagoryOptions"></span>
+
+    </select>
 
 
     <input id="ResetButton" type="reset"  name="Reset" value="Clear">
