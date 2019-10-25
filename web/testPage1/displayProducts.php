@@ -98,10 +98,10 @@ try
   from products
   left OUTER JOIN Rarity
   ON products.rarityid = Rarity.id
-  left OUTER JOIN Category
-  ON products.sub_categoryid = Category.id
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id
+  left OUTER JOIN Category
+  ON Sub_Category.categoryid = Category.id
   ';
 
   $dbquery = $db->query($statment . " " . $WHEREclause);
