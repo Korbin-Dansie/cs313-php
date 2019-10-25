@@ -1,3 +1,4 @@
+<?php  ?>
  <div>
   <form method="get" action="" id="SearchForm" onreset="resetForm()">
     <span>Name:</span><input type="search" name="ProductName">
@@ -34,7 +35,7 @@
          $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
 
          foreach ($results as $key => $value) {
-          echo"<option value="$key">$key</option>";
+          echo "<option value="$key">$key</option>";
          }
 
        catch (PDOException $ex)
