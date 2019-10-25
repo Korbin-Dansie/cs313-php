@@ -1,3 +1,7 @@
+function hello(){
+  alert("Hello");
+}
+
 function updateProducts(){
   var xhr = new XMLHttpRequest();
 
@@ -43,7 +47,6 @@ function updateProducts(){
 }
 
 function resetForm(){
-  alert("Hello");
   window.history.replaceState(null, null, location.pathname);
   updateProducts();
 }
