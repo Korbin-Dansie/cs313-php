@@ -34,6 +34,9 @@
          $dbquery = $db->query($statment);
          $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
 
+         echo "$results";
+         return;
+         
          foreach ($results[0] as $key => $value) {
           echo"<option value="$key">$key</option>";
          }
