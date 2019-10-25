@@ -2,7 +2,7 @@ function HelloWorld() {
   var formLocation = document.getElementById("SearchForm");
   var selectElements = formLocation.getElementsByTagName("SELECT");
   for (var i = 0, element; element = selectElements[i++];) {
-    if (element.value !== "" || element.value !== "None") {
+    if (element.value != "" || element.value != "None") {
       alert(element.value);
     }
   }
