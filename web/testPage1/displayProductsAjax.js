@@ -6,7 +6,7 @@ function updateProducts(){
       var divDom = document.getElementById("productTable");
       divDom.innerHTML = xhr.responseText;
     }
-  }
+  };
   //Get String is prepared
   //Pass in the current GET Paramaters
   var paramaters = "";
@@ -23,7 +23,7 @@ function updateProducts(){
   var selectElements = formLocation.getElementsByTagName("SELECT");
   alert(selectElements);
   for (var i = 0, element; element = selectElements[i++];) {
-    if (element.value !== "" || element.value !== "None")
+    if (element.value !== "" || element.value !== "None") {
       getString += element.getAttribute("name") + "=" + element.value + "&";
     }
   }
