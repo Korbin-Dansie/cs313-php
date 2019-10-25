@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: text/plain");
- ?>
+?>
 
 <?php //Create a query to add all options to Catagory
 echo "Try";
@@ -32,9 +32,10 @@ try
   $dbquery = $db->query($statment);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   echo "Here2";
-  catch (PDOException $ex)
-  {
-    echo 'Error!: ' . $ex->getMessage();
-    die();
-  }
-  ?>
+}
+catch (PDOException $ex)
+{
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
+?>
