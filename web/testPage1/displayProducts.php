@@ -36,8 +36,14 @@ if(isset($_GET)){
   }
 
   if(isset($_GET['Category'])){
-    if($_GET['Category'] != "None" || $_GET['Category'] != ""){
+    if($_GET['Category'] != "None" && $_GET['Category'] != ""){
       array_push($searchValues, "LOWER(Category.name) LIKE LOWER('%".$_GET['Category']."%')");
+      //Check if subCatagorys is set
+      if(isset($_GET['SubCategory'])) {
+        if($_GET['SubCategory'] != "None" && $_GET['SubCategory'] != ""){
+          array_push($searchValues, "LOWER(SubCategory.name) LIKE LOWER('%".$_GET['SubCategory']."%')");
+        }
+      }
     }
   }
 
