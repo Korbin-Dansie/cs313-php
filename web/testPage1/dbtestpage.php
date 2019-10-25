@@ -15,7 +15,7 @@
   <br />
 
   <div>
-    <?php include "displayProductsUI.php" ?>
+    <?php include("displayProductsUI.php"); ?>
   </div>
 
   <div id="productTable">
