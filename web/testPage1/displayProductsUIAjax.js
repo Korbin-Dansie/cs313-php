@@ -1,4 +1,5 @@
 function displaySubProducts(){
+  var displayNone = "<option value=\"None\">None</option>";
   var input = document.getElementById("CatagoryField");
   if(input.value != "None"){
     var xhr = new XMLHttpRequest();
@@ -6,7 +7,7 @@ function displaySubProducts(){
     xhr.onreadystatechange = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
         var subCatagorys = document.getElementById("SubCatagoryField");
-        subCatagorys.innerHTML = xhr.responseText;
+        subCatagorys.innerHTML = displayNone + xhr.responseText;
       }
     };
     //Get String is prepared
@@ -18,6 +19,6 @@ function displaySubProducts(){
   }
   else {
     var subCatagorys = document.getElementById("OtherSubCatagoryOptions");
-    subCatagorys.innerHTML = "";
+    subCatagorys.innerHTML = displayNone;
   }
 }
