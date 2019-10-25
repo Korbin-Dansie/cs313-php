@@ -7,6 +7,8 @@
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
   <script src="displayProductsAjax.js"></script>
+  <script src="displayProductsUIAjax.js"></script>
+
 </head>
 
 <body onload="updateProducts()">
