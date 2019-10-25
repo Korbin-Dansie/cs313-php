@@ -1,4 +1,5 @@
 function displaySubProducts(){
+  var subCatagorys = document.getElementById("SubCatagoryField");
   var displayNone = "<option value=\"None\">None</option>";
   var input = document.getElementById("CatagoryField");
   if(input.value != "None"){
@@ -6,7 +7,6 @@ function displaySubProducts(){
 
     xhr.onreadystatechange = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
-        var subCatagorys = document.getElementById("SubCatagoryField");
         subCatagorys.innerHTML = displayNone + xhr.responseText;
       }
     };
@@ -18,7 +18,6 @@ function displaySubProducts(){
     xhr.send();
   }
   else {
-    var subCatagorys = document.getElementById("OtherSubCatagoryOptions");
     subCatagorys.innerHTML = displayNone;
   }
 }
