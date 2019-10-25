@@ -43,7 +43,7 @@ function updateProducts(){
 }
 
 function resetForm(){
-  console.log("Hello");
+  alert("Hello");
   window.history.replaceState(null, null, location.pathname);
   updateProducts();
 }
