@@ -35,7 +35,7 @@
          $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
 
          foreach ($results as $key => $value) {
-          echo"<option value=\"$value\">$value</option>";
+          echo "<option value=\"$value\">$value</option>";
          }
 
        catch (PDOException $ex)
