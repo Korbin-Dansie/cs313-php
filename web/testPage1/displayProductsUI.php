@@ -48,7 +48,7 @@
       ?>
     </select>
 
-    <select id="CatagoryField" name="Category">
+    <select id="SubCatagoryField" name="SubCategory">
       <option value="None">None</option>
     </select>
 

@@ -1,3 +1,6 @@
 function displaySubProducts(){
-  alert("Hello");
+  var input = document.getElementById("CatagoryField");
+  if(input.value != "None"){
+    alert(input.value);
+  }
 }
