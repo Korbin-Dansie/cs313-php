@@ -36,7 +36,7 @@ if(isset($_GET["Catagory"])) {
       ';
       $whereClause = " '" . stripslashes($_GET["Catagory"]) . "'";
       //. " '" . $_GET["Catagory"] . "'"
-      $dbquery = $db->query($statment + $whereClause);
+      $dbquery = $db->query($statment . $whereClause);
       $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
       $returnString = "";
       for ($i=0; $i < count($results); $i++) {
