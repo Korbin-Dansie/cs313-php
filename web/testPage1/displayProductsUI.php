@@ -6,7 +6,9 @@
      <span>Category</span>
      <select id="CatagoryField" name="Category">
        <option value="None">None</option>
-
+       <?php
+echo "<option value=\"Some\">Some</option>";
+        ?>
      </select>
      <input id="ResetButton" type="reset"  name="Reset" value="Clear">
      <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts()">
