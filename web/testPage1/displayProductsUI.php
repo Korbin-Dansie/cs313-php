@@ -36,7 +36,7 @@ try
   * [rarityname] => Common [productsname] => Steel_Sword [productsquantity] => 100
   * [productsprice] => 12
   ***********/
-  $statment = 'Select name from category;';
+  $statment = 'Select name from category';
 
   $dbquery = $db->query($statment);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
