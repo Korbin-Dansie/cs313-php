@@ -1,5 +1,7 @@
 function HelloWorld() {
-  alert("Hello");
+  var formLocation = document.getElementById("SearchForm");
+  var selectElements = formLocation.getElementsByTagName("SELECT");
+  alert(selectElements);
 }
 
 function updateProducts(){
