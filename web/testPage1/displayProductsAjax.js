@@ -1,4 +1,4 @@
-function Hello() {
+function HelloWorld() {
   alert("Hello");
 }
 
