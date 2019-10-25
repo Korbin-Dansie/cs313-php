@@ -4,7 +4,7 @@
     <span>Name:</span><input type="search" name="ProductName">
     <span>Price</span><input type="text" name="PriceLow" placeholder="Min"><input type="text" name="PriceHigh" placeholder="Max">
     <span>Category</span>
-    <select id="CatagoryField" name="Category" onselect="displaySubProducts()">
+    <select id="CatagoryField" name="Category" onselect="displaySubProducts">
       <option value="None">None</option>
       <?php //Create a query to add all options to Catagory
       try
