@@ -6,7 +6,7 @@ function updateProducts(){
       var divDom = document.getElementById("productTable");
       divDom.innerHTML = xhr.responseText;
     }
-  };
+  }
   //Get String is prepared
   //Pass in the current GET Paramaters
   var paramaters = "";
@@ -20,8 +20,6 @@ function updateProducts(){
       getString += element.getAttribute("name") + "=" + element.value + "&";
     }
   }
-
-  alert("Hello");
   /*
   var selectElements = formLocation.getElementsByTagName("SELECT");
   for (var i = 0, element; element = selectElements[i++];) {
@@ -42,6 +40,7 @@ function updateProducts(){
   }
   xhr.open("GET", "displayProducts.php" + paramaters);
   xhr.send();
+  alert("hello");
 }
 
 function resetForm(){
