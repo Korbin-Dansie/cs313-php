@@ -40,10 +40,10 @@ function updateProducts(){
   }
   xhr.open("GET", "displayProducts.php" + paramaters);
   xhr.send();
-  alert("hello");
 }
 
 function resetForm(){
+  alert("Hello");
   window.history.replaceState(null, null, location.pathname);
   updateProducts();
 }
