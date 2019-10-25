@@ -36,8 +36,8 @@ if(isset($_GET)){
   }
 
   if(isset($_GET['Category'])){
-    if($_GET['Category'] != ""){
-      array_push($searchValues, "LOWER(Sub_Category.name) LIKE LOWER('%".$_GET['Category']."%')");
+    if($_GET['Category'] != "None" || $_GET['Category'] != ""){
+      array_push($searchValues, "LOWER(Category.name) LIKE LOWER('%".$_GET['Category']."%')");
     }
   }
 
