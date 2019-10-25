@@ -5,7 +5,7 @@ function displaySubProducts(){
 
     xhr.onreadystatechange = function (){
       if (xhr.readyState == 4 && xhr.status == 200) {
-        var subCatagorys = document.getElementById("OtherSubCatagoryOptions");
+        var subCatagorys = document.getElementById("SubCatagoryField");
         subCatagorys.innerHTML = xhr.responseText;
       }
     };

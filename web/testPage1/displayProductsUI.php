@@ -50,8 +50,6 @@
 
     <select id="SubCatagoryField" name="SubCategory">
       <option value="None">None</option>
-      <span id="OtherSubCatagoryOptions"></span>
-
     </select>
 
 

@@ -34,14 +34,15 @@ if(isset($_GET["Catagory"])) {
     //. " '" . $_GET["Catagory"] . "'"
     $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
+    $returnString = "";
     for ($i=0; $i < count($results); $i++) {
       foreach ($results[$i] as $key => $value) {
         $safeChars = htmlspecialchars($value);
-        echo "<option value=\"$safeChars\">$safeChars</option>";
+        $returnString .= "<option value=\"$safeChars\">$safeChars</option>";
       }
     }
+    echo $returnString;
   }//End of Try
-
   catch (PDOException $ex)
   {
     echo 'Error!: ' . $ex->getMessage();
