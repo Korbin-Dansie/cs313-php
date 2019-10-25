@@ -40,7 +40,13 @@ try
 
   $dbquery = $db->query($statment);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-  print_r($results[0]);
+  print_r($results);
+  for ($i=0; $i < count($results); $i++) {
+    foreach ($results[$i] as $key => $value) {
+      echo "tag $value endTag";
+    }
+  }
+
 }
 catch (PDOException $ex)
 {
