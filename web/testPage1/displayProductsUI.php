@@ -12,6 +12,7 @@
      <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts()">
    </form>
    <?php //Create a query to add all options to Catagory
+   echo "Try";
    try
    {
      $dbUrl = getenv('DATABASE_URL');
@@ -34,12 +35,12 @@
      * [rarityname] => Common [productsname] => Steel_Sword [productsquantity] => 100
      * [productsprice] => 12
      ***********/
+     echo "Selects";
      $statment = 'Select category.name from public.category;';
 
      $dbquery = $db->query($statment);
      $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-     print_r($results);
-
+     echo "Here2";
    catch (PDOException $ex)
    {
      echo 'Error!: ' . $ex->getMessage();
