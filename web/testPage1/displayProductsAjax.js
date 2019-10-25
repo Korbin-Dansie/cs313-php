@@ -1,11 +1,5 @@
 function HelloWorld() {
-  var formLocation = document.getElementById("SearchForm");
-  var selectElements = formLocation.getElementsByTagName("SELECT");
-  for (var i = 0, element; element = selectElements[i++];) {
-    if (element.value != "" && element.value != "None") {
-      alert(element.value);
-    }
-  }
+
 }
 
 function updateProducts(){
@@ -30,13 +24,12 @@ function updateProducts(){
       getString += element.getAttribute("name") + "=" + element.value + "&";
     }
   }
-  /*
   var selectElements = formLocation.getElementsByTagName("SELECT");
   for (var i = 0, element; element = selectElements[i++];) {
-    if (element.value !== "" || element.value !== "None") {
+    if (element.value != "" && element.value != "None") {
       getString += element.getAttribute("name") + "=" + element.value + "&";
     }
-  }*/
+  }
   //Trim last charactar of the string to prevent errors
   getString = getString.substring(0, getString.length - 1);
   //Add paramaters to url with page refreash
