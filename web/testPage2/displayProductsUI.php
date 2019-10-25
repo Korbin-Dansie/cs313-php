@@ -1,9 +1,5 @@
 <?php
-
 $returnString = "";
-
-
-
  ?>
  <div>
   <form method="get" action="" id="SearchForm" onreset="resetForm()">
