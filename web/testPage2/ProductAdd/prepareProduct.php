@@ -16,13 +16,28 @@ foreach ($_POST as $key => $value) {
   echo "<br>";
 }
 
-
+include ("Name_Categories_Rarity_Query.php");
+echo NameCategoriesRarityQuery();
+echo "<br>";
 //Check to make sure all the variables are set
 if( !(isset($_POST['ProductName']) && isset($_POST['PriceList']) &&
-isset($_POST['SubCategory']) && isset($_POST['Rarity']) && isset($_POST['Rarity']))) {
+isset($_POST['Category']) && isset($_POST['SubCategory']) && isset($_POST['Rarity']))) {
   echo "All variables are not set!";
   return;
 }
 
-echo "All variables set.";
+$correctValues = true;
+//Check to make sure all variable have correct values
+if($_POST['ProductName'] == ""){
+  $correctValues = false;
+
+}elseif (substr($_POST['ProductName'], 0, 5) == "@ERR:") {
+  $correctValues = false;
+  // code...
+}
+
+if(!is_numeric($_POST['PriceList'])){
+  $correctValues = false;
+
+}
 ?>
