@@ -11,7 +11,7 @@
 
 </head>
 
-<body onload="updateProducts()">
+<body onload="updateProducts(this.id, &quot;productTable&quot;)">
   <h1><a href="../index.html" id="homeButton">CS 313 Assignments</a></h1>
   <h2>By: Korbin Dansie</h2>
   <br />
