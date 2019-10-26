@@ -1,7 +1,5 @@
 function HelloWorld() {
   alert("Hello");
-  alert(location.pathname);
-
 }
 
 function updateProducts(){
