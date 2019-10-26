@@ -1,5 +1,5 @@
 <?php //Create a query to add all options to Catagory
-header("Content-Type: text/plain");
+//header("Content-Type: text/plain");
 try
 {
   $dbUrl = getenv('DATABASE_URL');
