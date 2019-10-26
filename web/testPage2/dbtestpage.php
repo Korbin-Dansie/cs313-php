@@ -6,7 +6,9 @@
   <link rel="stylesheet" type="text/css" href="../css/productTable.css" />
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
+  <script src="displayProductsUIAjax.js"></script>
   <script src="displayProductsAjax.js"></script>
+
 </head>
 
 <body onload="updateProducts()">
@@ -14,7 +16,10 @@
   <h2>By: Korbin Dansie</h2>
   <br />
 
-  <?php include("displayProductsUI.php"); ?>
+  <div>
+    <?php include("displayProductsUI.php"); ?>
+  </div>
+
   <div id="productTable">
   </div>
 </body>

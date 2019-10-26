@@ -1,4 +1,5 @@
 <?php
+$limitNumber = 25;
 /***********
 * Possible values that should be returned with get
 *  ProductName, PriceLow, PriceHigh, Category
@@ -36,20 +37,33 @@ if(isset($_GET)){
   }
 
   if(isset($_GET['Category'])){
-    if($_GET['Category'] != ""){
-      array_push($searchValues, "LOWER(Sub_Category.name) LIKE LOWER('%".$_GET['Category']."%')");
+    if($_GET['Category'] != "None" && $_GET['Category'] != ""){
+      array_push($searchValues, "LOWER(Category.name) LIKE LOWER('%".$_GET['Category']."%')");
+      //Check if subCatagorys is set
+      if(isset($_GET['SubCategory'])) {
+        if($_GET['SubCategory'] != "None" && $_GET['SubCategory'] != ""){
+          array_push($searchValues, "LOWER(Sub_Category.name) LIKE LOWER('%".$_GET['SubCategory']."%')");
+        }
+      }
     }
   }
 
-
-  //Add 'and' between search values
-  foreach ($searchValues as $key) {
-    $WHEREclause .= $key;
-    if(end($searchValues) != $key){
-      $WHEREclause .= " and ";
+  if(isset($_GET['Rarity'])){
+    if($_GET['Rarity'] != "None" && $_GET['Rarity'] != "") {
+      array_push($searchValues, "Rarity.name ='".$_GET['Rarity']."'");
     }
+  }
+}//End of GET
+
+
+//Add 'and' between search values
+foreach ($searchValues as $key) {
+  $WHEREclause .= $key;
+  if(end($searchValues) != $key){
+    $WHEREclause .= " and ";
   }
 }
+
 
 if($WHEREclause == 'WHERE ') {
   $WHEREclause = '';
@@ -58,8 +72,7 @@ if($WHEREclause == 'WHERE ') {
 
 //The string we will return when we end
 $returnString = '';
-try
-{
+try{
   $dbUrl = getenv('DATABASE_URL');
 
   $dbOpts = parse_url($dbUrl);
@@ -92,20 +105,21 @@ try
   from products
   left OUTER JOIN Rarity
   ON products.rarityid = Rarity.id
-  left OUTER JOIN Category
-  ON products.sub_categoryid = Category.id
   left OUTER JOIN Sub_Category
   ON products.sub_categoryid = Sub_Category.id
+  left OUTER JOIN Category
+  ON Sub_Category.categoryid = Category.id
   ';
 
-  $dbquery = $db->query($statment . " " . $WHEREclause);
+  $dbquery = $db->query($statment . " " . $WHEREclause . " Limit " . $limitNumber);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
   //Create table headers
   $returnString .= "<tr>";
-  $returnString .= "<th>ID</th>";       //Row Number
-  $returnString .= "<th>Category</th>"; //Sub Category
+  $returnString .= "<th>Row#</th>";       //Row Number
+  $returnString .= "<th>Category</th>"; //Category
+  $returnString .= "<th>Subategory</th>"; //Sub Category
   $returnString .= "<th>Name</th>";     //name
   $returnString .= "<th>Quantity</th>"; //Quantity
   $returnString .= "<th>Price</th>";    //Price
@@ -118,22 +132,21 @@ try
     //For per column
     foreach ($results[$i] as $key => $value) {
       //Values we dont want
-      if($key == "categoryname"){
-        continue;
-      }
       //Have rarity info come before product name
-      else if($key == "rarityname"){
+      if($key == "rarityname"){
         $productsnameSTR .= "<td class=\"$value\">";
       }
       else if($key == "productsname"){
         $productsnameSTR .= "$value</td>";
         $returnString .= $productsnameSTR;
       }
+      else if($key == "productsid"){
+        $returnString .= "<td value=\"$value\">".($i+1)."</td>";
+      }
       else {
         $returnString .= "<td>$value</td>";
       }
     }
-
     $returnString .= "</tr>";
   }
 

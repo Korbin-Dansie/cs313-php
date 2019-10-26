@@ -1,3 +1,7 @@
+function HelloWorld() {
+  alert("Hello");
+}
+
 function updateProducts(){
   var xhr = new XMLHttpRequest();
 
@@ -20,6 +24,12 @@ function updateProducts(){
       getString += element.getAttribute("name") + "=" + element.value + "&";
     }
   }
+  var selectElements = formLocation.getElementsByTagName("SELECT");
+  for (var i = 0, element; element = selectElements[i++];) {
+    if (element.value != "" && element.value != "None") {
+      getString += element.getAttribute("name") + "=" + element.value + "&";
+    }
+  }
   //Trim last charactar of the string to prevent errors
   getString = getString.substring(0, getString.length - 1);
   //Add paramaters to url with page refreash
@@ -32,10 +42,12 @@ function updateProducts(){
     paramaters = location.search.toString();
   }
   xhr.open("GET", "displayProducts.php" + paramaters);
-  xhr.send(null);
+  xhr.send();
 }
 
 function resetForm(){
+  document.getElementById("SearchForm").reset();
   window.history.replaceState(null, null, location.pathname);
   updateProducts();
+  displaySubProducts();
 }
