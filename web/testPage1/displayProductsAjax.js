@@ -47,5 +47,6 @@ function updateProducts(){
 
 function resetForm(){
   window.history.replaceState(null, null, location.pathname);
+  alert(location.pathname);
   updateProducts();
 }
