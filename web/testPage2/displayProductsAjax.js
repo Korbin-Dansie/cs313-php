@@ -45,8 +45,8 @@ function updateProducts(){
   xhr.send();
 }
 
-function resetForm(){
-  document.getElementById("SearchForm").reset();
+function resetForm(locationID){
+  document.getElementById(locationID).reset();
   window.history.replaceState(null, null, location.pathname);
   updateProducts();
   displaySubProducts();
