@@ -17,7 +17,7 @@ foreach ($_POST as $key => $value) {
 }
 
 include ("Name_Categories_Rarity_Query.php");
-echo NameCategoriesRarityQuery();
+echo json_decode (NameCategoriesRarityQuery());
 echo "<br>";
 //Check to make sure all the variables are set
 if( !(isset($_POST['ProductName']) && isset($_POST['PriceList']) &&
