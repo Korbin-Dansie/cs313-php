@@ -7,7 +7,7 @@
     <br/>
 
     <span>Category</span>
-    <select id="CatagoryField" name="Category" onchange="displaySubProducts(this.id, &quot;SubCatagoryField&quot;)">
+    <select id="CatagoryField" name="Category" onchange="displaySubProducts(&quot;CatagoryField&quot;, &quot;SubCatagoryField&quot;)">
       <option value="None">None</option>
       <?php include("categoryOptions.php") ?>
     </select>
