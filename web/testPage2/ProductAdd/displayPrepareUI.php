@@ -3,7 +3,7 @@
   <form method="get" action="" id="PrepareFrom">
     <span>Name</span><input type="search" name="ProductName">
     <br/>
-    <span>Price</span><input type="text" name="PriceLow" placeholder="Min">
+    <span>Price</span><input type="text" name="PriceList" placeholder="Min">
     <br/>
 
     <span>Category</span>
