@@ -37,13 +37,13 @@ function NameCategoriesRarityQuery() {
 
     $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-    return $results;
+    echo  $results;
 
   }
   catch (PDOException $ex)
   {
+    echo  "'Error!: ' . $ex->getMessage()";
     die();
-    return "'Error!: ' . $ex->getMessage()";
   }
 }
 ?>
