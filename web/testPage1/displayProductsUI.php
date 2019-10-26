@@ -1,6 +1,6 @@
 <?php  ?>
 <div>
-  <form method="get" action="" id="SearchForm" onreset="resetForm()">
+  <form method="get" action="" id="SearchForm">
     <span>Name:</span><input type="search" name="ProductName">
     <span>Price</span><input type="text" name="PriceLow" placeholder="Min"><input type="text" name="PriceHigh" placeholder="Max">
     <span>Category</span>
@@ -52,7 +52,7 @@
       <option value="None">None</option>
     </select>
     <input type="button" name="Hello" value="Hello" onclick="HelloWorld()">
-    <input id="ResetButton" type="Reset"  name="Reset" value="Clear">
+    <input id="ResetButton" type="button"  name="Reset" value="Clear" onclick="resetForm()">
     <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts()">
   </form>
 </div>
