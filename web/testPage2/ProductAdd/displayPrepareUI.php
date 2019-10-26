@@ -1,13 +1,13 @@
 <?php  ?>
 <div>
-  <form method="get" action="" id="SearchForm2">
+  <form method="get" action="" id="PrepareFrom">
     <span>Name</span><input type="search" name="ProductName">
     <br/>
     <span>Price</span><input type="text" name="PriceLow" placeholder="Min">
     <br/>
 
     <span>Category</span>
-    <select id="CatagoryField2" name="Category" onchange="displaySubProducts(&quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
+    <select id="CatagoryField2" name="Category" onchange="displaySubProducts(this.id;, &quot;SubCatagoryField2&quot;)">
       <option value="None">None</option>
       <?php include("categoryOptions.php") ?>
     </select>
@@ -23,8 +23,8 @@
       <?php include("rarityOptions.php") ?>
     </select>
     <br/>
-    <input id="ResetButton2" type="button"  name="Reset" value="Clear"
-    onclick="resetForm(this.parentElement.id, &quot;productTable2&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
-    <input id="SubmitButton2" type="button" name="Submit" value="Submit" onclick="updateProducts(this.parentElement.id, &quot;productTable2&quot;)">
+    <input id="PrepareResetButton2" type="button"  name="Reset" value="Clear"
+    onclick="resetForm(this.parentElement.id, &quot;PrepareFrom&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
+    <input id="SubmitButton2" type="button" name="Submit" value="Submit" onclick="">
   </form>
 </div>
