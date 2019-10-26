@@ -119,6 +119,7 @@ try{
   $returnString .= "<tr>";
   $returnString .= "<th>ID</th>";       //Row Number
   $returnString .= "<th>Category</th>"; //Sub Category
+  $returnString .= "<th>Subategory</th>"; //Sub Category
   $returnString .= "<th>Name</th>";     //name
   $returnString .= "<th>Quantity</th>"; //Quantity
   $returnString .= "<th>Price</th>";    //Price
@@ -131,9 +132,6 @@ try{
     //For per column
     foreach ($results[$i] as $key => $value) {
       //Values we dont want
-      if($key == "categoryname"){
-        continue;
-      }
       //Have rarity info come before product name
       else if($key == "rarityname"){
         $productsnameSTR .= "<td class=\"$value\">";
