@@ -48,5 +48,6 @@ function updateProducts(){
 function resetForm(){
   window.history.replaceState(null, null, location.pathname);
   alert(location.pathname);
+  document.getElementById("SearchForm").reset();
   updateProducts();
 }
