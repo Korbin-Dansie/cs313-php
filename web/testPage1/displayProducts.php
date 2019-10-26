@@ -46,12 +46,6 @@ if(isset($_GET)){
       }
     }
   }
-
-  if(isset($_GET['Rarity'])) {
-    if($_GET['Rarity'] != "None" && $_GET['Rarity'] != ""){
-      array_push($searchValues, "Rarity.name = '" .$_GET['rarity'] ."'";
-    }
-  }
 }//End of GET
 
 
