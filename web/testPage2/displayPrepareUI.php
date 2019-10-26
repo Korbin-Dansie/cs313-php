@@ -1,9 +1,9 @@
 <?php  ?>
 <div>
-  <form method="get" action="" id="SearchForm">
+  <form method="get" action="" id="SendForm">
     <span>Name</span><input type="search" name="ProductName">
     <br/>
-    <span>Price</span><input type="text" name="PriceLow" placeholder="Min"><input type="text" name="PriceHigh" placeholder="Max">
+    <span>Price</span><input type="text" name="PriceLow">
     <br/>
 
     <span>Category</span>
