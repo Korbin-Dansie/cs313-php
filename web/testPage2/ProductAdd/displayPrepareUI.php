@@ -24,7 +24,7 @@
     </select>
     <br/>
     <input id="PrepareResetButton2" type="button"  name="Reset" value="Clear"
-    onclick="resetForm(this.parentElement.id, &quot;PrepareFrom&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
+    onclick="resetForm(this.parentElement.id, &quot;DisplayReults&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
     <input id="SubmitButton2" type="button" name="Submit" value="Submit" onclick="">
   </form>
 </div>
