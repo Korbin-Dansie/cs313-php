@@ -24,7 +24,7 @@
     </select>
     <br/>
     <input id="PrepareResetButton2" type="button"  name="Reset" value="Clear"
-    onclick="resetForm(this.parentElement.id, &quot;DisplayReults&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
-    <input id="SubmitButton2" type="button" name="Submit" value="Submit" onclick="">
+    onclick="resetPrepareForm(this.parentElement.id, &quot;DisplayReults&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
+    <input id="SubmitButton2" type="button" name="Submit" value="Submit" onclick="AddNewProduct(this.parentNode.id, &quot;prepareTable&quot;){">
   </form>
 </div>

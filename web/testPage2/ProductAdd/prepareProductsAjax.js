@@ -28,11 +28,11 @@ function AddNewProduct(formLocationID, toElementID){
   //Trim last charactar of the string to prevent errors
   getString = getString.substring(0, getString.length - 1);
 
-  xhr.open("POST", "ProductAdd/perepareProduct.php");
+  xhr.open("POST", "ProductAdd/perepareProduct.php", true);
   xhr.send(getString);
 }
 //TODO: Remove toLocation after testing is done
-function resetForm(formLocationID, toElementID, categoryID, subCategoryID){
+function resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID){
   document.getElementById(formLocationID).reset();
   AddNewProduct(formLocationID, toLocation);
   displaySubProducts(categoryID, subCategoryID);
