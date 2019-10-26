@@ -24,6 +24,6 @@
     </select>
     <br/>
     <input id="ResetButton" type="button"  name="Reset" value="Clear" onclick="resetForm(this.parentElement.id)">
-    <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts()">
+    <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts(this.parentElement.id, productTable)">
   </form>
 </div>

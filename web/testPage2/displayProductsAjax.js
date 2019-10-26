@@ -2,12 +2,12 @@ function HelloWorld() {
   alert("Hello");
 }
 
-function updateProducts(){
+function updateProducts(formLocationID, toElementID){
   var xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function (){
     if (xhr.readyState == 4 && xhr.status == 200) {
-      var divDom = document.getElementById("productTable");
+      var divDom = document.getElementById(toElementID);
       divDom.innerHTML = xhr.responseText;
     }
   }
@@ -16,7 +16,7 @@ function updateProducts(){
   var paramaters = "";
   //Prepare the Get String
   var getString = "?";
-  var formLocation = document.getElementById("SearchForm");
+  var formLocation = document.getElementById(formLocationID);
   var formElements = formLocation.getElementsByTagName("INPUT");
   for (var i = 0, element; element = formElements[i++];) {
     if (element.value !== "" &&
@@ -45,8 +45,8 @@ function updateProducts(){
   xhr.send();
 }
 
-function resetForm(locationID){
-  document.getElementById(locationID).reset();
+function resetForm(formLocationID){
+  document.getElementById(formLocationID).reset();
   window.history.replaceState(null, null, location.pathname);
   updateProducts();
   displaySubProducts();
