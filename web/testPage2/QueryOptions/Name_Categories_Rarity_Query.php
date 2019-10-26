@@ -37,7 +37,7 @@ function NameCategoriesRarityQuery() {
 
     $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-    return json_encode(array_values($results));
+    return $results;
 
   }
   catch (PDOException $ex)
