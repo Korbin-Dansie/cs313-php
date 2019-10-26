@@ -14,7 +14,7 @@ function displaySubProducts(catagoryFieldID, subCatagoryFieldID) {
     //Pass in the current GET Paramaters
     var paramaters = "?Catagory=" + input.value;
 
-    xhr.open("GET", "subCatagorysQuery.php" + paramaters);
+    xhr.open("GET", "../QueryOptions/subCatagorysQuery.php" + paramaters);
     xhr.send();
   }
   else {

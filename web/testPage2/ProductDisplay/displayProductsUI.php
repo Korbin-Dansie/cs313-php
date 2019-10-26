@@ -9,7 +9,7 @@
     <span>Category</span>
     <select id="CatagoryField" name="Category" onchange="displaySubProducts(&quot;CatagoryField&quot;, &quot;SubCatagoryField&quot;)">
       <option value="None">None</option>
-      <?php include("categoryOptions.php") ?>
+      <?php include("../QueryOptions/categoryOptions.php") ?>
     </select>
     <br/>
     <span>Subcategory</span>
@@ -20,7 +20,7 @@
     <span>Rarity</span>
     <select class="" name="Rarity">
       <option value="None">None</option>
-      <?php include("rarityOptions.php") ?>
+      <?php include("../QueryOptions/rarityOptions.php") ?>
     </select>
     <br/>
     <input id="ResetButton" type="button"  name="Reset" value="Clear"

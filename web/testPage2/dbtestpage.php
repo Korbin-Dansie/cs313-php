@@ -6,8 +6,8 @@
   <link rel="stylesheet" type="text/css" href="../css/productTable.css" />
   <link rel="icon" href="../img/KtechIcon.png">
   <title>Korbin Dansie's</title>
-  <script src="displayProductsUIAjax.js"></script>
-  <script src="displayProductsAjax.js"></script>
+  <script src="QueryOptions/CategoriesUpdateAjax.js"></script>
+  <script src="ProductDisplay/displayProductsAjax.js"></script>
 
 </head>
 
@@ -17,7 +17,7 @@
   <br />
 
   <div>
-    <?php include("displayPrepareUI.php"); ?>
+    <?php include("ProductAdd/displayPrepareUI.php"); ?>
   </div>
 
   <div id="prepareTable">
@@ -25,7 +25,7 @@
   </div>
 
   <div>
-    <?php include("displayProductsUI.php"); ?>
+    <?php include("ProductDisplay/displayProductsUI.php"); ?>
   </div>
 
   <div id="productTable">
