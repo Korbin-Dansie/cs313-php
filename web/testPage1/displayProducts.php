@@ -133,7 +133,7 @@ try{
     foreach ($results[$i] as $key => $value) {
       //Values we dont want
       //Have rarity info come before product name
-      else if($key == "rarityname"){
+      if($key == "rarityname"){
         $productsnameSTR .= "<td class=\"$value\">";
       }
       else if($key == "productsname"){
@@ -144,7 +144,6 @@ try{
         $returnString .= "<td>$value</td>";
       }
     }
-
     $returnString .= "</tr>";
   }
 
