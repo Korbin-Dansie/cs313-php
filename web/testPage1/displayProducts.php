@@ -118,7 +118,8 @@ try{
   //Create table headers
   $returnString .= "<tr>";
   $returnString .= "<th>ID</th>";       //Row Number
-  $returnString .= "<th>Category</th>"; //Sub Category
+  $returnString .= "<th hidden>ID</th>";       //True ID Value
+  $returnString .= "<th>Category</th>"; //Category
   $returnString .= "<th>Subategory</th>"; //Sub Category
   $returnString .= "<th>Name</th>";     //name
   $returnString .= "<th>Quantity</th>"; //Quantity
@@ -142,6 +143,7 @@ try{
       }
       else if($key == "productsid"){
         $returnString .= "<td>".($i+1)."</td>";
+        $returnString .= "<td>".$value."</td>";
       }
       else {
         $returnString .= "<td>$value</td>";
