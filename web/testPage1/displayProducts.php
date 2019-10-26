@@ -45,7 +45,13 @@ if(isset($_GET)){
         }
       }
     }
+
+if(isset($_GET['Rarity'])) {
+  if($_GET['Rarity'] != "None" && $_GET['Rarity'] != ""){
+    array_push($searchValues, "LOWER(rarity.name) LIKE LOWER('%".$_GET['rarity']."%')");
   }
+}
+  }//End of GET
 
 
   //Add 'and' between search values
