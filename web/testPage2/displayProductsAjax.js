@@ -45,9 +45,9 @@ function updateProducts(formLocationID, toElementID){
   xhr.send();
 }
 
-function resetForm(formLocationID){
+function resetForm(formLocationID, toElementID, categoryID, subCategoryID){
   document.getElementById(formLocationID).reset();
   window.history.replaceState(null, null, location.pathname);
-  updateProducts();
-  displaySubProducts();
+  updateProducts(formLocationID, toElementID);
+  displaySubProducts(categoryID, subCategoryID);
 }

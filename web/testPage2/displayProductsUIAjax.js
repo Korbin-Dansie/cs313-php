@@ -1,7 +1,7 @@
-function displaySubProducts(){
-  var subCatagorys = document.getElementById("SubCatagoryField");
+function displaySubProducts(catagoryFieldID, subCatagoryFieldID){
+  var subCatagorys = document.getElementById(subCatagoryFieldID);
   var displayNone = "<option value=\"None\">None</option>";
-  var input = document.getElementById("CatagoryField");
+  var input = document.getElementById(catagoryFieldID);
   if(input.value != "None"){
     var xhr = new XMLHttpRequest();
 

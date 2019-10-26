@@ -23,7 +23,8 @@
       <?php include("rarityOptions.php") ?>
     </select>
     <br/>
-    <input id="ResetButton" type="button"  name="Reset" value="Clear" onclick="resetForm(this.parentElement.id)">
+    <input id="ResetButton" type="button"  name="Reset" value="Clear"
+    onclick="resetForm(this.parentElement.id, &quote;productTable&quote;, &quote;CatagoryField&quote;, &quote;SubCatagoryField&quote;)">
     <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts(this.parentElement.id, &quot;productTable&quot;)">
   </form>
 </div>
