@@ -7,9 +7,9 @@
     <br/>
 
     <span>Category</span>
-    <select id="CatagoryField2" name="Category" onchange="displaySubProducts(this.id;, &quot;SubCatagoryField2&quot;)">
+    <select id="CatagoryField2" name="Category" onchange="displaySubProducts(this.id, &quot;SubCatagoryField2&quot;)">
       <option value="None">None</option>
-      <?php include("categoryOptions.php") ?>
+      <?php include("QueryOptions/categoryOptions.php") ?>
     </select>
     <br/>
     <span>Subcategory</span>
@@ -20,11 +20,11 @@
     <span>Rarity</span>
     <select class="" name="Rarity">
       <option value="None">None</option>
-      <?php include("rarityOptions.php") ?>
+      <?php include("QueryOptions/rarityOptions.php") ?>
     </select>
     <br/>
     <input id="PrepareResetButton2" type="button"  name="Reset" value="Clear"
-    onclick="resetPrepareForm(this.parentElement.id, &quot;DisplayReults&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
+    onclick="resetPrepareForm(this.parentNode.id, &quot;DisplayReults&quot;, &quot;CatagoryField2&quot;, &quot;SubCatagoryField2&quot;)">
     <input id="SubmitButton2" type="button" name="Submit" value="Submit" onclick="AddNewProduct(this.parentNode.id, &quot;prepareTable&quot;){">
   </form>
 </div>
