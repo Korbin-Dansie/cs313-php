@@ -117,7 +117,7 @@ try{
   $returnString .= "<table id='productTable'>";
   //Create table headers
   $returnString .= "<tr>";
-  $returnString .= "<th>ID</th>";       //Row Number
+  $returnString .= "<th>Row#</th>";       //Row Number
   $returnString .= "<th>Category</th>"; //Category
   $returnString .= "<th>Subategory</th>"; //Sub Category
   $returnString .= "<th>Name</th>";     //name
