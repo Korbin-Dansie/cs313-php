@@ -143,7 +143,7 @@ try{
         $returnString .= $productsnameSTR;
       }
       else if($key == "productsid"){
-        $returnString .= "<td>" . strval(($i+1)) . "</td>"
+        $returnString .= "<td>" . $i . "</td>"
       }
       else {
         $returnString .= "<td>$value</td>";
