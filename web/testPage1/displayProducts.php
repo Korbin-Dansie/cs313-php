@@ -45,23 +45,24 @@ if(isset($_GET)){
         }
       }
     }
+  }
 
-    if(isset($_GET['Rarity'])) {
-      if($_GET['Rarity'] != "None" && $_GET['Rarity'] != ""){
-        array_push($searchValues, "Rarity.name = '" .$_GET['rarity'] ."'";
-      }
-    }
-  }//End of GET
-
-
-  //Add 'and' between search values
-  foreach ($searchValues as $key) {
-    $WHEREclause .= $key;
-    if(end($searchValues) != $key){
-      $WHEREclause .= " and ";
+  if(isset($_GET['Rarity'])) {
+    if($_GET['Rarity'] != "None" && $_GET['Rarity'] != ""){
+      array_push($searchValues, "Rarity.name = '" .$_GET['rarity'] ."'";
     }
   }
+}//End of GET
+
+
+//Add 'and' between search values
+foreach ($searchValues as $key) {
+  $WHEREclause .= $key;
+  if(end($searchValues) != $key){
+    $WHEREclause .= " and ";
+  }
 }
+
 
 if($WHEREclause == 'WHERE ') {
   $WHEREclause = '';
@@ -70,8 +71,7 @@ if($WHEREclause == 'WHERE ') {
 
 //The string we will return when we end
 $returnString = '';
-try
-{
+try{
   $dbUrl = getenv('DATABASE_URL');
 
   $dbOpts = parse_url($dbUrl);
