@@ -8,6 +8,8 @@
   <title>Korbin Dansie's</title>
   <script src="QueryOptions/CategoriesUpdateAjax.js"></script>
   <script src="ProductDisplay/displayProductsAjax.js"></script>
+  <script src="ProductAdd/prepareProductsAjax.js"></script>
+
 
 </head>
 

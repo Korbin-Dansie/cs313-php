@@ -28,7 +28,7 @@ function AddNewProduct(formLocationID, toElementID){
   //Trim last charactar of the string to prevent errors
   getString = getString.substring(0, getString.length - 1);
 
-  xhr.open("POST", "ProductAdd/perepareProduct.php", true);
+  xhr.open("POST", "ProductAdd/prepareProduct.php", true);
   xhr.send(getString);
 }
 //TODO: Remove toLocation after testing is done
