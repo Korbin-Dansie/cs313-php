@@ -18,8 +18,8 @@ foreach ($_POST as $key => $value) {
 
 
 //Check to make sure all the variables are set
-if( !(isset($_POST['ProductName']) || isset($_POST['PriceList']) ||
-isset($_POST['SubCategory']) || isset($_POST['Rarity']) || isset($_POST['Rarity']))) {
+if( !(isset($_POST['ProductName']) && isset($_POST['PriceList']) &&
+isset($_POST['SubCategory']) && isset($_POST['Rarity']) && isset($_POST['Rarity']))) {
   echo "All variables are not set!";
   return;
 }
