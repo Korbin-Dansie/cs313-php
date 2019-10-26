@@ -1,4 +1,5 @@
 <?php
+$limitNumber = 25;
 /***********
 * Possible values that should be returned with get
 *  ProductName, PriceLow, PriceHigh, Category
@@ -110,7 +111,7 @@ try{
   ON Sub_Category.categoryid = Category.id
   ';
 
-  $dbquery = $db->query($statment . " " . $WHEREclause);
+  $dbquery = $db->query($statment . " " . $WHEREclause . " Limit " . $limitNumber);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
