@@ -140,6 +140,9 @@ try{
         $productsnameSTR .= "$value</td>";
         $returnString .= $productsnameSTR;
       }
+      else if($key == "productsid"){
+        $returnString .= "<td>$i</td>";
+      }
       else {
         $returnString .= "<td>$value</td>";
       }
