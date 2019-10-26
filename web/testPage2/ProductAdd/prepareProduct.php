@@ -9,13 +9,12 @@ print_r($_POST);
 *
 */
 echo "<br>";
-for ($i=0; $i < count($_POST); $i++) {
-  foreach ($_POST[$i] as $key => $value) {
+  foreach ($_POST[0] as $key => $value) {
     echo "$key";
     echo "---";
     echo "$value";
     echo "<br>";
   }
-}
+
 
  ?>
