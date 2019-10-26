@@ -51,6 +51,7 @@
       ?>
     </select>
     <br/>
+    <span>Subcategory</span>
     <select id="SubCatagoryField" name="SubCategory">
       <option value="None">None</option>
     </select>
