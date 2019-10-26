@@ -17,7 +17,7 @@
   <br />
 
   <div>
-    <?php include("displayPrepareUI.php") ?>
+    <?php //include("displayPrepareUI.php"); ?>
   </div>
 
   <div id="prepareTable">

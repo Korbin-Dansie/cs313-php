@@ -1,4 +1,4 @@
-function displaySubProducts(catagoryFieldID, subCatagoryFieldID){
+function displaySubProducts(catagoryFieldID, subCatagoryFieldID) {
   var subCatagorys = document.getElementById(subCatagoryFieldID);
   var displayNone = "<option value=\"None\">None</option>";
   var input = document.getElementById(catagoryFieldID);
