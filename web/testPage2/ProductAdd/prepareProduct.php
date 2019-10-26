@@ -9,7 +9,7 @@ print_r($_POST);
 *
 */
 echo "<br>";
-  foreach ($_POST[0] as $key => $value) {
+  foreach ($_POST as $key => $value) {
     echo "$key";
     echo "---";
     echo "$value";
