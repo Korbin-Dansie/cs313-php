@@ -1,6 +1,7 @@
 function HelloWorld() {
-  alert(location.pathname);
   alert("Hello");
+  alert(location.pathname);
+
 }
 
 function updateProducts(){
