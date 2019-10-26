@@ -27,7 +27,7 @@ function AddNewProduct(formLocationID, toElementID){
   }
   //Trim last charactar of the string to prevent errors
   getString = getString.substring(0, getString.length - 1);
-
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.open("POST", "ProductAdd/prepareProduct.php", true);
   xhr.send(getString);
 }
