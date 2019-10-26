@@ -41,7 +41,7 @@ function updateProducts(formLocationID, toElementID){
   {
     paramaters = location.search.toString();
   }
-  xhr.open("GET", "displayProducts.php" + paramaters);
+  xhr.open("GET", "ProductDisplay/displayProducts.php" + paramaters);
   xhr.send();
 }
 
