@@ -51,7 +51,8 @@
     <select id="SubCatagoryField" name="SubCategory">
       <option value="None">None</option>
     </select>
-    <input id="ResetButton" type="button"  name="Reset" value="Clear" onclick="resetForm()">
+    <input type="button" name="Hello" value="Hello" onclick="HelloWorld()">
+    <input id="ResetButton" type="Reset"  name="Reset" value="Clear">
     <input id="SubmitButton" type="button" name="Submit" value="Submit" onclick="updateProducts()">
   </form>
 </div>

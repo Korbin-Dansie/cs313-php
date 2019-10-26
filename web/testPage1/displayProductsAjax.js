@@ -1,4 +1,5 @@
 function HelloWorld() {
+  alert(location.pathname);
 
 }
 
