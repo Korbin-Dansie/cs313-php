@@ -16,7 +16,7 @@ foreach ($_POST as $key => $value) {
   echo "<br>";
 }
 
-include("QueryOptions/Name_Categories_Rarity_Query.php");
+include("../QueryOptions/Name_Categories_Rarity_Query.php");
 NameCategoriesRarityQuery();
 echo "<br>";
 //Check to make sure all the variables are set
