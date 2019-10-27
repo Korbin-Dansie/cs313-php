@@ -111,7 +111,7 @@ try{
   ON Sub_Category.categoryid = Category.id
   ';
 
-  $dbquery = $db->query($statment . " " . $WHEREclause . " Limit " . $limitNumber . " ORDER BY ProductsID ASC");
+  $dbquery = $db->query($statment . " " . $WHEREclause . " ORDER BY ProductsID ASC " . " Limit " . $limitNumber);
   $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
   //Create the tableRows
   $returnString .= "<table id='productTable'>";
