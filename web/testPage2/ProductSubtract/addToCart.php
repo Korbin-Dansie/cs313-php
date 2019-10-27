@@ -15,7 +15,7 @@ if(is_numeric($_POST['productid']) == false) {
 
 include("../QueryOptions/AllProductQuery.php");
 $productRow = AllProductQuery(" Where id = " . $_POST['productid'] );
-
+$productRow = $productRow[0];
 if($productRow == ""){
   echo "Product row is Blank";
 }
@@ -35,7 +35,7 @@ print_r($_SESSION["shopping"]);
 
 //If we are out of the product dont contine
 if($productRow['quantity'] <= 0){
-  echo "Quantity is  ".$productRow['quantity']."\n";
+  echo "Quantity is  ". $productRow['quantity'] ."\n";
   return;
 }
 try
