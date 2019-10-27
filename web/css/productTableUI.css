@@ -1,7 +1,7 @@
-#SearchForm *{
+#SearchForm{
   width: 150px;
 }
 
-#SearchForm{
-  width: 150px;
+#SearchForm *{
+  width: 140px;
 }
