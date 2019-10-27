@@ -36,9 +36,9 @@ $dbInfoCategories = CategoriesQuery();
 echo "<br>";
 //Check to make sure all the variables are set
 if( !(isset($_POST['ProductName']) && isset($_POST['PriceList']) &&
-isset($_POST['Category']) && isset($_POST['SubCategory']) && isset($_POST['Rarity']))) {
+isset($_POST['Category']) && isset($_POST['SubCategory']) && isset($_POST['Rarity'])) ) {
   echo "All variables are not set!";
-  //return;
+  return;
 }
 
 $correctValues = true;
@@ -68,7 +68,6 @@ for ($i=0; $i <= count($dbInfoCategories); $i++) {
   if($i == count($dbInfoCategories)){
     $correctValues = false;
     array_push($returnStringArray, "Category or SubCategory is incorrect");
-
   }
   else if($dbInfoCategories[$i]['CategoryName'] == $_POST['Category']){
     if ($dbInfoCategories[$i]['Sub_CategoryName'] == $_POST['SubCategory']) {
