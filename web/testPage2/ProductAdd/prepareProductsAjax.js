@@ -16,6 +16,7 @@ function AddNewProduct(formLocationID, toElementID, categoryID, subCategoryID){
         }
       }else {
         //No error and product submited so reset form
+        divDom.innerHTML = "";
         resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID);
       }
     }
