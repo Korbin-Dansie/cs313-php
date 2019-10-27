@@ -35,11 +35,9 @@ function updateProducts(formLocationID, toElementID){
   //Add paramaters to url with page refreash
   if(getString.length > 0){
     window.history.replaceState(null, null, getString);
-  }else {
-    window.history.replaceState(null, null, location.pathname);
   }
 
-  if(location.location != null)
+  if(location.search != null)
   {
     paramaters = location.search.toString();
   }
