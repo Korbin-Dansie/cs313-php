@@ -4,7 +4,12 @@ function AddNewProduct(formLocationID, toElementID){
   xhr.onreadystatechange = function (){
     if (xhr.readyState == 4 && xhr.status == 200) {
       var divDom = document.getElementById(toElementID);
-      divDom.innerHTML = JSON.parse(this.responseText);
+      var responseJson = JSON.parse(this.responseText);
+      var newHTML = "";
+      for (i = 0; i < responseJson.length; i++) {
+        newHTML += myObj[i] + "<br/>";
+      }
+      divDom.innerHTML = newHTML;
     }
   }
   //Get String is prepared
@@ -15,7 +20,7 @@ function AddNewProduct(formLocationID, toElementID){
   var formElements = formLocation.getElementsByTagName("INPUT");
   for (var i = 0, element; element = formElements[i++];) {
     if (element.value !== "" &&
-        (!(element.getAttribute("name") == "Submit" || element.getAttribute("name") == "Reset" ))) {
+    (!(element.getAttribute("name") == "Submit" || element.getAttribute("name") == "Reset" ))) {
       getString += element.getAttribute("name") + "=" + element.value + "&";
     }
   }
