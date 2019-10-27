@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 header('Content-Type: text/plain; charset=utf-8');
 
 if(isset($_POST['productid']) == false) {
@@ -22,7 +24,7 @@ else {
 }
 
 
-if(!isset($_SESSION["shopping"])) {
+if(isset($_SESSION["shopping"]) == false) {
   $_SESSION["shopping"] = array();
   array_push($_SESSION["shopping"], $_POST['productid']);
 }else {
