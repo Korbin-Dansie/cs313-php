@@ -2,18 +2,3 @@
   box-sizing: border-box;
   width: 150px;
 }
-
-#SearchForm * {
-  box-sizing: border-box;
-}
-
-#SearchForm input{
-  width: 75%;
-}
-
-#SearchForm span{
-  width: 25%;
-}
-#SearchForm #ResetButton,#SubmitButton{
-  width: 50%;
-}
