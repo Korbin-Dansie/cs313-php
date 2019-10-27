@@ -50,7 +50,7 @@ if($_POST['ProductName'] == ""){
   array_push($returnStringArray, "Name Cannot start with @ERR:");
 
   // code...
-}elseif ( strpos($_POST['ProductName'], "'") === false) {
+}elseif ( strpos($_POST['ProductName'], "'") == false) {
   $correctValues = false;
   array_push($returnStringArray, "Name Cannot contain a ' ");
 }
@@ -70,6 +70,7 @@ for ($i=0; $i <= count($dbInfoCategories); $i++) {
   else if($dbInfoCategories[$i]['CategoryName'] == $_POST['Category']){
     if ($dbInfoCategories[$i]['Sub_CategoryName'] == $_POST['SubCategory']) {
       //Correct value and subCategory
+      echo "Catogorys are correct";
       break;
     }
   }
@@ -91,7 +92,7 @@ for ($i=0; $i <= count($dbInfoRarity); $i++) {
 }
 
 if($correctValues == false){
-  echo '$correctValues<br> = ' . $correctValues;
+  echo '$correctValues<br> = ' . ($correctValues ? 'true' : 'false');
 }
 
 print_r($returnStringArray);
