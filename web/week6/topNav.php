@@ -1,17 +1,17 @@
 <div class="topnav">
   <nav>
-    <h1><a href="week3.php" id="shopHomeButton">Shadow-Steel Weapons</a></h1>
+    <h1><a href="week6.php" id="shopHomeButton">Shadow-Steel Weapons</a></h1>
     <div id="navagation">
       <div id="Products">
         <ul>
-          <li><a href="errorPage.php">Swords</a>
+          <li><a href="week6.php">Swords</a>
             <ul>
-              <li><a href="errorPage.php">Short Sword</a></li>
-              <li><a href="errorPage.php">Long Sword</a></li>
-              <li><a href="week3.php">Sharp Sword</a></li>
+              <li><a href="week6.php">Common Sword</a></li>
+              <li><a href="wee6.php">Uncommon Sword</a></li>
+              <li><a href="week6php">Rare Sword</a></li>
             </ul>
           </li>
-          <li><a href="errorPage.php">Add Product</a>
+          <li><a href="addProduct.php">Add Product</a>
           </li>
           <li><a href="dbtestpage.php">Addmin</a>
           </li>
