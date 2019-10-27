@@ -4,19 +4,22 @@ function AddNewProduct(formLocationID, toElementID){
   xhr.onreadystatechange = function (){
     if (xhr.readyState == 4 && xhr.status == 200) {
       var divDom = document.getElementById(toElementID);
-      var responseJson = JSON.parse(this.responseText);
-      divDom.innerHTML = "";
-      for (var i = 0; i < responseJson.length; i++) {
-        var para = document.createElement("p");
-        var node = document.createTextNode(responseJson[i]);
-        para.appendChild(node);
-        divDom.appendChild(para);
-      }
-      if(responseJson.length == 0){
+      var responseJson = "";
+      if(this.responseText != ""){
+        responseJson = JSON.parse(this.responseText);
+        divDom.innerHTML = "";
+        for (var i = 0; i < responseJson.length; i++) {
+          var para = document.createElement("p");
+          var node = document.createTextNode(responseJson[i]);
+          para.appendChild(node);
+          divDom.appendChild(para);
+        }
+      }else {
         divDom.innerHTML = "";
       }
     }
   }
+
   //Get String is prepared
   //Pass in the current GET Paramaters
   //Prepare the Get String
