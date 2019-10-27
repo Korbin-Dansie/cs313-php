@@ -29,5 +29,6 @@ if(!isset($_SESSION["shopping"])) {
   array_push($_SESSION["shopping"], $_POST['productid']);
 }
 
+print_r($_SESSION["shopping"]);
 return;
  ?>
