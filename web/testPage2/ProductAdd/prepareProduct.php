@@ -70,14 +70,14 @@ echo "<br>";
 
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
   if($i < count($dbInfoCategories)){
-    echo $dbInfoCategories[$i]['CategoryName'] . " -- " . $dbInfoCategories[$i]['Sub_CategoryName'];
+    echo array_values($dbInfoCategories[$i]['CategoryName']) . " -- " . $dbInfoCategories[$i]['Sub_CategoryName'];
   }
   if($i == count($dbInfoCategories)){
     $correctValues = false;
     array_push($returnStringArray, "Category or SubCategory is incorrect");
   }
   else if($dbInfoCategories[0][$i]['CategoryName'] == $_POST['Category']){
-    if ($dbInfoCategories[0][$i]['Sub_CategoryName'] == $_POST['SubCategory']) {
+    if ($dbInfoCategories[$i]['Sub_CategoryName'] == $_POST['SubCategory']) {
       //Correct value and subCategory
       echo "Catogorys are correct";
       break;
@@ -101,7 +101,7 @@ for ($i=0; $i <= count($dbInfoRarity); $i++) {
 }
 
 if($correctValues == false){
-  echo '$correctValues = ' . ($correctValues ? 'true' : 'false') . "<br>";
+  echo '<br>$correctValues = ' . ($correctValues ? 'true' : 'false') . "<br>";
 }
 
 print_r($returnStringArray);
