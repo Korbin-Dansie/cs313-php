@@ -66,9 +66,11 @@ echo "<br>";
 echo "Catagorys:";
 echo "<br>";
 print_r($dbInfoCategories);
+echo "<br>";
+
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
   if($i < count($dbInfoCategories)){
-    echo $dbInfoCategories[0]['CategoryName'] . " -- " . $dbInfoCategories[0]['Sub_CategoryName'];
+    echo $dbInfoCategories['CategoryName'][0] . " -- " . $dbInfoCategories['Sub_CategoryName'][0];
   }
   if($i == count($dbInfoCategories)){
     $correctValues = false;
