@@ -70,7 +70,7 @@ echo "<br>";
 
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
   if($i < count($dbInfoCategories)){
-    echo array_values($dbInfoCategories)[$i]['CategoryName'] . " -- " . $dbInfoCategories[$i]['Sub_CategoryName'];
+    echo array_values($dbInfoCategories)[$i]['categoryname'] . " -- " . $dbInfoCategories[$i]['sub_categoryname'];
   }
   if($i == count($dbInfoCategories)){
     $correctValues = false;
