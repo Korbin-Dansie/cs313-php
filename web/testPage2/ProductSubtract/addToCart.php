@@ -35,6 +35,7 @@ print_r($_SESSION["shopping"]);
 
 //If we are out of the product dont contine
 if($productRow['quantity'] <= 0){
+  echo "Quantity is  ".$productRow['quantity']."\n";
   return;
 }
 try
