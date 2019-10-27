@@ -10,8 +10,8 @@ function addToCart(datebaseRowInfo){
   //Get String is prepared
   //Pass in the current GET Paramaters
   //Prepare the Get String
-  alert("productid=" + datebaseRowInfo);
-  var getString = "productid=" + datebaseRowInfo;
+  var getString = "productid=" + toString(datebaseRowInfo);
+  alert(getString);
 
   //Trim last charactar of the string to prevent errors
   xhr.open("POST", "ProductSubtract/addToCart.php", true);
