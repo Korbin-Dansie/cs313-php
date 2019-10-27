@@ -63,7 +63,7 @@ if(!is_numeric($_POST['PriceList'])){
 //Check if subcategorys are $correctValues
 //[Category] => Sword [SubCategory] => Short_Sword
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
-  echo $dbInfoCategories[$i]['CategoryName'] . " -- " . $dbInfoCategories[$i]['CategoryName'];
+  echo $dbInfoCategories['CategoryName'][$i] . " -- " . $dbInfoCategories['CategoryName'][$i];
   if($i == count($dbInfoCategories)){
     $correctValues = false;
     array_push($returnStringArray, "Category or SubCategory is incorrect");
