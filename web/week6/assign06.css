@@ -1,0 +1,65 @@
+label{
+  cursor: pointer;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  min-width: 900px;
+}
+
+#personalInfo td:first-child{
+  text-align: right;
+}
+
+#personalInfo tr:last-child td:last-child textarea{
+  width: 183px;
+}
+
+#personalInfoErrorMessages,
+#creditCardInfoErrorMessages,
+#formButtonsErrorMessages{
+  display: None;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffcccc;
+  text-align: center;
+
+}
+#totalAmount{
+  border: black solid 1px;
+  font-size: 1.5em;
+  padding: 8px;
+  margin: 16px;
+}
+
+#total{
+  display: inline;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#items td{
+text-align: center;
+}
+
+#creditCardInfo{
+  text-align: center;
+}
+
+#creditCardType{
+  margin-top: 16px;
+}
+#formButtons{
+  margin: 16px;
+  text-align: center;
+}
+
+#formButtons input{
+  margin: 10px;
+  height: 35px;
+  width: 35%;
+}
