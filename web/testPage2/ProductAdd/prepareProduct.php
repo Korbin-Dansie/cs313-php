@@ -114,6 +114,7 @@ try
   price,
   sub_categoryid)
   VALUES (:rid, :pname, :quantity, :price, :subid)';
+  $db->prepare($statment);
   $db->bindParam(':rid', $rarityID, PDO::PARAM_INT);
   $db->bindParam(':pname', $_POST['ProductName'], PDO::PARAM_STR);
   $db->bindParam(':quantity', $_POST['Quantity'], PDO::PARAM_INT);
