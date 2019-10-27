@@ -6,6 +6,7 @@ if(is_numeric($_POST['productid']) == false) {
   echo "Not numaric";
   return;
 }
+echo "is numaric";
 
 //include("../QueryOptions/AllProductQuery.php");
 //$inRange = AllProductQuery(" Where id = " . $_POST['productid'] );
@@ -22,5 +23,5 @@ if(!isset($_SESSION["shopping"]){
   array_push($_SESSION["shopping"], $_POST['productid']);
 }
 
-return "Success";
+return;
  ?>
