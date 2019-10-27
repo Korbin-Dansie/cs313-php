@@ -1,21 +1,33 @@
 <?php
 header('Content-Type: text/plain; charset=utf-8');
 
-echo ($_POST['productid'] . " From php");
+if(isset($_POST['productid']) == false) {
+  echo "Not Set";
+  return;
+}
+
 if(is_numeric($_POST['productid']) == false) {
   echo "Not numaric";
   return;
 }
-echo "is numaric";
 
-//include("../QueryOptions/AllProductQuery.php");
-//$inRange = AllProductQuery(" Where id = " . $_POST['productid'] );
-return;
+include("../QueryOptions/AllProductQuery.php");
+$inRange = AllProductQuery(" Where id = " . $_POST['productid'] );
 
 if($inRange == ""){
+  echo "Range Blank";
+}
+else {
+  echo "Range not blank";
 }
 
 
+if(!isset($_SESSION["shopping"])) {
+  $_SESSION["shopping"] = array();
+  array_push($_SESSION["shopping"], $_POST['productid']);
+}else {
+  array_push($_SESSION["shopping"], $_POST['productid']);
+}
 
 return;
  ?>
