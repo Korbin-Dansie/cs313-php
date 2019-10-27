@@ -8,9 +8,10 @@ if(is_numeric($_POST['productid']) == false){
 
 include("AllProductQuery.php");
 $inRange = AllProductQuery(" Where product.id = " . $_POST['productid']);
+print_r($inRange);
+return;
+
 if($inRange == ""){
-  echo "$inRange";
-  return;
 }
 
 
