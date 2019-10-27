@@ -16,12 +16,6 @@ if($inRange == ""){
 }
 
 
-if(!isset($_SESSION["shopping"]){
-  $_SESSION["shopping"] = array();
-  array_push($_SESSION["shopping"], $_POST['productid']);
-}else {
-  array_push($_SESSION["shopping"], $_POST['productid']);
-}
 
 return;
  ?>
