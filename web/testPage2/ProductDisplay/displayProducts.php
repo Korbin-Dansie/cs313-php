@@ -117,7 +117,7 @@ try{
   $returnString .= "<table id='productTable'>";
   //Create table headers
   $returnString .= "<tr>";
-  $returnString .= "<th>Row#</th>";       //Row Number
+  $returnString .= "<th>Buy</th>";       //Row Number
   $returnString .= "<th>Category</th>"; //Category
   $returnString .= "<th>Subategory</th>"; //Sub Category
   $returnString .= "<th>Name</th>";     //name
@@ -141,7 +141,10 @@ try{
         $returnString .= $productsnameSTR;
       }
       else if($key == "productsid"){
-        $returnString .= "<td value=\"$value\">".($i+1)."</td>";
+        //$returnString .= "<td value=\"$value\">".($i+1)."</td>";
+        //Button to remove 1 product from the table
+        $button = "<button type=\"button\" value=\"$value\" onclick=\"addToCart($results[$i])\">" . ($i+1) . "</button>"
+
       }
       else {
         $returnString .= "<td>$value</td>";
