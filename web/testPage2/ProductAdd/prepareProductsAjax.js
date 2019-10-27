@@ -34,6 +34,6 @@ function AddNewProduct(formLocationID, toElementID){
 //TODO: Remove toLocation after testing is done
 function resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID){
   document.getElementById(formLocationID).reset();
-  AddNewProduct(formLocationID, toLocation);
+  AddNewProduct(formLocationID, toElementID);
   displaySubProducts(categoryID, subCategoryID);
 }
