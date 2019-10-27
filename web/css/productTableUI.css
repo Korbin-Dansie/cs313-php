@@ -11,9 +11,9 @@
   width: 75%;
 }
 
-#SearchForm input{
-  width: 75%;
+#SearchForm span{
+  width: 25%;
 }
 #SearchForm #ResetButton,#SubmitButton{
-  width: 10%;
+  width: 50%;
 }
