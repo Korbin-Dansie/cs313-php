@@ -6,7 +6,7 @@ function AddNewProduct(formLocationID, toElementID){
       var divDom = document.getElementById(toElementID);
       var responseJson = JSON.parse(this.responseText);
       var newHTML = "";
-      for (i = 0; i < responseJson.length; i++) {
+      for (var i = 0; i < responseJson.length; i++) {
         newHTML += myObj[i] + "<br/>";
       }
       divDom.innerHTML = newHTML;
