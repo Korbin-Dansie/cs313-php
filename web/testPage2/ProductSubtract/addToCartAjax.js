@@ -5,16 +5,17 @@ function addToCart(datebaseRowInfo){
       if(this.responseText != ""){
         alert(this.responseText);
       }
-      //Get String is prepared
-      //Pass in the current GET Paramaters
-      //Prepare the Get String
-      alert("productid=" + datebaseRowInfo);
-      var getString = "productid=" + datebaseRowInfo;
-
-      //Trim last charactar of the string to prevent errors
-      xhr.open("POST", "ProductSubtract/addToCart.php", true);
-      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xhr.send(getString);
     }
   }
+  //Get String is prepared
+  //Pass in the current GET Paramaters
+  //Prepare the Get String
+  alert("productid=" + datebaseRowInfo);
+  var getString = "productid=" + datebaseRowInfo;
+
+  //Trim last charactar of the string to prevent errors
+  xhr.open("POST", "ProductSubtract/addToCart.php", true);
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.send(getString);
+
 }
