@@ -65,7 +65,6 @@ session_start();
   <header>
     <h1><a href="../index.php" id="homeButton">CS 313 Assignments</a></h1>
     <h2>By: Korbin Dansie</h2>
-    <p>Assignment 3</p>
     <hr />
   </header>
 
