@@ -14,7 +14,8 @@ $returnStringArray = array();
 if( !(isset($_POST['ProductName']) && isset($_POST['PriceList']) &&
 isset($_POST['Category']) && isset($_POST['SubCategory']) && isset($_POST['Rarity'])) ) {
   array_push($returnStringArray, "All variables are not set!");
-  return $returnStringArray;
+  echo json_encode($returnStringArray);
+  return;
 }
 
 $correctValues = true;
@@ -72,7 +73,8 @@ for ($i=0; $i <= count($dbInfoRarity); $i++) {
 }
 
 if($correctValues == false){
-  return $returnStringArray;
+  echo json_encode(returnStringArray);
+  return;
 }
 //All input correct add to dataBase
 
