@@ -144,7 +144,7 @@ try{
         //$returnString .= "<td value=\"$value\">".($i+1)."</td>";
         //Button to remove 1 product from the table
         $button = "<td><button type=\"button\" value=\"$value\" onclick=\"addToCart($results[$i])\">" . ($i+1) . "</button></td>"
-
+        $returnString .= $button;
       }
       else {
         $returnString .= "<td>$value</td>";
