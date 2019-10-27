@@ -114,13 +114,13 @@ try
   price,
   sub_categoryid)
   VALUES (:rid, :pname, :quantity, :price, :subid)';
-  $db->prepare($statment);
-  $db->bindParam(':rid', $rarityID, PDO::PARAM_INT);
-  $db->bindParam(':pname', $_POST['ProductName'], PDO::PARAM_STR);
-  $db->bindParam(':quantity', $_POST['Quantity'], PDO::PARAM_INT);
-  $db->bindParam(':price', $_POST['PriceList'], PDO::PARAM_INT);
-  $db->bindParam(':subid', $subCategoryID, PDO::PARAM_INT);
-  $db->execute();
+  $sth = $db->prepare($statment);
+  $sth->bindParam(':rid', $rarityID, PDO::PARAM_INT);
+  $sth->bindParam(':pname', $_POST['ProductName'], PDO::PARAM_STR);
+  $sth->bindParam(':quantity', $_POST['Quantity'], PDO::PARAM_INT);
+  $sth->bindParam(':price', $_POST['PriceList'], PDO::PARAM_INT);
+  $sth->bindParam(':subid', $subCategoryID, PDO::PARAM_INT);
+  $sth->execute();
 }
 catch (PDOException $ex)
 {
