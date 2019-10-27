@@ -7,7 +7,7 @@ function AddNewProduct(formLocationID, toElementID){
       var responseJson = JSON.parse(this.responseText);
       for (var i = 0; i < responseJson.length; i++) {
         var para = document.createElement("p");
-        var node = document.createTextNode(myObj[i]);
+        var node = document.createTextNode(responseJson[i]);
         para.appendChild(node);
         divDom.appendChild(para);
       }
