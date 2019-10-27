@@ -1,6 +1,6 @@
 <?php //Create a query to add all options to Catagory
 //header("Content-Type: text/plain");
-function NameCategoriesRarityQuery() {
+function CategoriesQuery() {
   try{
     $dbUrl = getenv('DATABASE_URL');
 
@@ -18,21 +18,18 @@ function NameCategoriesRarityQuery() {
 
     /***********
     * Returns an array with the following information
-    * [categoryname] => Sword   [sub_categoryname] => Short_Sword
-    * [rarityname] => Common    [productsname] => Steel_Sword
+    * [categoryname] => Sword              [Categoryid] => 1
+    * [sub_categoryname] => Short_Sword    [Sub_Categoryid] => 1
     ***********/
     $statment = 'select
-    Products.name AS ProductsName,
-    Category.name AS CategoryName,
-    Sub_Category.name AS Sub_CategoryName,
-    Rarity.name AS RarityName
-    from products
-    left OUTER JOIN Rarity
-    ON products.rarityid = Rarity.id
-    left OUTER JOIN Sub_Category
-    ON products.sub_categoryid = Sub_Category.id
-    left OUTER JOIN Category
-    ON Sub_Category.categoryid = Category.id';
+  Category.name AS CategoryName,
+  Category.id AS Categoryid,
+  Sub_Category.name AS Sub_CategoryName,
+  Sub_Category.id AS Sub_Categoryid
+  from Sub_Category
+  left OUTER JOIN Category
+  ON Sub_Category.categoryid = Category.id
+  ORDER BY Category.id ASC, Sub_Category.id ASC';
 
     $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
