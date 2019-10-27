@@ -4,12 +4,10 @@ session_start();
 header('Content-Type: text/plain; charset=utf-8');
 
 if(isset($_POST['productid']) == false) {
-  echo "Not Set";
   return;
 }
 
 if(is_numeric($_POST['productid']) == false) {
-  echo "Not numaric";
   return;
 }
 
@@ -17,10 +15,8 @@ include("../QueryOptions/AllProductQuery.php");
 $productRow = AllProductQuery(" Where id = " . $_POST['productid'] );
 $productRow = $productRow[0];
 if($productRow == ""){
-  echo "Product row is Blank";
 }
 else {
-  echo "\nProducts\n";
   print_r($productRow);
 }
 
@@ -35,7 +31,6 @@ print_r($_SESSION["shopping"]);
 
 //If we are out of the product dont contine
 if($productRow['quantity'] <= 0){
-  echo "Quantity is  ". $productRow['quantity'] ."\n";
   return;
 }
 try
@@ -62,9 +57,9 @@ try
   ***********/
   $statment = "update products SET quantity = " . ($productRow['quantity']-1) .
   " WHERE id = " . $productRow['id'];
-  echo "\nstatment\n$statment\n";
   $sth = $db->prepare($statment);
   $sth->execute();
+  echo "";
 }
 catch (PDOException $ex)
 {

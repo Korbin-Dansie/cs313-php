@@ -1,9 +1,11 @@
-function addToCart(datebaseRowInfo){
+function addToCart(datebaseRowInfo, formLocation, updateTable){
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function (){
     if (xhr.readyState == 4 && xhr.status == 200) {
       if(this.responseText != ""){
         console.log(this.responseText);
+      }else {
+        updateProducts(formLocation, updateTable){
       }
     }
   }
