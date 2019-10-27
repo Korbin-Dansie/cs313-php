@@ -5,7 +5,7 @@ function addToCart(datebaseRowInfo, formLocation, updateTable){
       if(this.responseText != ""){
         console.log(this.responseText);
       }else {
-        updateProducts(formLocation, updateTable){
+        updateProducts(formLocation, updateTable);
       }
     }
   }
