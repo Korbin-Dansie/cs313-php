@@ -5,6 +5,7 @@ function AddNewProduct(formLocationID, toElementID){
     if (xhr.readyState == 4 && xhr.status == 200) {
       var divDom = document.getElementById(toElementID);
       var responseJson = JSON.parse(this.responseText);
+      divDom.innerHTML = "";
       for (var i = 0; i < responseJson.length; i++) {
         var para = document.createElement("p");
         var node = document.createTextNode(responseJson[i]);
