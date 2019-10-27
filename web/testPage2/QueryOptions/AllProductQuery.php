@@ -31,7 +31,7 @@ function AllProductQuery($where = "") {
     from products';
 
     if($where != ""){
-      $statment .= $where;
+      $statment .= " " . $where;
     }
 
     $dbquery = $db->query($statment);

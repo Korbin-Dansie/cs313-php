@@ -7,7 +7,7 @@ if(is_numeric($_POST['productid']) == false) {
 }
 
 include("../QueryOptions/AllProductQuery.php");
-$inRange = AllProductQuery(" Where product.id = " . $_POST['productid']);
+$inRange = AllProductQuery(" Where id = " . $_POST['productid'] );
 return;
 
 if($inRange == ""){
