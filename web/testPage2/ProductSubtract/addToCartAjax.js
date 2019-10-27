@@ -6,7 +6,7 @@ function addToCart(datebaseRowInfo){
     if (xhr.readyState == 4 && xhr.status == 200) {
       var responsetext = "";
       if(this.responseText != ""){
-        responsetext = this.responseText;
+        alert(this.responseText);
       }
 
       //Get String is prepared
