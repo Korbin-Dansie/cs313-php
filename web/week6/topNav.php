@@ -7,8 +7,8 @@
           <li><a href="week6.php">Swords</a>
             <ul>
               <li><a href="week6.php?Rarity=Common">Common Sword</a></li>
-              <li><a href="wee6.php?Rarity=Uncommon">Uncommon Sword</a></li>
-              <li><a href="week6php?Rarity=Rare">Rare Sword</a></li>
+              <li><a href="week6.php?Rarity=Uncommon">Uncommon Sword</a></li>
+              <li><a href="week6.php?Rarity=Rare">Rare Sword</a></li>
             </ul>
           </li>
           <li><a href="addProduct.php">Add Product</a>
