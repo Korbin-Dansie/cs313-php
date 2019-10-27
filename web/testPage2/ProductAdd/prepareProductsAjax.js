@@ -50,6 +50,9 @@ function AddNewProduct(formLocationID, toElementID, categoryID, subCategoryID){
 function resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID){
   document.getElementById(formLocationID).reset();
   var divDom = document.getElementById(toElementID);
-  divDom.innerHTML = "";
+  if(divDom.innerHTML != ""){
+    divDom.innerHTML = "";
+
+  }
   displaySubProducts(categoryID, subCategoryID);
 }
