@@ -1,4 +1,4 @@
-function AddNewProduct(formLocationID, toElementID){
+function AddNewProduct(formLocationID, toElementID, categoryID, subCategoryID){
   var xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function (){
@@ -43,10 +43,10 @@ function AddNewProduct(formLocationID, toElementID){
   xhr.open("POST", "ProductAdd/prepareProduct.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send(getString);
+  resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID);
 }
 //TODO: Remove toLocation after testing is done
 function resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID){
   document.getElementById(formLocationID).reset();
-  AddNewProduct(formLocationID, toElementID);
   displaySubProducts(categoryID, subCategoryID);
 }
