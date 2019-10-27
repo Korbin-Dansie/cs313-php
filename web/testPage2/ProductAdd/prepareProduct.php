@@ -1,23 +1,6 @@
 <?php
 
 $returnStringArray = array();
-echo "Get<br>";
-print_r($_GET);
-echo "<br>";
-echo "Post<br>";
-print_r($_POST);
-/* $_POST values
-* Array( [ProductName] => asdf [PriceList] => 100 [Category] => Sword [SubCategory] => Short_Sword [Rarity] => Common )
-*/
-echo "<br>";
-foreach ($_POST as $key => $value) {
-  echo "$key";
-  echo "---";
-  echo "$value";
-  echo "<br>";
-}
-
-
 /***********
 * Returns an array with the following information
 * [categoryname] => Sword   [sub_categoryname] => Short_Sword
@@ -27,15 +10,12 @@ foreach ($_POST as $key => $value) {
 //include("../QueryOptions/Name_Categories_Rarity_Query.php");
 //$dbInfo = NameCategoriesRarityQuery();
 
-echo "<br>";
 //Check to make sure all the variables are set
 if( !(isset($_POST['ProductName']) && isset($_POST['PriceList']) &&
 isset($_POST['Category']) && isset($_POST['SubCategory']) && isset($_POST['Rarity'])) ) {
-  echo "All variables are not set!";
-  return;
+  array_push($returnStringArray, "All variables are not set!");
+  return $returnStringArray;
 }
-
-
 
 $correctValues = true;
 //Check to make sure all variable have correct values
@@ -62,19 +42,8 @@ if(!is_numeric($_POST['PriceList'])){
 //[Category] => Sword [SubCategory] => Short_Sword
 include("../QueryOptions/CategoriesQuery.php");
 $dbInfoCategories = CategoriesQuery();
-echo "<br>";
-echo "Catagorys:";
-echo "<br>";
-print_r($dbInfoCategories);
-echo "<br>";
 
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
-  if($i < count($dbInfoCategories)){
-    //echo $dbInfoCategories[$i]['categoryname'] . " -- " . $dbInfoCategories[$i]['sub_categoryname'];
-    echo ($dbInfoCategories[$i]['categoryname']) . "==" . (($_POST['Category'])) .
-          " -- ". $dbInfoCategories[$i]['sub_categoryname'] . "==" . (($_POST['SubCategory'])) . "<br>";
-  }
-
   if($i == count($dbInfoCategories)){
     $correctValues = false;
     array_push($returnStringArray, "Category or SubCategory is incorrect");
@@ -82,7 +51,6 @@ for ($i=0; $i <= count($dbInfoCategories); $i++) {
   else if($dbInfoCategories[$i]['categoryname'] == ($_POST['Category'])){
     if ($dbInfoCategories[$i]['sub_categoryname'] == ($_POST['SubCategory'])) {
       //Correct value and subCategory
-      echo "Catogorys are correct";
       break;
     }
   }
@@ -104,9 +72,8 @@ for ($i=0; $i <= count($dbInfoRarity); $i++) {
 }
 
 if($correctValues == false){
-  echo '<br>$correctValues = ' . ($correctValues ? 'true' : 'false') . "<br>";
+  return $returnStringArray;
 }
-
-print_r($returnStringArray);
+//All input correct add to dataBase
 
 ?>
