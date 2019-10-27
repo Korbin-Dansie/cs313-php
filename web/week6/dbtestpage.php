@@ -22,7 +22,8 @@ session_start();
   <h1><a href="../index.html" id="homeButton">CS 313 Assignments</a></h1>
   <h2>By: Korbin Dansie</h2>
   <br />
-
+  <h1>Admin</h1>
+  <h2>Add Product</h2>
   <div>
     <?php include("ProductAdd/displayPrepareUI.php"); ?>
   </div>
@@ -30,6 +31,7 @@ session_start();
   <div id="prepareTable">
 
   </div>
+  <h2>Display Product</h2>
 
   <div>
     <?php include("ProductDisplay/displayProductsUI.php"); ?>

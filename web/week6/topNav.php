@@ -11,19 +11,9 @@
               <li><a href="week3.php">Sharp Sword</a></li>
             </ul>
           </li>
-          <li><a href="errorPage.php">Bows</a>
-            <ul>
-              <li><a href="errorPage.php">Short Bow</a></li>
-              <li><a href="errorPage.php">Long Bow</a></li>
-              <li><a href="errorPage.php">Flat Bow</a></li>
-            </ul>
+          <li><a href="errorPage.php">Add Product</a>
           </li>
-          <li><a href="errorPage.php">Staffs</a>
-            <ul>
-              <li><a href="errorPage.php">Short Staffs</a></li>
-              <li><a href="errorPage.php">Long Staffs</a></li>
-              <li><a href="errorPage.php">Round Staffs</a></li>
-            </ul>
+          <li><a href="dbtestpage.php">Addmin</a>
           </li>
         </ul>
         <div id="loginbar">
