@@ -37,7 +37,7 @@ function updateProducts(formLocationID, toElementID){
     window.history.replaceState(null, null, getString);
   }
 
-  if(location.search != null)
+  if(location.pathname != null)
   {
     paramaters = location.search.toString();
   }
