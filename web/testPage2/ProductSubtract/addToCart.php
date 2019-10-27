@@ -61,6 +61,7 @@ try
   ***********/
   $statment = "update products SET quantity = " . ($productRow['quantity']-1) .
   " WHERE id = " . $productRow['id'];
+  echo "\nstatment\n$statment\n";
   $sth = $db->prepare($statment);
   $sth->execute();
 }
