@@ -1,4 +1,7 @@
+#SearchForm *{
+  width: 150px;
+}
+
 #SearchForm{
-  box-sizing: border-box;
   width: 150px;
 }
