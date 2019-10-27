@@ -3,5 +3,9 @@
 }
 
 #SearchForm *{
-  width: 140px;
+  width: 150px;
+}
+
+#SearchForm #PriceL,#PriceH{
+  width: 100px;
 }

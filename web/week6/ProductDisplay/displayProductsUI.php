@@ -6,8 +6,8 @@
     <input type="search" name="ProductName">
     <br/>
     <span>Price</span>
-    <br/><input type="text" name="PriceLow" placeholder="Min">
-    <br/><input type="text" name="PriceHigh" placeholder="Max">
+    <br/><input id="priceL" type="text" name="PriceLow" placeholder="Min">
+    <br/><input id="priceH"type="text" name="PriceHigh" placeholder="Max">
     <br/>
 
     <span>Category</span>
