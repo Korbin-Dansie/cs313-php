@@ -11,6 +11,10 @@ session_start();
   <link rel="stylesheet" type="text/css" href="assign04.css" />
   <link rel="stylesheet" type="text/css" href="../css/HomeButton.css" />
   <link rel="stylesheet" type="text/css" href="assign06.css">
+  <link rel="stylesheet" type="text/css" href="../css/productTable.css" />
+  <link rel="stylesheet" type="text/css" href="../css/productTableUI.css" />
+
+
   <script type="text/javascript" src="assign06.js">
   </script>
   <script src="QueryOptions/CategoriesUpdateAjax.js"></script>
