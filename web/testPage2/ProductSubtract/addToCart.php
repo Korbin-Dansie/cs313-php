@@ -17,7 +17,6 @@ $productRow = $productRow[0];
 if($productRow == ""){
 }
 else {
-  print_r($productRow);
 }
 
 
@@ -27,7 +26,6 @@ if(isset($_SESSION["shopping"]) == false) {
 }else {
   array_push($_SESSION["shopping"], $_POST['productid']);
 }
-print_r($_SESSION["shopping"]);
 
 //If we are out of the product dont contine
 if($productRow['quantity'] <= 0){
