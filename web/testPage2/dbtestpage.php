@@ -13,7 +13,7 @@ session_start();
   <script src="QueryOptions/CategoriesUpdateAjax.js"></script>
   <script src="ProductDisplay/displayProductsAjax.js"></script>
   <script src="ProductAdd/prepareProductsAjax.js"></script>
-  <script src="ProductSubtract/addToCart.js"></script>
+  <script src="ProductSubtract/addToCartAjax.js"></script>
 
 
 </head>
