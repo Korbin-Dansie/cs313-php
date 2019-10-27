@@ -8,6 +8,7 @@ function AddNewProduct(formLocationID, toElementID){
       for (var i = 0; i < responseJson.length; i++) {
         var para = document.createElement("p");
         var node = document.createTextNode(myObj[i]);
+        para.appendChild(node);
         divDom.appendChild(para);
       }
       if(responseJson.length == 0){
