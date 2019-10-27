@@ -71,7 +71,10 @@ echo "<br>";
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
   if($i < count($dbInfoCategories)){
     //echo $dbInfoCategories[$i]['categoryname'] . " -- " . $dbInfoCategories[$i]['sub_categoryname'];
+    echo ($dbInfoCategories[$i]['categoryname']) . "==" . (strtolower($_POST['Category'])) .
+          " -- ". $dbInfoCategories[$i]['sub_categoryname'] . "==" (strtolower($_POST['SubCategory'])) . "<br>";
   }
+
   if($i == count($dbInfoCategories)){
     $correctValues = false;
     array_push($returnStringArray, "Category or SubCategory is incorrect");
