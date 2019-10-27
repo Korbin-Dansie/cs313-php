@@ -8,6 +8,7 @@ function addToCart(datebaseRowInfo){
       //Get String is prepared
       //Pass in the current GET Paramaters
       //Prepare the Get String
+      alert("productid=" + datebaseRowInfo);
       var getString = "productid=" + datebaseRowInfo;
 
       //Trim last charactar of the string to prevent errors
