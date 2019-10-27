@@ -73,7 +73,7 @@ for ($i=0; $i <= count($dbInfoRarity); $i++) {
 }
 
 if($correctValues == false){
-  echo json_encode(returnStringArray);
+  echo json_encode($returnStringArray);
   return;
 }
 //All input correct add to dataBase

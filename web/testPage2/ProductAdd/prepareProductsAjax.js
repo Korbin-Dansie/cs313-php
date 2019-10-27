@@ -4,7 +4,7 @@ function AddNewProduct(formLocationID, toElementID){
   xhr.onreadystatechange = function (){
     if (xhr.readyState == 4 && xhr.status == 200) {
       var divDom = document.getElementById(toElementID);
-      divDom.innerHTML = xhr.responseText;
+      divDom.innerHTML = JSON.parse(this.responseText);
     }
   }
   //Get String is prepared
