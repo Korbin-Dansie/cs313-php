@@ -14,5 +14,4 @@ function addToCart(datebaseRowInfo){
   xhr.open("POST", "ProductSubtract/addToCart.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send(getString);
-
 }
