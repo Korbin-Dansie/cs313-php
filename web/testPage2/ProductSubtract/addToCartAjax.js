@@ -1,4 +1,4 @@
-function AddNewProduct(datebaseRowInfo){
+function addToCart(datebaseRowInfo){
   alert(datebaseRowInfo);
   var xhr = new XMLHttpRequest();
 
