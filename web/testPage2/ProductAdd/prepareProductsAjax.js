@@ -15,7 +15,8 @@ function AddNewProduct(formLocationID, toElementID, categoryID, subCategoryID){
           divDom.appendChild(para);
         }
       }else {
-        divDom.innerHTML = "";
+        //No error and product submited so reset form
+        resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID);
       }
     }
   }
@@ -43,10 +44,10 @@ function AddNewProduct(formLocationID, toElementID, categoryID, subCategoryID){
   xhr.open("POST", "ProductAdd/prepareProduct.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send(getString);
-  resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID);
 }
 //TODO: Remove toLocation after testing is done
 function resetPrepareForm(formLocationID, toElementID, categoryID, subCategoryID){
   document.getElementById(formLocationID).reset();
+  AddNewProduct(formLocationID, toElementID);
   displaySubProducts(categoryID, subCategoryID);
 }
