@@ -6,11 +6,14 @@ function AddNewProduct(formLocationID, toElementID){
       var divDom = document.getElementById(toElementID);
       var responseJson = JSON.parse(this.responseText);
       alert(responseJson);
-      var newHTML = "";
+      var para = document.createElement("p");
       for (var i = 0; i < responseJson.length; i++) {
-        newHTML += myObj[i] + "<br/>";
+        var node = document.createTextNode(myObj[i]);
+        divDom.appendChild(para);
       }
-      divDom.innerHTML = newHTML;
+      if(responseJson.length == 0){
+        divDom.innerHTML = "";
+      }
     }
   }
   //Get String is prepared
