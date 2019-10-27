@@ -1,6 +1,6 @@
 <?php  ?>
 <div>
-  <form method="get" action="" id="PrepareFrom">
+  <form method="get" action="" id="PrepareFrom" onreset="updateProducts(this.id, &quot;productTable&quot;)">
     <span>Name</span><input type="search" name="ProductName">
     <br/>
     <span>Price</span><input type="text" name="PriceList" placeholder="">
