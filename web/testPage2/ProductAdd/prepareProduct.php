@@ -35,8 +35,6 @@ isset($_POST['Category']) && isset($_POST['SubCategory']) && isset($_POST['Rarit
   return;
 }
 
-include("../QueryOptions/CategoriesQuery.php");
-$dbInfoCategories = CategoriesQuery();
 
 
 $correctValues = true;
@@ -62,8 +60,13 @@ if(!is_numeric($_POST['PriceList'])){
 
 //Check if subcategorys are $correctValues
 //[Category] => Sword [SubCategory] => Short_Sword
+include("../QueryOptions/CategoriesQuery.php");
+$dbInfoCategories = CategoriesQuery();
+echo "<br>";
+echo "Catagorys:";
+echo "<br>";
+print_r($dbInfoCategories);
 for ($i=0; $i <= count($dbInfoCategories); $i++) {
-  echo $dbInfoCategories['CategoryName'][$i] . " -- " . $dbInfoCategories['CategoryName'][$i];
   if($i == count($dbInfoCategories)){
     $correctValues = false;
     array_push($returnStringArray, "Category or SubCategory is incorrect");
