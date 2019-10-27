@@ -59,9 +59,8 @@ try
   * [rarityname] => Common [productsname] => Steel_Sword [productsquantity] => 100
   * [productsprice] => 12
   ***********/
-  $statment = "update products
-  SET quantity = " . ($productRow['quantity']-1) .
-  " WHERE id = " $productRow['id'];
+  $statment = "update products SET quantity = " . ($productRow['quantity']-1) .
+  " WHERE id = " . $productRow['id'];
   $sth = $db->prepare($statment);
   $sth->execute();
 }
@@ -70,4 +69,4 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
- ?>
+?>
