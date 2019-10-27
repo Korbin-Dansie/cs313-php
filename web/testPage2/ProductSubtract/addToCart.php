@@ -2,13 +2,12 @@
 header('Content-Type: text/plain; charset=utf-8');
 
 echo ($_POST['productid'] . " From php");
-if(is_numeric($_POST['productid']) == false){
+if(is_numeric($_POST['productid']) == false) {
   return;
 }
 
 include("../QueryOptions/AllProductQuery.php");
 $inRange = AllProductQuery(" Where product.id = " . $_POST['productid']);
-print_r($inRange);
 return;
 
 if($inRange == ""){
