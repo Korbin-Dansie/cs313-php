@@ -18,7 +18,7 @@ if($inRange == ""){
   echo "Range Blank";
 }
 else {
-  echo "Range not blank";
+  print_r($inRange);
 }
 
 
