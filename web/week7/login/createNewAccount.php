@@ -82,6 +82,8 @@ catch (PDOException $ex)
   die();
 }
 
+header("Location: ../sign-in.php");
+die();
 
 
 ?>

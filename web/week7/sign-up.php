@@ -60,7 +60,7 @@ session_start();
     <div class="mainContect">
       <h1>Sign Up</h1>
 
-      <form class="" action="createNewAccount" method="post">
+      <form class="" action="login/createNewAccount.php" method="post">
             <input type="text" name="UserName" value="" placeholder="Username">
             <input type="text" name="Password" value="" placeholder="Password">
             <input type="Submit" name="Submit" value="Login">
