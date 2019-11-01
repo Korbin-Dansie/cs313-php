@@ -60,9 +60,9 @@ session_start();
     <div class="mainContect">
       <h1>Sign Up</h1>
 
-      <form class="" action="index.html" method="post">
-            <input type="text" name="" value="" placeholder="Username">
-            <input type="text" name="" value="" placeholder="Password">
+      <form class="" action="createNewAccount" method="post">
+            <input type="text" name="UserName" value="" placeholder="Username">
+            <input type="text" name="Password" value="" placeholder="Password">
             <input type="Submit" name="Submit" value="Login">
       </form>
 
