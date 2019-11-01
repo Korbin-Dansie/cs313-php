@@ -1,6 +1,6 @@
 <?php
 //Check variables are correct
-if(!isset($_POST["UserName"])){
+if(!isset($_POST["UserName"])) {
   return;
 }
 
@@ -42,6 +42,7 @@ try
 }//End of try
 catch (PDOException $ex)
 {
+  echo "Reading<br/>";
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
@@ -78,6 +79,7 @@ try
 }
 catch (PDOException $ex)
 {
+  echo "Insert<br/>";
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
