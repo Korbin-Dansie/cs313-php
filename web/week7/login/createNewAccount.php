@@ -73,7 +73,7 @@ try
   ( :uname :upassword)';
   $sth = $db->prepare($statment);
   $sth->bindParam(':uname', $_POST["UserName"], PDO::PARAM_STR);
-  $sth->bindParam(':pname', $hash, PDO::PARAM_STR);
+  $sth->bindParam(':upassword', $hash, PDO::PARAM_STR);
   $sth->execute();
 }
 catch (PDOException $ex)
