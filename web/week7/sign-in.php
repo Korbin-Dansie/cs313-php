@@ -14,13 +14,6 @@ session_start();
   <link rel="stylesheet" type="text/css" href="../css/productTable.css" />
   <link rel="stylesheet" type="text/css" href="../css/productTableUI.css" />
 
-
-  <script type="text/javascript" src="assign06.js"></script>
-  <script src="QueryOptions/CategoriesUpdateAjax.js"></script>
-  <script src="ProductDisplay/displayProductsAjax.js"></script>
-  <script src="ProductAdd/prepareProductsAjax.js"></script>
-  <script src="ProductSubtract/addToCartAjax.js"></script>
-
   <style media="screen">
   #finePrint{
     font-size: x-small;
@@ -61,18 +54,10 @@ session_start();
 </head>
 
 <body onload="updateProducts('SearchForm', 'productTable')">
-  <div id="body">
-    <?php require_once('topNav.php');?>
-
-    <div class="sideAdd">
-      <?php include("ProductDisplay/displayProductsUI.php"); ?>
-    </div>
 
 
     <div class="mainContect">
-      <h1>Shopping Cart</h1>
-      <div id="productTable">
-      </div>
+      <h1>Sign In</h1>
 
     </div><!--End of Main mainContect-->
 

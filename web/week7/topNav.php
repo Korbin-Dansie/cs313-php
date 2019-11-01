@@ -18,7 +18,7 @@
         </ul>
         <div id="loginbar">
           <div id="loginButton">
-            <a href="errorPage.html">
+            <a href="sign-in.php">
               <img src="img/PersonIcon.png" alt="Login Icon">
               Login</a>
             </div>
