@@ -58,7 +58,7 @@ session_start();
     <?php require_once('topNav.php');?>
 
     <div class="mainContect">
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
 
       <form class="" action="index.html" method="post">
             <input type="text" name="" value="" placeholder="Username">
@@ -66,7 +66,7 @@ session_start();
             <input type="Submit" name="Submit" value="Login">
       </form>
 
-      <p><a href="sign-up.php">Create a new account.</a></p>
+      <p>Already have an account? <a href="sign-in.php">Login here</a></p>
 
     </div><!--End of Main mainContect-->
 
