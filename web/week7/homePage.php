@@ -62,12 +62,6 @@ session_start();
 </head>
 
 <body onload="updateProducts('SearchForm', 'productTable')">
-  <header>
-    <h1><a href="../index.php" id="homeButton">CS 313 Assignments</a></h1>
-    <h2>By: Korbin Dansie</h2>
-    <hr />
-  </header>
-
   <div id="body">
     <?php require_once('topNav.php');?>
 
