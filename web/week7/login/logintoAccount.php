@@ -1,10 +1,12 @@
 <?php
 //Check variables are correct
 if(!isset($_POST["UserName"])) {
+  echo "username not set<br>";
   return;
 }
 
 if(!isset($_POST["Password"])){
+  echo "password not set<br>";
   return;
 }
 
@@ -18,5 +20,8 @@ include('../QueryOptions/UserQuery.php');
 $setPassword = getPasswordForUsername($_POST["UserName"], "admin1234");
 if(password_verify($_POST["Password"], $setPassword)) {
 echo "Passwords are the same";
+}
+else{
+  echo "Passwords are NOT the same";
 }
  ?>
