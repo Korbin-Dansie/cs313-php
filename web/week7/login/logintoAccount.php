@@ -32,6 +32,7 @@ if(password_verify( $_POST["Password"], $setPassword)) {
   //Passwords are the same
 }
 else{
+  echo "Password not valid.";
   //header("Location: ../sign-in.php");
   //die();
 }
