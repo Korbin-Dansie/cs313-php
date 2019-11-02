@@ -52,13 +52,6 @@ if (isset($_POST["removeFromCart"])) {
   }
 </style>
 <body>
-  <header>
-    <h1><a href="../index.php" id="homeButton">CS 313 Assignments</a></h1>
-    <h2>By: Korbin Dansie</h2>
-    <p>Assignment 3</p>
-    <hr />
-  </header>
-
   <div id="body">
     <?php require_once('topNav.php');?>
 
@@ -67,6 +60,10 @@ if (isset($_POST["removeFromCart"])) {
 
       <div class="mainContect">
         <h1>Profile</h1>
+
+        <form class="" action="login/logout.php" method="post">
+          <input type="Submit" name="Logout" value="Submit">
+        </form>
       </div><!--End of Main mainContect-->
 
       <footer>
