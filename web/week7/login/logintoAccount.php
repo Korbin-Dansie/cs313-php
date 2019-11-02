@@ -18,8 +18,8 @@ if($_POST["UserName"] == "" || $_POST["Password"] == ""){
 //Check is password is valid
 include('../QueryOptions/UserQuery.php');
 $setPassword = getPasswordForUsername($_POST["UserName"], "admin1234");
-print_r($setPassword);
-if(password_verify($setPassword[0], $_POST["Password"])) {
+echo ($setPassword);
+if(password_verify( $_POST["Password"], $setPassword) ) {
 echo "Passwords are the same";
 }
 else{
