@@ -56,7 +56,7 @@ function getPasswordForUsername($username, $passwordStr = ""){
     $statment = "Select userpassword FROM customers where username='" . $username . "'";
     $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-    return $results[0];
+    return $results;
   }//End of try
   catch (PDOException $ex)
   {
