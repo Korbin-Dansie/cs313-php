@@ -21,53 +21,9 @@ session_start();
   <script src="ProductDisplay/displayProductsAjax.js"></script>
   <script src="ProductAdd/prepareProductsAjax.js"></script>
   <script src="ProductSubtract/addToCartAjax.js"></script>
-
-  <style media="screen">
-  #finePrint{
-    font-size: x-small;
-    font-family: monospace;
-  }
-
-  span{
-    font-size: large;
-    font-family: sans-serif;
-  }
-
-  .mainContect h1{
-    border-bottom: #9966ff solid 2px;
-  }
-
-  .mainContect{
-    min-height: 600px;
-  }
-
-  #navagation{
-    width: 900px;
-    display: inline-block;
-  }
-
-  .topnav nav ul{
-    float: left;
-    padding-left: 5px;
-    margin-top: 0px;
-  }
-
-  table img{
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-  }
-</style>
-
 </head>
 
 <body onload="updateProducts('SearchForm', 'productTable')">
-  <header>
-    <h1><a href="../index.html" id="homeButton">CS 313 Assignments</a></h1>
-    <h2>By: Korbin Dansie</h2>
-    <hr />
-  </header>
-
   <div id="body">
     <?php require_once('topNav.php');?>
 

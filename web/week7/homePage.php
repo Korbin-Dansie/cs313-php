@@ -20,46 +20,6 @@ session_start();
   <script src="ProductDisplay/displayProductsAjax.js"></script>
   <script src="ProductAdd/prepareProductsAjax.js"></script>
   <script src="ProductSubtract/addToCartAjax.js"></script>
-
-  <style media="screen">
-  #finePrint{
-    font-size: x-small;
-    font-family: monospace;
-  }
-
-  span{
-    font-size: large;
-    font-family: sans-serif;
-  }
-
-  .mainContect h1{
-    border-bottom: #9966ff solid 2px;
-  }
-
-  .mainContect{
-    min-height: 600px;
-  }
-
-  #navagation{
-    width: 900px;
-    display: inline-block;
-  }
-
-  .topnav nav ul{
-    float: left;
-    padding-left: 5px;
-    margin-top: 0px;
-  }
-
-  table img{
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-  }
-</style>
-
-</head>
-
 <body onload="updateProducts('SearchForm', 'productTable')">
   <div id="body">
     <?php require_once('topNav.php');?>
@@ -70,7 +30,7 @@ session_start();
 
 
     <div class="mainContect">
-      <h1>Shopping Cart</h1>
+      <h1>Home page</h1>
       <div id="productTable">
       </div>
 

@@ -15,42 +15,6 @@ if (isset($_POST["removeFromCart"])) {
   <link rel="stylesheet" type="text/css" href="assign04.css" />
   <link rel="stylesheet" type="text/css" href="../css/HomeButton.css" />
   <link rel="stylesheet" type="text/css" href="assign06.css">
-  <style media="screen">
-  #finePrint{
-    font-size: x-small;
-    font-family: monospace;
-  }
-
-  span{
-    font-size: large;
-    font-family: sans-serif;
-  }
-
-  .mainContect h1{
-    border-bottom: #9966ff solid 2px;
-  }
-
-  .mainContect{
-    min-height: 600px;
-  }
-
-  #navagation{
-    width: 900px;
-    display: inline-block;
-  }
-
-  .topnav nav ul{
-    float: left;
-    padding-left: 5px;
-    margin-top: 0px;
-  }
-
-  table img{
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-  }
-</style>
 <body>
   <div id="body">
     <?php require_once('topNav.php');?>
