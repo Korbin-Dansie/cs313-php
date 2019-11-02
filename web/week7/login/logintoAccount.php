@@ -21,8 +21,8 @@ if($_POST["UserName"] == "" || $_POST["Password"] == "") {
 include('../QuperyOptions/UserQuery.php');
 $setPassword = getPasswordForUsername($_POST["UserName"]);
 if(password_verify( $_POST["Password"], $setPassword) ) {
-  $_SESSION['Username'] = $_POST["UserName"];
-  //header("Location: ../homePage.php");
+  //$_SESSION['Username'] = $_POST["UserName"];
+  header("Location: ../homePage.php");
   //die();
   //Passwords are the same
 }
