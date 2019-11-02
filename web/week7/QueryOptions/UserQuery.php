@@ -53,14 +53,14 @@ function getPasswordForUsername($username, $passwordStr = ""){
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $statment = "Select userpassword FROM customers where username=\'" . $username . "'";
+    $statment = "Select userpassword FROM customers where username='" . $username . "'";
     $dbquery = $db->query($statment);
     $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
     echo $results[0];
   }//End of try
   catch (PDOException $ex)
   {
-    echo "Reading<br/>";
+    echo "UserPassword Reading<br/>";
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
