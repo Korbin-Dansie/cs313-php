@@ -28,7 +28,7 @@ function getUsernameQuery(){
   }
 }
 
-function getPasswordForUsername($username){
+function getPasswordForUsername($username) {
   try
   {
     $dbUrl = getenv('DATABASE_URL');
