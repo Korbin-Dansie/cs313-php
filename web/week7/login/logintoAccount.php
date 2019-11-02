@@ -1,7 +1,8 @@
 <?php
+echo "Start<br>";
 session_start();
+echo "End<br>";
 ?>
-
 <?php
 //session_start();
 //Check variables are correct
