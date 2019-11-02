@@ -62,7 +62,7 @@ session_start();
 
       <form class="" action="login/logintoAccount.php" method="post">
             <input type="text" name="UserName" value="" placeholder="Username">
-            <input type="text" name="" value="Password" placeholder="Password">
+            <input type="text" name="Password" value="" placeholder="Password">
             <input type="Submit" name="Submit" value="Login">
       </form>
 
