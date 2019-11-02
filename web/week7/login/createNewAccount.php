@@ -14,7 +14,24 @@ if($_POST["UserName"] == "" || $_POST["Password"] == ""){
 
 
 
+for ($i=0; $i < count($results); $i++) {
+  if($results[$i] == $_POST["UserName"]){
+    echo "Username is already in use.";
+    return; //Username is already in use
+  }
+}
 
+//Check if username is unique
+include ('../QueryOptions/UserQuery.php');
+
+$usernameQuery = getUsernameQuery('admin1234');
+
+for ($i=0; $i < count($usernameQuery); $i++) {
+  if($usernameQuery[$i] == $_POST['Username']){
+    echo "Username is not unique";
+    return;
+  }
+}
 //Username and Password are filled out and vaild
 //Insert them and hash the password
 $hash = password_hash($_POST["Password"], PASSWORD_DEFAULT);

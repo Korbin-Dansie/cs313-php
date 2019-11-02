@@ -1,10 +1,9 @@
 <?php
-function getUserName($passwordStr = ""){
+function getUsernameQuery($passwordStr = ""){
   if($passwordStr != "admin1234"){
     return;
   }
 
-  //Check for unique username
   try
   {
     $dbUrl = getenv('DATABASE_URL');
@@ -23,13 +22,7 @@ function getUserName($passwordStr = ""){
 
     $statment = 'Select username FROM customers';
     $dbquery = $db->query($statment);
-    $results = $dbquery->fetchAll(PDO::FETCH_ASSOC);
-    for ($i=0; $i < count($results); $i++) {
-      if($results[$i] == $_POST["UserName"]){
-        echo "Username is already in use.";
-        return; //Username is already in use
-      }
-    }
+    echo $dbquery->fetchAll(PDO::FETCH_ASSOC);
   }//End of try
   catch (PDOException $ex)
   {
