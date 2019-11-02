@@ -1,9 +1,5 @@
 <?php
-function getUsernameQuery($passwordStr = ""){
-  if($passwordStr != "admin1234"){
-    return;
-  }
-
+function getUsernameQuery(){
   try
   {
     $dbUrl = getenv('DATABASE_URL');
@@ -32,11 +28,7 @@ function getUsernameQuery($passwordStr = ""){
   }
 }
 
-function getPasswordForUsername($username, $passwordStr = ""){
-  if($passwordStr != "admin1234"){
-    return;
-  }
-
+function getPasswordForUsername($username){
   try
   {
     $dbUrl = getenv('DATABASE_URL');

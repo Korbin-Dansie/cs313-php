@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <div class="topnav">
   <nav>
     <h1><a href="homePage.php" id="shopHomeButton">Shadow-Steel Weapons</a></h1>
@@ -18,9 +22,22 @@
         </ul>
         <div id="loginbar">
           <div id="loginButton">
-            <a href="sign-in.php">
-              <img src="img/PersonIcon.png" alt="Login Icon">
-              Login</a>
+            <!--Start of signin -->
+            <?php
+            if(!isset($_Session['Username'])){
+              echo '<a href="sign-in.php">';
+              echo '<img src="img/PersonIcon.png" alt="Login Icon">';
+              echo 'Login</a>';
+            }
+            else {
+              //Username is set
+              echo '<a href="Profile.php">';
+              echo '<img src="img/PersonIcon.png" alt="Login Icon">';
+              echo $_Session['Username'] . '</a>';
+            }
+            ?>
+
+              <!--End of signin -->
             </div>
             <a href="shopingCart.php">
               <img src="img/ShopingCart.png" alt="Shoping Cart Icon">

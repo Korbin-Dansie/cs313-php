@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Check variables are correct
 if(!isset($_POST["UserName"])) {
   echo "username not set<br>";
@@ -11,18 +12,23 @@ if(!isset($_POST["Password"])){
 }
 
 if($_POST["UserName"] == "" || $_POST["Password"] == ""){
+  echo "Username and password cannot be blank<br>";
   return;
 }
 
 
 //Check is password is valid
-include('../QueryOptions/UserQuery.php');
-$setPassword = getPasswordForUsername($_POST["UserName"], "admin1234");
-echo ($setPassword);
+include('../QuperyOptions/UserQuery.php');
+$setPassword = getPasswordForUsername($_POST["UserName"]);
 if(password_verify( $_POST["Password"], $setPassword) ) {
-echo "Passwords are the same";
+  $_Session['Username'] = $_POST["UserName"];
+  header("Location: ../homePage.php");
+  die();
+  //Passwords are the same
 }
 else{
-  echo "Passwords are NOT the same";
+  header("Location: ../sign-in.php");
+  die();
+
 }
- ?>
+?>

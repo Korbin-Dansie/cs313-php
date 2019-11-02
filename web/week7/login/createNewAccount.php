@@ -1,17 +1,20 @@
 <?php
 //Check variables are correct
-if(!isset($_POST["UserName"])) {
+if(!isset( $_POST["UserName"] )) {
+  echo "Username is not set<br>";
   return;
 }
 
+
 if(!isset($_POST["Password"])){
+  echo "Password is not set<br>";
   return;
 }
 
 if($_POST["UserName"] == "" || $_POST["Password"] == ""){
+  echo "Username and password cannot be blank<br>";
   return;
 }
-
 
 
 for ($i=0; $i < count($results); $i++) {
@@ -24,7 +27,7 @@ for ($i=0; $i < count($results); $i++) {
 //Check if username is unique
 include ('../QueryOptions/UserQuery.php');
 
-$usernameQuery = getUsernameQuery('admin1234');
+$usernameQuery = getUsernameQuery();
 
 for ($i=0; $i < count($usernameQuery); $i++) {
   if($usernameQuery[$i] == $_POST['Username']){

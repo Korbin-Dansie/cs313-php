@@ -65,25 +65,8 @@ if (isset($_POST["removeFromCart"])) {
       <div class="sideAdd">
       </div>
 
-
       <div class="mainContect">
-        <h1>Shopping Cart</h1>
-        <?php
-
-        foreach ($_SESSION["newIteams"] as $key => $value){
-          echo '<form class="cart" method="post">';
-          echo '<input type="submit" name="removeFromCart" value="removeFromCart" >';
-          echo '<input type="text" name="itemName" value="' . $_SESSION["newIteams"][$key]["itemName"] . '">';
-          echo '<input type="text" name="itemPrice" value="'. $_SESSION["newIteams"][$key]["itemPrice"] . '"><br>';
-          echo '<input type="hidden" name="cartIndex" value="'.$key.'">';
-          echo '</form>';
-        }
-        ?>
-
-        <div>
-          <a href="week3.php">Back</a>
-          <a href="checkout.php">Check out</a>
-        </div>
+        <h1>Profile</h1>
       </div><!--End of Main mainContect-->
 
       <footer>
