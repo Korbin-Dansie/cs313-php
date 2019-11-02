@@ -23,23 +23,20 @@ if($_POST["UserName"] == "" || $_POST["Password"] == "") {
 
 
 //Check is password is valid
-echo "querystart<br>";
 
-include('../QuperyOptions/UserQuery.php');
-
+include('../QueryOptions/UserQuery.php');
 $setPassword = getPasswordForUsername($_POST["UserName"]);
-echo "queryend<br>";
 
 if(password_verify( $_POST["Password"], $setPassword)) {
   echo "Password varified.";
-  //$_SESSION['Username'] = $_POST["UserName"];
-  //header("Location: ../homePage.php");
-  //die();
+  $_SESSION['Username'] = $_POST["UserName"];
+  header("Location: ../homePage.php");
+  die();
   //Passwords are the same
 }
 else{
   echo "Password not valid.";
-  //header("Location: ../sign-in.php");
-  //die();
+  header("Location: ../sign-in.php");
+  die();
 }
 ?>
