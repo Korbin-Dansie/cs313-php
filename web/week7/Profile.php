@@ -62,7 +62,7 @@ if (isset($_POST["removeFromCart"])) {
         <h1>Profile</h1>
 
         <form class="" action="login/logout.php" method="post">
-          <input type="Submit" name="Logout" value="Submit">
+          <input type="Submit" name="Submit" value="Logout">
         </form>
       </div><!--End of Main mainContect-->
 
