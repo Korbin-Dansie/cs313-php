@@ -23,8 +23,13 @@ if($_POST["UserName"] == "" || $_POST["Password"] == "") {
 
 
 //Check is password is valid
+echo "querystart<br>";
+
 include('../QuperyOptions/UserQuery.php');
+
 $setPassword = getPasswordForUsername($_POST["UserName"]);
+echo "queryend<br>";
+
 if(password_verify( $_POST["Password"], $setPassword)) {
   echo "Password varified.";
   //$_SESSION['Username'] = $_POST["UserName"];
