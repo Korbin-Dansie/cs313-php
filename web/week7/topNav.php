@@ -24,7 +24,7 @@ session_start();
           <div id="loginButton">
             <!--Start of signin -->
             <?php
-            if(!isset($_Session['Username'])){
+            if(!isset($_SESSION['Username'])){
               echo '<a href="sign-in.php">';
               echo '<img src="img/PersonIcon.png" alt="Login Icon">';
               echo 'Login</a>';
@@ -33,7 +33,7 @@ session_start();
               //Username is set
               echo '<a href="Profile.php">';
               echo '<img src="img/PersonIcon.png" alt="Login Icon">';
-              echo $_Session['Username'] . '</a>';
+              echo $_SESSION['Username'] . '</a>';
             }
             ?>
 

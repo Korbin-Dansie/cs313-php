@@ -2,12 +2,12 @@
 session_start();
 //Check variables are correct
 if(!isset($_POST["UserName"])) {
-  echo "username not set<br>";
+  echo "Username not set<br>";
   return;
 }
 
 if(!isset($_POST["Password"])){
-  echo "password not set<br>";
+  echo "Password not set<br>";
   return;
 }
 
@@ -21,7 +21,7 @@ if($_POST["UserName"] == "" || $_POST["Password"] == ""){
 include('../QuperyOptions/UserQuery.php');
 $setPassword = getPasswordForUsername($_POST["UserName"]);
 if(password_verify( $_POST["Password"], $setPassword) ) {
-  $_Session['Username'] = $_POST["UserName"];
+  $_SESSION['Username'] = $_POST["UserName"];
   header("Location: ../homePage.php");
   die();
   //Passwords are the same
@@ -29,6 +29,5 @@ if(password_verify( $_POST["Password"], $setPassword) ) {
 else{
   header("Location: ../sign-in.php");
   die();
-
 }
 ?>
