@@ -61,8 +61,8 @@ session_start();
       <h1>Sign In</h1>
 
       <form class="" action="login/logintoAccount.php" method="post">
-            <input type="text" name="UserName" value="" placeholder="Username">
-            <input type="text" name="Password" value="" placeholder="Password">
+            <input type="text" name="UserName" value="admin" placeholder="Username">
+            <input type="text" name="Password" value="1234" placeholder="Password">
             <input type="Submit" name="Submit" value="Login">
       </form>
 

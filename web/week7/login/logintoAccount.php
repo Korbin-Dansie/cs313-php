@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 //session_start();
 //Check variables are correct
 if(!isset($_POST["UserName"])) {
