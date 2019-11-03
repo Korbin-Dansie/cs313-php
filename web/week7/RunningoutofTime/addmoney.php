@@ -18,8 +18,9 @@ if(!isset($_POST['addMoney'])) {
 //Add money to account
 
 include('../QueryOptions/moneyQuery.php');
-echo "Got Here 1";
+echo "Got Here 1<br>";
 $money = getMoneyQuery($_SESSION['Username']);
+echo "$money<br>";
 if($money != NULL){
   echo "Got Here if";
   setMoneyQuery($_SESSION['Username'], ($_POST['addMoney'] + $money));
