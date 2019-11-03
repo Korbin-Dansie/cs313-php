@@ -1,10 +1,5 @@
 <?php
 session_start();
-if (isset($_POST["removeFromCart"])) {
-  \array_splice($_SESSION["newIteams"], $_POST["cartIndex"], 1);
-  header("Location: shopingCart.php");
-  return;
-}
 ?>
 <!DOCTYPE html>
 <html>
