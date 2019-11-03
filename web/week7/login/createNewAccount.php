@@ -56,9 +56,9 @@ try
 
   $statment = 'insert into customers
   (username,
-  userpassword)
+  userpassword, money)
   VALUES
-  ( :uname, :upassword)';
+  ( :uname, :upassword, 0)';
   $sth = $db->prepare($statment);
   $sth->bindParam(':uname', $_POST["UserName"], PDO::PARAM_STR);
   $sth->bindParam(':upassword', $hash, PDO::PARAM_STR);
