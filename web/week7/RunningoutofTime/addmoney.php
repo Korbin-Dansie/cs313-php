@@ -21,10 +21,11 @@ include('../QueryOptions/moneyQuery.php');
 echo "Got Here 1";
 $money = getMoneyQuery($_SESSION['Username']);
 if($money != NULL){
-  echo "Got Here";
+  echo "Got Here if";
   setMoneyQuery($_SESSION['Username'], ($_POST['addMoney'] + $money));
 }
 else {
+  echo "Got Here else";
   setMoneyQuery($_SESSION['Username'], $_POST['addMoney']);
 }
 header('Location: ../shopingCart.php');
