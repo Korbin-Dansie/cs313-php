@@ -29,7 +29,7 @@ else {
   echo "Got Here else";
   setMoneyQuery($_SESSION['Username'], $_POST['addMoney']);
 }
-header('Location: shopingCart.php');
+header('Location: ../shopingCart.php');
 die();
 
 ?>
