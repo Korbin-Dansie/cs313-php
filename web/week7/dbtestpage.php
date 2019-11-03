@@ -32,12 +32,12 @@ session_start();
   </form>
 
   <h2>Add Sub-Category</h2>
-  <form class="" action="RunningoutofTime/addCategory.php" method="post">
+  <form class="" action="RunningoutofTime/addSubcategory.php" method="post">
     <select class="Category" name="">
       <option value="">None</option>
       <?php include('QueryOptions/categoryOptions.php'); ?>
     </select>
-    <input type="text" name="Category" value="">
+    <input type="text" name="subcategory" value="">
     <input type="Submit" name="Submit" value="Submit">
   </form>
 
