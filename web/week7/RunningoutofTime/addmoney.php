@@ -7,9 +7,10 @@ if(!isset($_SESSION['Username'])){
 }
 
 //If nuber is not valid return
-if(!isset($_POST['addMoney'])){
+if(!isset($_POST['addMoney'])) {
+  header('Location: ../shopingCart.php');
   return;
-}else if(!is_numeric($_POST['addMoney'])){
+} else if(!is_numeric($_POST['addMoney'])) {
   header('Location: ../shopingCart.php');
   return;
 }
@@ -17,7 +18,7 @@ if(!isset($_POST['addMoney'])){
 //Add money to account
 
 include('../QueryOptions/moneyQuery.php');
-$money = getMoneyQuery($_SESSION['Username');
+$money = getMoneyQuery($_SESSION['Username']);
 if($money != null){
   setMoneyQuery($_SESSION['Username'], ($_POST['addMoney'] + $money));
 }
