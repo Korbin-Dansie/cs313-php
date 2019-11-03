@@ -50,7 +50,7 @@ function setMoneyQuery($username, $amount){
 
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $statment = "update customers SET money=:money where username='" . $username . "' ";
+    $statment = "update customers SET money = :money where username='" . $username . "' ";
     $stmt = $db->prepare($statment);
     $stmt->bindParam(":money", $money, PDO::PARAM_INT);
     $stmt->execute();
