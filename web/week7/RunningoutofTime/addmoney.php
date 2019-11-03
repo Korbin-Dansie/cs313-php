@@ -23,7 +23,7 @@ $money = getMoneyQuery($_SESSION['Username']);
 echo "$money<br>";
 echo $_POST['addMoney']."<br>";
 echo "Add " . $money + $_POST['addMoney']."<br>";
-die();
+
 if($money != 0){
   echo "Got Here if";
   setMoneyQuery($_SESSION['Username'], ($_POST['addMoney'] + $money) );
