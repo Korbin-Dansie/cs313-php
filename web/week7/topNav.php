@@ -41,6 +41,16 @@ session_start();
             </div>
             <a href="shopingCart.php">
               <img src="img/ShopingCart.png" alt="Shoping Cart Icon">
+              <?php
+              include('QueryOptions/moneyQuery.php');
+
+              $money = getMoneyQuery($_SESSION['Username']);
+              if(isset($_SESSION['Username']) && $money != null){
+                echo "$ ";
+                echo "$money";
+              }
+               ?>
+
             </a>
           </div>
 

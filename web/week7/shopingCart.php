@@ -22,12 +22,12 @@ if (isset($_POST["removeFromCart"])) {
       <div class="sideAdd">
       </div>
 
-
       <div class="mainContect">
         <h1>Shopping Cart</h1>
 
         <form class="" action="RunningoutofTime/addmoney.php" method="post">
-          <span>Add Money</span><input type="number" name="addMoney" value="">
+          <span>Add Money </span><input type="number" name="addMoney" value="">
+          <input type="Submit" name="Submit" value="Submit">
         </form>
       </div><!--End of Main mainContect-->
 
