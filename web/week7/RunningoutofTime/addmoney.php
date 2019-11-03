@@ -21,7 +21,7 @@ include('../QueryOptions/moneyQuery.php');
 echo "Got Here 1<br>";
 $money = getMoneyQuery($_SESSION['Username']);
 echo "$money<br>";
-if($money != NULL){
+if($money != 0){
   echo "Got Here if";
   setMoneyQuery($_SESSION['Username'], ($_POST['addMoney'] + $money));
 }
