@@ -23,13 +23,13 @@ $money = getMoneyQuery($_SESSION['Username']);
 echo "$money<br>";
 if($money != 0){
   echo "Got Here if";
-  setMoneyQuery($_SESSION['Username'], ($_POST['addMoney'] + $money));
+  setMoneyQuery($_SESSION['Username'], (floatval($_POST['addMoney'] + floatval($money)));
 }
 else {
   echo "Got Here else";
-  setMoneyQuery($_SESSION['Username'], $_POST['addMoney']);
+  setMoneyQuery($_SESSION['Username'], floatval($_POST['addMoney']));
 }
-header('Location: ../shopingCart.php');
-die();
+//header('Location: ../shopingCart.php');
+//die();
 
 ?>
