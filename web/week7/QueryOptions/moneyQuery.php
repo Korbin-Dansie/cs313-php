@@ -52,7 +52,7 @@ function setMoneyQuery($username, $amount){
 
     $statment = "insert into customers (money) VALUES (:money)" . " where username='" . $username . "' ";
     $stmt = $db->prepare($statment);
-    $stmt->bind_pram(":money", $money, PDO::PARAM_INT);
+    $stmt->bindParam(":money", $money, PDO::PARAM_INT);
     $stmt->execute();
   }//End of try
   catch (PDOException $ex)
