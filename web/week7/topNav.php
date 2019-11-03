@@ -45,7 +45,7 @@ session_start();
               include('QueryOptions/moneyQuery.php');
 
               $money = getMoneyQuery($_SESSION['Username']);
-              if(isset($_SESSION['Username']) && $money != null){
+              if(isset($_SESSION['Username'])){
                 echo "$ ";
                 echo "$money";
               }
