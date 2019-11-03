@@ -23,12 +23,24 @@ session_start();
   <h2>By: Korbin Dansie</h2>
   <br />
   <h1>Admin</h1>
+  <h2><a href="homePage.php">Back</a></h2>
 
   <h2>Add Category</h2>
   <form class="" action="RunningoutofTime/addCategory.php" method="post">
     <input type="text" name="Category" value="">
     <input type="Submit" name="Submit" value="Submit">
   </form>
+
+  <h2>Add Sub-Category</h2>
+  <form class="" action="RunningoutofTime/addCategory.php" method="post">
+    <select class="Category" name="">
+      <option value="">None</option>
+      <?php include('QueryOptions/categoryOptions.php'); ?>
+    </select>
+    <input type="text" name="Category" value="">
+    <input type="Submit" name="Submit" value="Submit">
+  </form>
+
 
   <h2>Add Product</h2>
   <div>
