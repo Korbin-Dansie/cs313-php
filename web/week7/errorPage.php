@@ -22,11 +22,6 @@ session_start();
       <div class="mainContect">
         <h1>ERROR PAGE</h1>
         <p>You have encontered an error. Please try one of these links.</p>
-        <a href="week3.php">Home</a><br/><br/>
-        <a href="shopingCart.php">Shoping Cart</a><br/><br/>
-        <a href="checkout.php">Check Out</a><br/><br/>
-        <a href="Confirmation.php">Confirmation</a><br/><br/>
-
       </div><!--End of Main mainContect-->
 
       <footer>
