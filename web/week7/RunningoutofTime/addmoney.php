@@ -32,7 +32,7 @@ else {
   echo "Got Here else";
   setMoneyQuery($_SESSION['Username'],  ($_POST['addMoney']));
 }
-//header('Location: ../shopingCart.php');
-//die();
+header('Location: ../shopingCart.php');
+die();
 
 ?>
