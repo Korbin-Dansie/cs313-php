@@ -17,7 +17,7 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $statment = "insert into sub_category (name, categoryid) VALUES (:var, (SELECT id from category WHERE name='". $_POST['Category']."'))";
+  $statment = "insert into sub_category (name, categoryid) VALUES ( :var, (SELECT id from category WHERE name='". $_POST['Category']."'))";
   $stmt = $db->prepare($statment);
   $stmt->bindParam(":var", $var, PDO::PARAM_STR);
   $stmt->execute();

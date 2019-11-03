@@ -37,7 +37,7 @@ session_start();
       <option value="">None</option>
       <?php include('QueryOptions/categoryOptions.php'); ?>
     </select>
-    <input type="text" name="subcategory" value="">
+    <input type="text" name="Subcategory" value="">
     <input type="Submit" name="Submit" value="Submit">
   </form>
 
