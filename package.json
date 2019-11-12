@@ -2,7 +2,7 @@
   "name": "cs313-php",
   "version": "1.0.0",
   "description": "CS 313 PHP Base Code",
-  "main": "index.js",
+  "main": "web/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,6 @@
   },
   "engines": {
     "node": "12.13.0"
-  }
+  },
+  "devDependencies": {}
 }
