@@ -8,14 +8,14 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-const PORT = process.env.PORT || 8888
+const PORT = process.env.PORT || 8888;
 
 function onRequest (req, res) {
   console.log("Received a request for:" + req.url);
   if(req.url == "/home"){
     fs.readFile('templatefile.html', 'utf8', (err, data) => {
       if (err) {
-        console.error(err.name + ': ' + err.message);
+//        console.error(err.name + ': ' + err.message);
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write("<h1>Hello World</h1>");
         res.end();
