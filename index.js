@@ -45,4 +45,4 @@ function onRequest (req, res) {
 
 var server = http.createServer(onRequest);
 server.listen(PORT);
-console.log("Listing for port:" + port);
+console.log("Listing for port:" + PORT);
