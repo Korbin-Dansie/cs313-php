@@ -8,7 +8,9 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-const PORT = process.env.PORT || 8008;
+const PORT = 8000;
+console.log("Env:" + process.env.PORT);
+//process.env.PORT ||
 
 function onRequest (req, res) {
   console.log("Received a request for:" + req.url);
